@@ -5,7 +5,16 @@ export default defineConfig({
     light: "/logo/logo-light.svg",
     dark: "/logo/logo-dark.svg",
   },
-  topNav: [{ text: "Website", link: "https://www.surge.build/" }],
+  topNav: [ 
+    {
+      text: "Docs",
+      link: "/overview/introduction",
+    },
+    {
+      text: "Blog",
+      link: "https://www.surge.build/",
+    },
+    { text: "Website", link: "https://www.surge.build/" }],
   theme: {
     accentColor: "#f56949",
   },

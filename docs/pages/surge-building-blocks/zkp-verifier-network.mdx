@@ -20,6 +20,8 @@ The ZKP verifier network is fundamental in enhancing the security and trust of L
 
 - `Decentralizing Trust:` The verifier network distributes the trust assumptions associated with validity proofs, mitigating the risks linked to centralized verification processes.
 
+<img src="/assets/user-tx.png" alt="user tx" />
+
 <img src="/assets/critical-role.png" alt="critical role" />
 
 ## Need for a ZKP Verifier Network
@@ -30,6 +32,29 @@ In typical Validium ZK rollup setups, transaction data is pushed to an off-chain
 
 However, the non-Turing-complete nature of Bitcoin's scripting language limits its ability to verify these proofs. To address this, our ZKP verifier network ensures that the proofs submitted are compatible and can be verified with BitVM2, enabling native verification on the Bitcoin Layer.
 
-### Future Roadmap also includes using BitVM for On-Chain Verification
+## How the ZKP Verification Happens:
+
+1. `Proof Generation:` Bitcoin rollups generate an initial proof on the client side. This proof is dispatched to a prover network—a marketplace of provers responsible for generating the full proofs. These proofs are then compressed using zk proof recursion.
+
+2. `Validation in ZKP Verifier Network:` Validators in the PoS-backed verifier network continuously monitor for new proofs. Once detected, these proofs are retrieved and queued for validation. The validators thoroughly check each proof against the claimed state changes. If discrepancies are found, a challenge is initiated, triggering a secondary verification process to ensure only valid proofs are accepted. This process uses ZKSTARKs with ZKVM's instruction set of RISC-V for efficient and scalable validation.
+
+3. `Decentralized Verification:` The decentralized verifier network consists of validator nodes and guardian nodes. Proof recursion can occur every 100 blocks or every few hours, after which the proofs are verified within the network.
+
+4. `Final Settlement:` Once verification is complete, the compressed proof or the validity proof is inscribed into the Bitcoin blockchain, ensuring final settlement.
+
+<img src="/assets/final-settlement.png" alt="final settlement" />
+
+## Reviewing zkVMs and Their Components:
+
+As part of our ZKP verification layer, we are actively reviewing various zkVMs (Zero-Knowledge Virtual Machines) and their components
+
+<img src="/assets/virtual-machines.png" alt="virtual machines" />
+
+For integration we are particularly reviewing the prover & verification component
+to facilitate the zk Rollup execution
+
+<img src="/assets/zk-rollup-execution.png" alt="zk rollup execution" />
+
+## Future Roadmap also includes using BitVM for On-Chain Verification
 
 With BitVM Program, we have the capability to verify validity proofs directly on the Bitcoin layer. Leveraging BitVM, we are exploring a framework that iteratively fetches ZK proofs from Bitcoin blocks and authenticates these proofs. This process ensures the integrity and finality of state differences in Layer 2 networks. But BitVM is still under development and needs lot of work before ready.
