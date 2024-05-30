@@ -1,0 +1,36 @@
+@layer vocs_preflight {
+  @tailwind base;
+}
+@tailwind components;
+@tailwind utilities;
+
+img {
+  border-radius: 8px;
+}
+.vocs_NavLogo_logoImage {
+  height: auto;
+}
+.vocs_Subtitle {
+  white-space: normal !important;
+}
+
+.vocs_Sidebar_sectionTitle {
+  padding: 0 0.5rem;
+}
+
+.vocs_Sidebar_items {
+  row-gap: 0.1rem;
+}
+
+.vocs_Sidebar_item {
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.dark .vocs_Sidebar_item[data-active="true"] {
+  background-color: #40241f;
+}
+.vocs_Sidebar_item[data-active="true"] {
+  color: var(--vocs-color_textAccent);
+  background-color: #40241f0f;
+}

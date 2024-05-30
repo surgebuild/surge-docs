@@ -1,0 +1,77 @@
+# Architecture [A Modular novel approach taken by Surge to Scale Bitcoin ecosystem via Rollups (L2's)]
+
+## Overview
+
+Surge leverages a modular architecture to streamline the deployment of Bitcoin Layer 2 (L2) solutions. This design enables a clear separation of concerns across different layers, simplifying development while maintaining high security and performance standards.
+
+## Modular Architecture Model
+
+Surge provides a layered approach for launching the Bitcoin Rollups by separating the Executions, Settlement and Data Layer
+
+1. `Execution Layer:` Supports multiple virtual machines (VMs) including EVM and MoveVM, allowing developers to build on various rollup frameworks.
+
+2. `Settlement Layer:` Manages transaction finalization using a robust, PoS-based network that ensures security and efficiency.
+
+3. `Data Layer:` Maintains data availability and integrity, crucial for transparent operations across the platform.
+
+<img src="/assets/architecture-model.png" alt="architecture model" />
+
+### Ecosystem Tooling
+
+Surge provides comprehensive tooling for dApps, enabling them to easily integrate and migrate to Bitcoin L2s to be available in the Bitcoin ecosystem
+
+### Execution & Frameworks
+
+We will be supporting multiple VMs from EVM, MoveVM, etc., with Initial support for EVM and MoveVM, and planned extensions to other VMs for enhanced flexibility. This also, lets us build on top of any rollup framework like OPStack or Arbitrum Orbit. and Transactions are batched on the Rollups and Zk proofs are generated.
+
+### Superstack
+
+Superstack accepts the ZK proofs from the execution layers and pushes the transaction data to the DA layer and Merkle state hash to the Bitcoin through inscriptions. Once the inscribed data settles on the Bitcoin we are inheriting the Bitcoin security. It's a PoS protocol-based network which secures the network and facilitates the proof verification.
+
+<img
+  className="md:w-[60%] mx-auto"
+  src="/assets/superstack.png"
+  alt="superstack"
+/>
+
+Superstack also contains MPC TSS-based network nodes for Bridging the assets from Bitcoin to Rollups. And also services like Oracle, indexers etc., which are being explored.
+
+### Bitcoin Settlement
+
+We inscribe validated proofs into the Bitcoin blockchain, which can be verified by anyone operating a Bitcoin node. By doing so, we leverage the inherent security of Bitcoin to ensure the integrity of these proofs once they are settled on the blockchain. Our ultimate goal is to integrate verification directly within the Bitcoin layer, fostering significant innovation and enhancing the robustness of this process.
+
+### Data Availability
+
+Surge offers multiple Data Availability (DA) layer options to suit different requirements and cost considerations:
+
+- Native Bitcoin DAs: Options like Nubit for those preferring integration closely tied to Bitcoin.
+
+- Non-native DA Layers: Alternatives like Avail, Eigen DA, and Celestia DA, offer flexibility and scalability.
+
+## Surge Superstack Layer
+
+#### Core Components
+
+The Superstack layer acts as the foundation of Surge’s architecture, integrating several key components:
+
+- [Bridging of BTC:](/surge-building-blocks/mpc-tss-bridge) Facilitates secure transactions between Bitcoin and various L2 solutions.
+
+- [Verification Layer:](/surge-building-blocks/zkp-verifier-network) Utilizes Zero-Knowledge Proofs (ZKP) to validate transactions.
+
+- [Utilities:](/surge-building-blocks/utilities/overview) Includes essential services like oracles and indexers, supporting a broad array of applications.
+
+## Architecture Layers
+
+Bitcoin layers have evolved to encompass a comprehensive suite of solutions, including Layer 2 (L2) for scaling, and Layer 3 (L3) for application-specific functionalities, alongside Data and Application layers. This structure draws inspiration from Ethereum's layered architecture but is uniquely tailored to leverage Bitcoin's robust security and decentralization features.
+
+<img
+  className="md:w-[40%] mx-auto"
+  src="/assets/bitcoin-layers.png"
+  alt="superstack"
+/>
+
+- `Layer 2 (L2) Scaling Solutions:` Aimed at enhancing Bitcoin transaction throughput and reducing latency. L2 solutions like Lightning Network, sidechains, and Rollup-as-a-Service (RaaS) platforms are pivotal in achieving this goal.
+
+- `Layer 3 (L3) and Beyond:` Focuses on providing application-specific functionalities, enabling developers to create bespoke solutions for DApps, marketplaces, and more, all while leveraging the underlying security and efficiency of L2 solutions.
+
+- `Data Layer:` Ensures data availability and integrity, serving as a critical component for maintaining transparent and trustless operations across all layers.

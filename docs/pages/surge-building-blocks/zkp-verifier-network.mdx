@@ -1,0 +1,35 @@
+# ↳ 2️⃣ ZKP Verifier Network [PoS based ZKP verifier network]
+
+Our ultimate goal is to enable native verification of Zero-Knowledge Proofs (ZKPs) within Bitcoin blocks. This advancement requires the introduction of new opcodes—such as `OP_verifystarkproof` in Bitcoin's script language. We believe that these necessary changes will evolve and be adapted over time
+
+## Building a PoS-Backed ZKP Verifier Network
+
+We are concurrently developing a Proof-of-Stake (PoS) backed ZKP verifier network. This network functions in the following manner:
+
+- `Prover's Role:` A prover generates ZK proofs reflecting the state differences of Bitcoin Layer 2, which are then inscribed onto the Bitcoin Layer.
+
+- `Validator's Duty:` These proofs are retrieved by the PoS-backed verifier network. Validators within the network meticulously review each proof, and any discrepancies are promptly challenged, ensuring only valid transactions are confirmed.
+
+<img src="/assets/zkp-verifier-network.png" alt="zkp verifier network" />
+
+## The Critical Role of the ZKP Verifier Network
+
+The ZKP verifier network is fundamental in enhancing the security and trust of Layer 2 state transitions. Key roles of the network include:
+
+- `Ensuring Secure Correctness of L2 State Transitions:` By accurately validating the state changes of Layer 2 transactions, the network guarantees their correctness.
+
+- `Decentralizing Trust:` The verifier network distributes the trust assumptions associated with validity proofs, mitigating the risks linked to centralized verification processes.
+
+<img src="/assets/critical-role.png" alt="critical role" />
+
+## Need for a ZKP Verifier Network
+
+In typical Validium ZK rollup setups, transaction data is pushed to an off-chain data availability layer and publishes zero-knowledge proofs to verify off-chain transactions on Layer 1.
+
+<img className="md:w-[80%] mx-auto" src="/assets/zkp-need.png" alt="zkp need" />
+
+However, the non-Turing-complete nature of Bitcoin's scripting language limits its ability to verify these proofs. To address this, our ZKP verifier network ensures that the proofs submitted are compatible and can be verified with BitVM2, enabling native verification on the Bitcoin Layer.
+
+### Future Roadmap also includes using BitVM for On-Chain Verification
+
+With BitVM Program, we have the capability to verify validity proofs directly on the Bitcoin layer. Leveraging BitVM, we are exploring a framework that iteratively fetches ZK proofs from Bitcoin blocks and authenticates these proofs. This process ensures the integrity and finality of state differences in Layer 2 networks. But BitVM is still under development and needs lot of work before ready.

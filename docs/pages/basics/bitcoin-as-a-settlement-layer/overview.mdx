@@ -1,0 +1,30 @@
+# Bitcoin as a Settlement Layer [The Bitcoin Settlement Layer anchors Layer 2 scalability solutions]
+
+The Bitcoin Settlement Layer plays a pivotal role in the infrastructure of Layer 2 (L2) scaling solutions by ensuring the integrity and finality of transactions. It utilizes the robust security and widespread trust in the Bitcoin blockchain to anchor the state of L2 networks, thereby leveraging Bitcoin's immutability to enhance the overall security of the L2 ecosystem.
+
+## Settlement Process
+
+The Settlement component commits the Merkle root of the new state (the output from the Execution Engine) to Bitcoin.
+
+In an optimistic rollup setup, state commitments are published onto Bitcoin as pending validity for a period (currently, set as 7 days) and subject to challenge.
+
+The Optimism team is developing the fault-proof process. Once it’s completed, we’ll add it to the Bitcoin L2.
+
+In ZK rollups, Nodes obtain rollup transactions data from Decentralized Storage and rollup transaction merkle tree root hash and zk proof data from the Aggregator of the Rollup Layer.
+
+First, within the ZK Proof Verifier of Rollup Module, the merkle tree root hash is used to check the rollup transactions. Then, the zk proof data is used to verify whether the rollup transactions have been executed correctly and effectively.
+
+Bitcoin serves as the ultimate settlement layer for Layer 2 Network. The rollup data is stored on Bitcoin, allowing complete retrieval or restoration of rollup transactions based on the inscriptions on Bitcoin. The computational validity of zk proof verification of rollup is confirmed on Bitcoin, thereby confirming the rollup.
+
+<img
+  src="/assets/bitcoin-as-a-settlement-layer.png"
+  alt="bitcoin as a settlement layer"
+/>
+
+## Bitcoin Finality and Security
+
+The use of Bitcoin for final settlement brings unparalleled security benefits to L2 networks:
+
+- `Bitcoin Finality:` Transactions that achieve finality on the Bitcoin blockchain are irreversible and universally accepted, providing a solid foundation for the security of L2 networks.
+
+- `Leveraging Bitcoin's Security:` By anchoring L2 states to the Bitcoin blockchain, the L2 networks inherit the immense hashing power and security mechanisms of Bitcoin, making attacks prohibitively expensive and complex.

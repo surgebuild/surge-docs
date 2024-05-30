@@ -1,0 +1,31 @@
+# ↳ 1️⃣ MPC TSS Bridge [2 way Peg with MPC TSS based Network Nodes for BTC Bridge]
+
+Unlike traditional BTC bridges that rely on central custodians or multi-signature federations, Surge introduces a novel approach leveraging a verifier network powered by Multi-Party Computation (MPC) Threshold Signature Scheme (TSS).
+
+## High-Level Overview
+
+Traditional BTC bridges operate under the control of either a central custodian or a federation, introducing potential points of failure and trust dependencies
+
+<img
+  className="md:w-[80%] mx-auto"
+  src="/assets/high-level-overview.png"
+  alt="high level overview"
+/>
+
+Surge, however, employs a decentralized verifier network, which utilizes MPC to ensure that no single party controls the entire transaction verification process or key management.
+
+## Two way Peg with MPC Network
+
+The two-way peg in Surge is designed to facilitate unilateral withdrawals, allowing users to exit the system at their discretion without compromising security. This is powered by use of MPC technology, which significantly reduces trust requirements.
+
+<img src="/assets/two-way-peg.png" alt="two way peg" />
+
+By integrating MPC technology within a verifier network that accesses the Data Availability (DA) layer to validate proofs submitted by provers, we ensure the secure and private release of funds
+
+### Benefits of Using MPC in Surge
+
+- `Decentralized Key Management:` In an MPC system, the private key required to sign blockchain transactions is never fully assembled in one location. Instead, key shares are distributed among multiple parties
+
+- `Verification Without Full Disclosure:` MPC allows nodes in the network to verify transactions and proofs without needing to reveal the underlying data to each other. This enhances privacy and security, as each node only processes parts of the data necessary for verification
+
+- `Reduction in Trust Dependencies:` By distributing decision-making and data handling across several nodes, the MPC-based system does not rely on a central authority or a trusted third party.

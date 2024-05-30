@@ -1,0 +1,23 @@
+---
+layout: landing
+---
+
+import { HomePage } from "vocs/components";
+
+<HomePage.Root>
+  <HomePage.Logo />
+  <h1 className="text-3xl">
+    A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network
+    & MPC-TSS Bridge
+  </h1>
+  <br />
+  <br />
+  <div className="flex gap-4">
+    <HomePage.Button href="/" variant="accent">
+      Whitepaper
+    </HomePage.Button>
+    <HomePage.Button href="/overview/introduction" variant="accent">
+      Docs
+    </HomePage.Button>
+  </div>
+</HomePage.Root>
