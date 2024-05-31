@@ -2,19 +2,16 @@ import { defineConfig } from "vocs";
 
 export default defineConfig({
   logoUrl: {
-    light: "/logo/logo-light.svg",
-    dark: "/logo/logo-dark.svg",
+    light: "/logo/logo-light.png",
+    dark: "/logo/logo-dark.png",
   },
+  font: { 
+    google: 'Inter'
+  }, 
   topNav: [ 
-    {
-      text: "Docs",
-      link: "/overview/introduction",
-    },
-    {
-      text: "Blog",
-      link: "https://www.surge.build/",
-    },
-    { text: "Website", link: "https://www.surge.build/" }],
+  
+  
+    { text: "Home", link: "https://www.surge.build/" }],
   theme: {
     accentColor: "#f56949",
   },
