@@ -11,6 +11,7 @@ img {
 :root {
   --vocs-color_background: #ffffff;
   --vocs-color_background4: #d6d6d6;
+  --vocs-color_backgroundDark: "#ffffff";
 }
 
 :root.dark {
