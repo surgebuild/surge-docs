@@ -10,11 +10,31 @@ img {
 
 :root {
   --vocs-color_background: #f3f3f3;
+  --vocs-color_background4: #d6d6d6;
 }
 
 :root.dark {
   --vocs-color_background: #000000;
   --vocs-color_backgroundDark: #000000;
+  --vocs-color_background4: #3c393f;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 9999px;
+  background: #ececec;
+}
+::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #292929;
 }
 
 .vocs_NavLogo_logoImage {
@@ -36,7 +56,7 @@ img {
   transform: scale(1.03);
 }
 .vocs_Sidebar_sectionTitle {
-  padding: 0 0.5rem;
+  @apply font-semibold text-xs py-0 px-2;
 }
 
 .vocs_Sidebar_items {
@@ -44,22 +64,29 @@ img {
 }
 
 .vocs_Sidebar_item {
-  padding: 0.4rem 0.5rem;
+  @apply text-sm py-1.5 px-2;
+
   border-radius: 0.3rem;
 }
 
-.dark .vocs_Sidebar_item[data-active="true"] {
-  background-color: #40241f;
-}
 .vocs_Sidebar_item[data-active="true"] {
+  background-color: #b85c2f3b;
+  font-weight: bold;
+}
+
+.dark .vocs_Sidebar_item[data-active="true"] {
   color: var(--vocs-color_textAccent);
-  background-color: #40241f0f;
+  background-color: #40241fbd;
+  font-weight: bold;
 }
 
 .vocs_Footer {
-  @apply px-[108px] py-0;
-  background-color: #e6e6e6;
+  @apply py-0;
 }
-.dark .vocs_Footer {
-  background-color: #1a1a1a;
+
+.dark .vocs_HomePage_tagline {
+  @apply !text-white;
+}
+.vocs_HomePage_tagline {
+  @apply !text-black;
 }

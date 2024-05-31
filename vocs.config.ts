@@ -5,13 +5,11 @@ export default defineConfig({
     light: "/logo/logo-light.png",
     dark: "/logo/logo-dark.png",
   },
-  font: { 
+   font: { 
     google: 'Inter'
   }, 
   topNav: [ 
-  
-  
-    { text: "Home", link: "https://www.surge.build/" }],
+  { text: "surge.build", link: "https://www.surge.build/" }],
   theme: {
     accentColor: "#f56949",
   },
