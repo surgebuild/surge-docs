@@ -91,3 +91,21 @@ img {
 .vocs_HomePage_tagline {
   @apply !text-black;
 }
+
+.vocs_Code {
+  font-weight: 600;
+}
+
+.vocs_DesktopSearch_search {
+  border: 1px solid #969697;
+  outline: 0;
+}
+
+.vocs_Sidebar_logo {
+  display: block;
+  width: 100%;
+}
+
+.vocs_Sidebar_logo {
+  @apply bg-white dark:bg-black;
+}
