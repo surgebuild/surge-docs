@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
 @layer vocs_preflight {
   @tailwind base;
 }
@@ -28,7 +30,7 @@ img {
 }
 ::-webkit-scrollbar-thumb {
   background: #d9d9d9;
-  border-radius: 9999px;
+  border-radius: 9999px ;
 }
 .dark ::-webkit-scrollbar-thumb {
   background: #4a4a4a;
@@ -93,12 +95,23 @@ img {
 }
 
 .vocs_Code {
-  font-weight: 600;
+  font-weight: 700 !important;
+  font-size: 1.05rem !important;
+  background: transparent !important;
+  border: 0 !important;
 }
 
 .vocs_DesktopSearch_search {
-  border: 1px solid #969697;
+  border: 1px solid #e7e7e7;
   outline: 0;
+}
+
+.vocs_DesktopSearch_search {
+  @apply border-[#e7e7e7]; /* Default and hover state */
+}
+
+.dark .vocs_DesktopSearch_search {
+  @apply border-[#2a282d] hover:border-[#e4e4e5]; /* Dark mode and hover state */
 }
 
 .vocs_Sidebar_logo {
@@ -108,4 +121,40 @@ img {
 
 .vocs_Sidebar_logo {
   @apply bg-white dark:bg-black;
+}
+
+.vocs_Strong {
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  color: #1f1f1f !important;
+  /* color: #f56949; */
+}
+
+.vocs_Paragraph {
+  font-weight: 400 !important;
+  color: #1f1f1f !important;
+}
+
+.vocs_Subtitle {
+  font-weight: 400 !important;
+  font-size: 1.125rem !important;
+  color: #565656 !important;
+}
+
+.vocs_ListItem {
+  font-size: 400 !important;
+}
+
+._list-paragraph {
+  display: inline;
+  font-weight: 400 !important;
+}
+
+.vocs_Sidebar_item {
+  font-weight: 400 !important;
+  color: #1f1f1f;
+}
+
+.vocs_Footer_navigationTextInner {
+  font-size: 1rem;
 }

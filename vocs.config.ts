@@ -185,7 +185,7 @@ export default defineConfig({
     },
     {
       icon: "x",
-      link: "https://twitter.com/"
+      link: "https://x.com/surgebuild"
     }
   ]
 });

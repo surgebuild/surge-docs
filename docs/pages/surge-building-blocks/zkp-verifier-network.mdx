@@ -1,14 +1,14 @@
 # ↳ 2️⃣ ZKP Verifier Network [PoS based ZKP verifier network]
 
-Our ultimate goal is to enable native verification of Zero-Knowledge Proofs (ZKPs) within Bitcoin blocks. This advancement requires the introduction of new opcodes—such as `OP_verifystarkproof` in Bitcoin's script language. We believe that these necessary changes will evolve and be adapted over time
+Our ultimate goal is to enable native verification of Zero-Knowledge Proofs (ZKPs) within Bitcoin blocks. This advancement requires the introduction of new opcodes—such as **OP_verifystarkproof** in Bitcoin's script language. We believe that these necessary changes will evolve and be adapted over time
 
 ## Building a PoS-Backed ZKP Verifier Network
 
 We are concurrently developing a Proof-of-Stake (PoS) backed ZKP verifier network. This network functions in the following manner:
 
-- `Prover's Role:` A prover generates ZK proofs reflecting the state differences of Bitcoin Layer 2, which are then inscribed onto the Bitcoin Layer.
+- **Prover's Role:** A prover generates ZK proofs reflecting the state differences of Bitcoin Layer 2, which are then inscribed onto the Bitcoin Layer.
 
-- `Validator's Duty:` These proofs are retrieved by the PoS-backed verifier network. Validators within the network meticulously review each proof, and any discrepancies are promptly challenged, ensuring only valid transactions are confirmed.
+- **Validator's Duty:** These proofs are retrieved by the PoS-backed verifier network. Validators within the network meticulously review each proof, and any discrepancies are promptly challenged, ensuring only valid transactions are confirmed.
 
 <img src="/assets/zkp-verifier-network.png" alt="zkp verifier network" />
 
@@ -16,9 +16,9 @@ We are concurrently developing a Proof-of-Stake (PoS) backed ZKP verifier networ
 
 The ZKP verifier network is fundamental in enhancing the security and trust of Layer 2 state transitions. Key roles of the network include:
 
-- `Ensuring Secure Correctness of L2 State Transitions:` By accurately validating the state changes of Layer 2 transactions, the network guarantees their correctness.
+- **Ensuring Secure Correctness of L2 State Transitions:** By accurately validating the state changes of Layer 2 transactions, the network guarantees their correctness.
 
-- `Decentralizing Trust:` The verifier network distributes the trust assumptions associated with validity proofs, mitigating the risks linked to centralized verification processes.
+- **Decentralizing Trust:** The verifier network distributes the trust assumptions associated with validity proofs, mitigating the risks linked to centralized verification processes.
 
 <img src="/assets/user-tx.png" alt="user tx" />
 
@@ -34,13 +34,13 @@ However, the non-Turing-complete nature of Bitcoin's scripting language limits i
 
 ## How the ZKP Verification Happens:
 
-1. `Proof Generation:` Bitcoin rollups generate an initial proof on the client side. This proof is dispatched to a prover network—a marketplace of provers responsible for generating the full proofs. These proofs are then compressed using zk proof recursion.
+1. **Proof Generation:** Bitcoin rollups generate an initial proof on the client side. This proof is dispatched to a prover network—a marketplace of provers responsible for generating the full proofs. These proofs are then compressed using zk proof recursion.
 
-2. `Validation in ZKP Verifier Network:` Validators in the PoS-backed verifier network continuously monitor for new proofs. Once detected, these proofs are retrieved and queued for validation. The validators thoroughly check each proof against the claimed state changes. If discrepancies are found, a challenge is initiated, triggering a secondary verification process to ensure only valid proofs are accepted. This process uses ZKSTARKs with ZKVM's instruction set of RISC-V for efficient and scalable validation.
+2. **Validation in ZKP Verifier Network:** Validators in the PoS-backed verifier network continuously monitor for new proofs. Once detected, these proofs are retrieved and queued for validation. The validators thoroughly check each proof against the claimed state changes. If discrepancies are found, a challenge is initiated, triggering a secondary verification process to ensure only valid proofs are accepted. This process uses ZKSTARKs with ZKVM's instruction set of RISC-V for efficient and scalable validation.
 
-3. `Decentralized Verification:` The decentralized verifier network consists of validator nodes and guardian nodes. Proof recursion can occur every 100 blocks or every few hours, after which the proofs are verified within the network.
+3. **Decentralized Verification:** The decentralized verifier network consists of validator nodes and guardian nodes. Proof recursion can occur every 100 blocks or every few hours, after which the proofs are verified within the network.
 
-4. `Final Settlement:` Once verification is complete, the compressed proof or the validity proof is inscribed into the Bitcoin blockchain, ensuring final settlement.
+4. **Final Settlement:** Once verification is complete, the compressed proof or the validity proof is inscribed into the Bitcoin blockchain, ensuring final settlement.
 
 <img src="/assets/final-settlement.png" alt="final settlement" />
 
