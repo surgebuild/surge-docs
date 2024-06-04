@@ -6,9 +6,9 @@ MultiSig (multi-signature) creates a vault with multiple locks and keys, sharing
 
 <img className="md:w-[60%] mx-auto" src="/assets/multisig.png" alt="multisig" />
 
-**Pros:** Better security, as the keys are never stored in the same place (if properly constructed).
+`Pros:` Better security, as the keys are never stored in the same place (if properly constructed).
 
-**Cons:** Higher fees, less privacy, not universally supported.
+`Cons:` Higher fees, less privacy, not universally supported.
 
 ## 2. Secret Sharing Scheme (SSS)
 
@@ -20,9 +20,9 @@ The Secret Sharing Scheme (SSS) shares the responsibility for the vault’s secu
   alt="secret sharing scheme"
 />
 
-**Pros:** Similar fees, privacy, and universal support as a regular transaction. When not in use, the key parts reside in different places.
+`Pros:` Similar fees, privacy, and universal support as a regular transaction. When not in use, the key parts reside in different places.
 
-**Cons:** When created and used, the key is present in its complete form and thus susceptible to stealing from a single place.
+`Cons:` When created and used, the key is present in its complete form and thus susceptible to stealing from a single place.
 
 ### Threshold Signatures (TSS)
 
@@ -42,8 +42,8 @@ MPC based Threshold Signatures The MPC-based threshold signature scheme divides 
 
 <img src="/assets/mpc-tss.png" alt="mpc tss" />
 
-**Pros:** The different keys never meet each other, the Threshold Signatures vault is indistinguishable from a regular vault and hence universal, and it has the same privacy and cost (fees) as a regular vault.
+`Pros:` The different keys never meet each other, the Threshold Signatures vault is indistinguishable from a regular vault and hence universal, and it has the same privacy and cost (fees) as a regular vault.
 
-**Cons:** The shaping process is harder on performance, but due to recent advancements in this field very much feasible.
+`Cons:` The shaping process is harder on performance, but due to recent advancements in this field very much feasible.
 
 _Source:_ [https://mmasmoudi.medium.com/an-overview-of-multi-party-computation-mpc-threshold-signatures-tss-and-mpc-tss-wallets-4253adacd1b2](https://mmasmoudi.medium.com/an-overview-of-multi-party-computation-mpc-threshold-signatures-tss-and-mpc-tss-wallets-4253adacd1b2)
