@@ -10,7 +10,8 @@ export default defineConfig({
   },
   topNav: [{ text: "Surge Build", link: "https://www.surge.build/" }],
   theme: {
-    accentColor: "#f56949"
+    // accentColor: "#f56949"
+    accentColor: "#f4431b"
   },
   title: "Surge Docs",
   sidebar: {

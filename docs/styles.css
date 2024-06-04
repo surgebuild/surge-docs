@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 @layer vocs_preflight {
   @tailwind base;
@@ -6,6 +6,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
 img {
   border-radius: 8px;
 }
@@ -68,23 +71,23 @@ img {
 
 .vocs_Sidebar_item {
   @apply text-sm py-1.5 px-2;
-
+  font-weight: 400;
   border-radius: 0.3rem;
 }
 
 .vocs_Sidebar_item[data-active="true"] {
-  background-color: #b85c2f3b;
-  font-weight: bold;
+  font-weight: 600;
+  @apply hover:bg-[#f4431b1f];
 }
 
 .dark .vocs_Sidebar_item[data-active="true"] {
-  color: var(--vocs-color_textAccent);
-  background-color: #40241fbd;
-  font-weight: bold;
+  color: #f66949;
+  @apply hover:bg-[#f4431b1f];
 }
 
 .vocs_Footer {
   @apply py-0;
+  margin-bottom: 2.688rem;
 }
 
 .dark .vocs_HomePage_tagline {
@@ -163,4 +166,26 @@ img {
 
 .dark .vocs_Strong {
   @apply dark:text-[#e9e9ea];
+}
+
+.vocs_DocsLayout_sidebar {
+  width: 23.75rem; /* 380px */
+}
+
+.vocs_H1 {
+  font-weight: 700;
+  font-size: 2.25rem;
+}
+
+.vocs_Outline_link {
+  @apply hover:text-[#f4431b];
+  font-size: 14px;
+}
+
+.vocs_Outline_items {
+  @apply *:mb-5;
+}
+
+.vocs_Outline_heading {
+  display: none;
 }
