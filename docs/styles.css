@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 @layer vocs_preflight {
@@ -97,6 +98,7 @@ img {
   @apply !text-black;
 }
 
+
 .vocs_Code {
   font-weight: 700 !important;
   font-size: 1.05rem !important;
@@ -189,3 +191,4 @@ img {
 .vocs_Outline_heading {
   display: none;
 }
+
