@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-
 @layer vocs_preflight {
   @tailwind base;
 }
@@ -164,3 +162,4 @@ img {
 .dark .vocs_Strong {
   @apply dark:text-[#e9e9ea];
 }
+
