@@ -4,9 +4,9 @@
 
 This upgrade marked a pivotal change by segregating / separating the witness data from the rest of the transaction data.
 
-**Reduced Transaction Weight:** With Segwit, the calculation of transaction size for the purpose of determining fees is adjusted by giving less "weight" to the segregated witness data. This means that the part of the transaction that is segregated (the signatures) is counted as less than the rest of the transaction data when calculating its size. Therefore, even though the actual amount of data transmitted and stored by the network is the same, the "virtual size" of the transaction is smaller. This results in lower fees because fees are calculated based on this virtual size.
+`Reduced Transaction Weight:` With Segwit, the calculation of transaction size for the purpose of determining fees is adjusted by giving less "weight" to the segregated witness data. This means that the part of the transaction that is segregated (the signatures) is counted as less than the rest of the transaction data when calculating its size. Therefore, even though the actual amount of data transmitted and stored by the network is the same, the "virtual size" of the transaction is smaller. This results in lower fees because fees are calculated based on this virtual size.
 
-**Increased Block Capacity:** Additionally, by separating the witness data, Segwit transactions effectively increase the capacity of blocks without changing their size limit. This is because the witness data is counted differently, allowing more transactions to fit into a single block. More transactions per block can lead to lower fees during times of high demand, as the competition for space in a block decreases.
+`Increased Block Capacity:` Additionally, by separating the witness data, Segwit transactions effectively increase the capacity of blocks without changing their size limit. This is because the witness data is counted differently, allowing more transactions to fit into a single block. More transactions per block can lead to lower fees during times of high demand, as the competition for space in a block decreases.
 
 <img
   src="/assets/increased-block-capacity.png"
