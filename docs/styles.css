@@ -30,7 +30,7 @@ img {
 }
 ::-webkit-scrollbar-thumb {
   background: #d9d9d9;
-  border-radius: 9999px ;
+  border-radius: 9999px;
 }
 .dark ::-webkit-scrollbar-thumb {
   background: #4a4a4a;
@@ -126,13 +126,13 @@ img {
 .vocs_Strong {
   font-weight: 700 !important;
   font-size: 1rem !important;
-  color: #1f1f1f !important;
+  color: #1f1f1f;
   /* color: #f56949; */
 }
 
 .vocs_Paragraph {
   font-weight: 400 !important;
-  color: #1f1f1f !important;
+  color: #1f1f1f;
 }
 
 .vocs_Subtitle {
@@ -150,11 +150,17 @@ img {
   font-weight: 400 !important;
 }
 
-.vocs_Sidebar_item {
-  font-weight: 400 !important;
-  color: #1f1f1f;
-}
-
 .vocs_Footer_navigationTextInner {
   font-size: 1rem;
+}
+
+.dark .vocs_Paragraph {
+  @apply dark:text-[#cfcfcf];
+}
+.dark .vocs_Subtitle {
+  @apply dark:text-[#bdbdbe] !important;
+}
+
+.dark .vocs_Strong {
+  @apply dark:text-[#e9e9ea];
 }
