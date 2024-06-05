@@ -1,46 +1,44 @@
 # ↳ 2️⃣ ZKP Verifier Network [PoS based ZKP verifier network]
 
-Our ultimate goal is to enable native verification of Zero-Knowledge Proofs (ZKPs) within Bitcoin blocks. This advancement requires the introduction of new opcodes—such as **OP_verifystarkproof** in Bitcoin's script language. We believe that these necessary changes will evolve and be adapted over time
+Our ultimate goal is to enable native verification of Zero-Knowledge Proofs (ZKPs) within Bitcoin blocks. This advancement requires the introduction of new opcodes—such as OP_verifystarkproof in Bitcoin's script language. We believe that these necessary changes will evolve and be adapted over time, until then we are developing a ZKP Verifier Network.
 
 ## Building a PoS-Backed ZKP Verifier Network
 
-We are concurrently developing a Proof-of-Stake (PoS) backed ZKP verifier network. This network functions in the following manner:
+We are concurrently developing a Proof-of-Stake (PoS) backed Zero knowledge Proof (ZKP) Verifier Network.
+
+This ZKP network functions in the following manner:
 
 - **Prover's Role:** A prover generates ZK proofs reflecting the state differences of Bitcoin Layer 2, which are then inscribed onto the Bitcoin Layer.
 
-- **Validator's Duty:** These proofs are retrieved by the PoS-backed verifier network. Validators within the network meticulously review each proof, and any discrepancies are promptly challenged, ensuring only valid transactions are confirmed.
+- **Validator's Duty:** Proofs submitted to the validator network are meticulously reviewed, and any discrepancies are promptly challenged, ensuring only valid proofs are confirmed and inscribed onto Bitcoin.
 
 <img src="/assets/zkp-verifier-network.png" alt="zkp verifier network" />
 
 ## The Critical Role of the ZKP Verifier Network
 
-The ZKP verifier network is fundamental in enhancing the security and trust of Layer 2 state transitions. Key roles of the network include:
+The ZKP verifier network is fundamental in enhancing the security and trust of Layer 2 state transitions. Key roles of the ZKP network include:
 
 - **Ensuring Secure Correctness of L2 State Transitions:** By accurately validating the state changes of Layer 2 transactions, the network guarantees their correctness.
 
 - **Decentralizing Trust:** The verifier network distributes the trust assumptions associated with validity proofs, mitigating the risks linked to centralized verification processes.
 
-<img src="/assets/user-tx.png" alt="user tx" />
-
-<img src="/assets/critical-role.png" alt="critical role" />
+<img src="/assets/zkp-verifier-overview.png" alt="user tx" />
 
 ## Need for a ZKP Verifier Network
 
 In typical Validium ZK rollup setups, transaction data is pushed to an off-chain data availability layer and publishes zero-knowledge proofs to verify off-chain transactions on Layer 1.
 
-<img className="md:w-[80%] mx-auto" src="/assets/zkp-need.png" alt="zkp need" />
-
-However, the non-Turing-complete nature of Bitcoin's scripting language limits its ability to verify these proofs. To address this, our ZKP verifier network ensures that the proofs submitted are compatible and can be verified with BitVM2, enabling native verification on the Bitcoin Layer.
+However, the non-Turing-complete nature of Bitcoin's scripting language limits its proof verification capabilities. To address this, our Zero-Knowledge Proof (ZKP) verifier network ensures that the submitted proofs are compatible, verifiable with BitVM2, and can be natively verified on the Bitcoin Layer.
 
 ## How the ZKP Verification Happens:
 
-1. **Proof Generation:** Bitcoin rollups generate an initial proof on the client side. This proof is dispatched to a prover network—a marketplace of provers responsible for generating the full proofs. These proofs are then compressed using zk proof recursion.
+1. **Proof Generation:** Bitcoin rollups initiate the process by generating a bundle of transactions on the client side. This bundle is then sent to the Prover Network, a marketplace of provers that generate zero-knowledge proofs for the transactions. These proofs are subsequently compressed using ZK proof recursion and passed to the ZKP Verifier Network.
 
-2. **Validation in ZKP Verifier Network:** Validators in the PoS-backed verifier network continuously monitor for new proofs. Once detected, these proofs are retrieved and queued for validation. The validators thoroughly check each proof against the claimed state changes. If discrepancies are found, a challenge is initiated, triggering a secondary verification process to ensure only valid proofs are accepted. This process uses ZKSTARKs with ZKVM's instruction set of RISC-V for efficient and scalable validation.
+2. **Validation in ZKP Verifier Network:** Verifiers in the Proof of Stake (PoS)-backed network consistently monitor for new proofs. When detected, these proofs are gathered and queued for validation. Validators meticulously examine each proof against the claimed state changes. If inconsistencies are detected, a challenge is launched, initiating a secondary verification process to guarantee only valid proofs are accepted. This process leverages ZK-Stark along with the instruction set of RISC-V as used in Zero-Knowledge Virtual Machine (ZKVM) for efficient and scalable validation.
 
 3. **Decentralized Verification:** The decentralized verifier network consists of validator nodes and guardian nodes. Proof recursion can occur every 100 blocks or every few hours, after which the proofs are verified within the network.
 
-4. **Final Settlement:** Once verification is complete, the compressed proof or the validity proof is inscribed into the Bitcoin blockchain, ensuring final settlement.
+4. **Final Settlement:** Once verification is complete, the aggregated proof or the validity proof is inscribed into the Bitcoin blockchain, ensuring final settlement.
 
 <img src="/assets/final-settlement.png" alt="final settlement" />
 
