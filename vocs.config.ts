@@ -7,7 +7,7 @@ export default defineConfig({
     light: "/logo/logo-light.png",
     dark: "/logo/logo-dark.png",
   },
-  ogImageUrl: "/surge-docs.png",
+  ogImageUrl: "https://surge-docs.vercel.app/surge-docs.png",
   font: {
     google: "Inter",
   },
