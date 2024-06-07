@@ -8,7 +8,7 @@ export default defineConfig({
   font: {
     google: "Inter"
   },
-  topNav: [{ text: "Surge Build", link: "https://www.surge.build/" }],
+  topNav: [{ text: "surge.build", link: "https://www.surge.build/" }],
   theme: {
     // accentColor: "#f56949"
     accentColor: "#f4431b"
@@ -20,12 +20,16 @@ export default defineConfig({
         text: "OVERVIEW",
         items: [
           {
-            text: "Introduction to Surge",
+            text: "Introduction",
             link: "/overview/introduction"
           },
           {
             text: "Why Surge?",
             link: "/overview/why-surge"
+          },
+          {
+            text: "Quick Links",
+            link: "/overview/quick-links"
           }
         ]
       },
