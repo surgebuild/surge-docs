@@ -1,10 +1,50 @@
 ---
 title: Surge | Node Setup Guide
-description: Coming soon... Set up a Superstack verifier node
+description: Setup Nodes for Devnet
 ---
 
-# Node Setup Guide [Set up a Superstack verifier node]
+# Node Setup Guide [Step by Step guide to set up up nodes to participate in Devnet]
+**Custom Signet Explorer**: https://mempool.signet.surge.dev
 
-Step by Step guide to setup a node for Surge Superstack layer
+This guide provides a step-by-step walkthrough for setting up nodes to participate in the Surge Devnet. It covers the setup of a custom Bitcoin Signet node and a Surge node.
 
-**Coming Soon...**
+>Note: This guide is actively under development and may change
+
+### Step 1: Install Docker
+
+Install Docker from [here](https://docs.docker.com/get-docker/)
+
+### Step 2: Setup Bitcoin Signet Node
+
+Clone the Bitcoin Signet repository and navigate to the folder:
+
+```sh copy
+git clone https://github.com/surgebuild/bitcoin-signet && cd bitcoin_signet
+````
+
+### Step 3: Build & run the Signet container using Docker compose file:
+
+```sh copy
+docker compose up -d
+```
+
+### Step 4: Verify Node
+
+Verify if the node is running by checking the peer info:
+
+Access the container:
+
+```sh copy 
+docker exec -it bitcoin-signet-bitcoind bash
+```
+
+Inside the container, check peer info:
+
+```sh copy 
+bitcoin-cli getpeerinfo
+```
+Once verified, you can exit the container by typing exit
+
+### Step 5: Setup Surge Node
+
+Coming Soon...
