@@ -1,42 +1,47 @@
 ---
 title: Surge | Node Setup Guide
-description: Setup Surge Devnet
+description: Setup Nodes for Devnet
 ---
 
-# Node Setup Guide [Step by Step guide to setup a node for Surge Devnet]
+# Node Setup Guide [Step by Step guide to set up up nodes to participate in Devnet]
+This guide provides a step-by-step walkthrough for setting up nodes to participate in the Surge Devnet. It covers the setup of a custom Bitcoin Signet node and a Surge node.
 
-
+>Note: This guide is actively being developed and may change.
 
 ### Step 1: Install Docker
 
-Install Docker from [here](https://docs.docker.com/get-docker/).
+Install Docker from [here](https://docs.docker.com/get-docker/)
 
-### Step 2: Setup Bitcoin Signet
+### Step 2: Setup Bitcoin Signet Node
 
-Clone the Bitcoin Signet Container and navigate to the folder:
+Clone the Bitcoin Signet repository and navigate to the folder:
 
 ```sh copy
 git clone https://github.com/surgebuild/bitcoin-signet && cd bitcoin_signet
 ````
 
-### Step 3: Build & Run  Signet Container using Docker compose file
+### Step 3: Build & run the Signet container using Docker compose file:
 
 ```sh copy
 docker compose up -d
 ```
 
-### Step 4: Verify 
+### Step 4: Verify Node
 
-Verify whether the node is running or net
+Verify if the node is running by checking the peer info:
+
+Access the container:
 
 ```sh copy 
 docker exec -it bitcoin-signet-bitcoind bash
 ```
-inside the container
 
+Inside the container, check peer info:
 
 ```sh copy 
 bitcoin-cli getpeerinfo
 ```
 
+### Step 5: Setup Surge Node
 
+Coming Soon...
