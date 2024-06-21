@@ -4,9 +4,11 @@ description: Setup Nodes for Devnet
 ---
 
 # Node Setup Guide [Step by Step guide to set up up nodes to participate in Devnet]
+**Custom Signet Explorer**: https://mempool.signet.surge.dev
+
 This guide provides a step-by-step walkthrough for setting up nodes to participate in the Surge Devnet. It covers the setup of a custom Bitcoin Signet node and a Surge node.
 
->Note: This guide is actively being developed and may change.
+>Note: This guide is actively under development and may change
 
 ### Step 1: Install Docker
 
@@ -41,6 +43,7 @@ Inside the container, check peer info:
 ```sh copy 
 bitcoin-cli getpeerinfo
 ```
+Once verified, you can exit the container by typing exit
 
 ### Step 5: Setup Surge Node
 
