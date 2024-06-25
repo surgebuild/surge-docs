@@ -1,8 +1,7 @@
 import { defineConfig } from "vocs";
 
 export default defineConfig({
-  description:
-    "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
+  description: "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
   logoUrl: {
     light: "/logo/logo-light.png",
     dark: "/logo/logo-dark.png",
@@ -46,10 +45,6 @@ export default defineConfig({
           {
             text: "Journey of Rollups on Bitcoin",
             link: "/basics/journey-of-rollups-on-bitcoin",
-          },
-          {
-            text: "ZKPs for Bitcoin Rollups",
-            link: "/basics/zero-knowledge-for-bitcoin",
           },
           {
             text: "Bitcoin as a Settlement Layer",
@@ -143,6 +138,10 @@ export default defineConfig({
                 link: "/surge-building-blocks/customizations/alternative-data-availability",
               },
             ],
+          },
+          {
+            text: "#️⃣ Bitcoin ZK Rollups",
+            link: "/surge-building-blocks/bitcoin-zk-rollups",
           },
         ],
       },
