@@ -3,15 +3,15 @@ title: Surge Architecture
 description: A Modular novel approach taken by Surge to Scale Bitcoin ecosystem via Rollups (L2's)
 ---
 
-# Architecture [A Modular novel approach taken by Surge to Scale Bitcoin ecosystem via Rollups (L2's)]
+# Architecture
 
 ## Overview
 
-Surge leverages a modular architecture to streamline the deployment of Bitcoin Layer 2 (L2) solutions. This design enables a clear separation of concerns across different layers, simplifying development while maintaining high security and performance standards.
+We took a modular first approach to design our architecture. This not only ensures a highly customisable and tailored end product but also heightens the security & performance of L2s built on us.
 
 ## Modular Architecture Model
 
-Surge provides a layered approach for launching the Bitcoin Rollups by separating the Executions, Settlement and Data Layer
+Surge provides a layered approach for launching Bitcoin rollups by separating the Executions, Settlement and Data Availability
 
 1. **Execution Layer:** Supports multiple virtual machines (VMs) including EVM and MoveVM, allowing developers to build on various rollup frameworks.
 
@@ -27,11 +27,11 @@ Surge provides comprehensive tooling for dApps, enabling them to easily integrat
 
 ### Execution & Frameworks
 
-We will be supporting multiple VMs from EVM, MoveVM, etc., with Initial support for EVM and MoveVM, and planned extensions to other VMs for enhanced flexibility. This also, lets us build on top of any rollup framework like OPStack or Arbitrum Orbit. and Transactions are batched on the Rollups and Zk proofs are generated.
+Out of the box, we plan on supporting multiple VMs like EVM, MoveVM., with planned extensions to other VMs for enhanced flexibility. This also, lets us build on top of any rollup framework like OPStack or Arbitrum Orbit and transactions are batched via rollups thereby generating ZK proofs.
 
-### Superstack
+### Surge Superstack
 
-Superstack accepts the ZK proofs from the execution layers and pushes the transaction data to the DA layer and Merkle state hash to the Bitcoin through inscriptions. Once the inscribed data settles on the Bitcoin we are inheriting the Bitcoin security. It's a PoS protocol-based network which secures the network and facilitates the proof verification.
+Our proprietary Surge Superstack layer acts as an intermediary and accepts the ZK proofs from the execution layers and pushes the transaction data to the DA layer and Merkle state hash to the Bitcoin L1 layer through inscriptions. Once the inscribed data settles on the Bitcoin we are inheriting the Bitcoin security. We’re building a PoS protocol-based network which secures the network and facilitates the proof verification.
 
 <img
   className="md:w-[60%] mx-auto"
@@ -39,11 +39,11 @@ Superstack accepts the ZK proofs from the execution layers and pushes the transa
   alt="superstack"
 />
 
-Superstack also contains MPC TSS-based network nodes for Bridging the assets from Bitcoin to Rollups. And also services like Oracle, indexers etc., which are being explored.
+Superstack also contains MPC TSS-based network nodes for bridging the assets from Bitcoin to rollups.
 
 ### Bitcoin Settlement
 
-We inscribe validated proofs into the Bitcoin blockchain, which can be verified by anyone operating a Bitcoin node. By doing so, we leverage the inherent security of Bitcoin to ensure the integrity of these proofs once they are settled on the blockchain. Our ultimate goal is to integrate verification directly within the Bitcoin layer, fostering significant innovation and enhancing the robustness of this process.
+As our proofs are directly inscribed onto Bitcoin L1, they can be verified by anyone operating a Bitcoin node. By doing so, we leverage the inherent security of Bitcoin to ensure the integrity of these proofs once they are settled on the blockchain. Our ultimate goal is to integrate verification directly within the Bitcoin layer, fostering significant innovation and enhancing the robustness of this process.
 
 ### Data Availability
 
@@ -52,18 +52,6 @@ Surge offers multiple Data Availability (DA) layer options to suit different req
 - Native Bitcoin DAs: Options like Nubit for those preferring integration closely tied to Bitcoin.
 
 - Non-native DA Layers: Alternatives like Avail, Eigen DA, and Celestia DA, offer flexibility and scalability.
-
-## Surge Superstack Layer
-
-#### Core Components
-
-The Superstack layer acts as the foundation of Surge’s architecture, integrating several key components:
-
-- [Bridging of BTC:](/surge-building-blocks/mpc-tss-bridge) Facilitates secure transactions between Bitcoin and various L2 solutions.
-
-- [Verification Layer:](/surge-building-blocks/zkp-verifier-network) Utilizes Zero-Knowledge Proofs (ZKP) to validate transactions.
-
-- [Utilities:](/surge-building-blocks/utilities/overview) Includes essential services like oracles and indexers, supporting a broad array of applications.
 
 ## Architecture Layers
 
