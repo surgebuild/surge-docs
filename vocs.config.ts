@@ -139,6 +139,10 @@ export default defineConfig({
               },
             ],
           },
+          {
+            text: "#️⃣ Bitcoin ZK Rollups",
+            link: "/surge-building-blocks/bitcoin-zk-rollups",
+          },
         ],
       },
       {
