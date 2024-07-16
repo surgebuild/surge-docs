@@ -3,6 +3,8 @@ title: Surge | MPC TSS Bridge
 description: 2 way Peg with MPC TSS based Network Nodes for BTC Bridge
 ---
 
+import ZoomImage from "../../components/ZoomImage";
+
 # ↳ 1️⃣ MPC TSS Bridge [2 way Peg with MPC TSS based Network Nodes for BTC Bridge]
 
 Unlike traditional BTC bridges that rely on central custodians or multi-signature federations, Surge introduces a novel approach leveraging a verifier network powered by Multi-Party Computation (MPC) Threshold Signature Scheme (TSS).
@@ -11,7 +13,7 @@ Unlike traditional BTC bridges that rely on central custodians or multi-signatur
 
 Traditional BTC bridges operate under the control of either a central custodian or a federation, introducing potential points of failure and trust dependencies
 
-<img
+<ZoomImage
   className="md:w-[80%] mx-auto"
   src="/assets/high-level-overview.png"
   alt="high level overview"
@@ -23,7 +25,7 @@ Surge, however, employs a decentralized verifier network, which utilizes MPC to 
 
 The two-way peg in Surge is designed to facilitate unilateral withdrawals, allowing users to exit the system at their discretion without compromising security. This is powered by use of MPC technology, which significantly reduces trust requirements.
 
-<img src="/assets/two-way-peg.png" alt="two way peg" />
+<ZoomImage src="/assets/two-way-peg.png" alt="two way peg" />
 
 By integrating MPC technology within a verifier network that accesses the Data Availability (DA) layer to validate proofs submitted by provers, we ensure the secure and private release of funds
 

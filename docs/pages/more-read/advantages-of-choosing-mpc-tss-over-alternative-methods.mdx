@@ -3,13 +3,19 @@ title: MPC TSS Over Alternative Methods
 description: Advantages of Choosing MPC TSS Over Alternative Methods
 ---
 
+import ZoomImage from "../../components/ZoomImage";
+
 # Advantages of Choosing MPC TSS Over Alternative Methods
 
 ## 1. MultiSig
 
 MultiSig (multi-signature) creates a vault with multiple locks and keys, sharing the responsibility for its security. It can create a mechanism that requires only some keys to open the vault, making it more secure against key duplication
 
-<img className="md:w-[60%] mx-auto" src="/assets/multisig.png" alt="multisig" />
+<ZoomImage
+  className="md:w-[60%] mx-auto"
+  src="/assets/multisig.png"
+  alt="multisig"
+/>
 
 **Pros:** Better security, as the keys are never stored in the same place (if properly constructed).
 
@@ -19,7 +25,7 @@ MultiSig (multi-signature) creates a vault with multiple locks and keys, sharing
 
 The Secret Sharing Scheme (SSS) shares the responsibility for the vault’s security by breaking the key into multiple pieces. This can be done in a redundant manner such that only a certain amount of key pieces can be reassembled into a functioning key. The key pieces can be assigned to multiple parties
 
-<img
+<ZoomImage
   className="md:w-[60%] mx-auto"
   src="/assets/secret-sharing-scheme.png"
   alt="secret sharing scheme"
@@ -35,7 +41,7 @@ Threshold Signatures (TSS) allows parties to share the capability of digitally s
 
 Threshold signatures require a subset of parties authorised to produce signatures on behalf of the group. The message is only considered signed if a threshold (t out of n, t = threshold of signers, n = number of total signers) of signers sign off on the message.
 
-<img
+<ZoomImage
   className="md:w-[80%] mx-auto"
   src="/assets/threshold-signatures.png"
   alt="threshold signatures"
@@ -45,7 +51,7 @@ Threshold signatures require a subset of parties authorised to produce signature
 
 MPC based Threshold Signatures The MPC-based threshold signature scheme divides the private key into many “fragments” in some way, and these fragments are held by multiple parties. When a signature is needed, the multi-party computation ensures that these fragments can directly generate a legitimate signature without putting them together. “No need to put it all together” means that the real private key is never and does not need to appear.
 
-<img src="/assets/mpc-tss.png" alt="mpc tss" />
+<ZoomImage src="/assets/mpc-tss.png" alt="mpc tss" />
 
 **Pros:** The different keys never meet each other, the Threshold Signatures vault is indistinguishable from a regular vault and hence universal, and it has the same privacy and cost (fees) as a regular vault.
 

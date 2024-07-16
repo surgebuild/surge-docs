@@ -3,6 +3,8 @@ title: Bitcoin ZK Rollups
 description: The role of Zero knowledge proofs in Bitcoin L2s
 ---
 
+import ZoomImage from "../../components/ZoomImage";
+
 # Bitcoin ZK Rollups
 
 Zero-Knowledge (ZK) proofs significantly enhance the scalability, security, and efficiency of blockchain technologies. ZK-Rollups, in particular, are a type of Layer 2 scaling solution that can significantly improve Bitcoin's transaction throughput and reduce computational load on the main blockchain..
@@ -12,7 +14,7 @@ The key idea behind ZK-Rollups is to batch multiple transactions into a single c
 ZK-Rollups manage blockchain bloat by reducing on-chain data. They post only the proof and minimal transaction data. The ZK proofs alone assure the correctness of transactions, which can be verified much faster.
 
 <p align="center">
-  <img width="90%" src="/assets/zkflow.png" alt="Understanding rollups" />
+  <ZoomImage width="90%" src="/assets/zkflow.png" alt="Understanding rollups" />
 </p>
 ### How Bitcoin ZK-Rollups work?{" "}
 
@@ -22,7 +24,11 @@ proofs, ensuring that all transactions in the rollup batch are valid without rev
 any transaction details.
 
 <p align="center">
-  <img width="100%" src="/assets/bitcoin-zk.png" alt="Understanding rollups" />
+  <ZoomImage
+    width="100%"
+    src="/assets/bitcoin-zk.png"
+    alt="Understanding rollups"
+  />
 </p>
 
 Some of the Benefits for ZKPs are being explored as a way to enhance Bitcoin Rollups in several ways:
