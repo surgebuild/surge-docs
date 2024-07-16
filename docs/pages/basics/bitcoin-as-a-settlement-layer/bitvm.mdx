@@ -3,6 +3,8 @@ title: BitVM
 description: Unleashing Smart Contract Capabilities on Bitcoin
 ---
 
+import ZoomImage from "../../../components/ZoomImage";
+
 # BitVM [Unleashing Smart Contract Capabilities on Bitcoin]
 
 BitVM is an approach that introduces the concept of Turing-complete smart contracts to the Bitcoin blockchain, without necessitating any changes to Bitcoin's consensus rules. It's built on the foundation of existing Bitcoin opcodes like hash locks, timelocks, and large Taproot trees, making the blockchain capable of verifying complex computations off-chain through a mechanism known as optimistic rollups​​​​.
@@ -15,7 +17,7 @@ However, BitVM also faces certain limitations, particularly in its current form 
 
 BitVM takes problem solving logic outside Bitcoin
 
-<img
+<ZoomImage
   className="md:w-[75%] mx-auto"
   src="/assets/how-bitvm-works.png"
   alt="how bitvm works"
@@ -25,7 +27,7 @@ BitVM takes problem solving logic outside Bitcoin
 
 All computer programs are executed using logic gates
 
-<img
+<ZoomImage
   className="md:w-[40%] w-[60%] mx-auto"
   src="/assets/bitvm-output.png"
   alt="bitvm output"
@@ -33,7 +35,7 @@ All computer programs are executed using logic gates
 
 The most interesting gate is NAND gate. Because using only NAND gates, you can build any other logic gate. BitVM uses Hashlocks, OP_BOOLAND and OP_NOT to make NAND
 
-<img
+<ZoomImage
   className="md:w-[60%] w-[80%] mx-auto"
   src="/assets/hashlocks.png"
   alt="hashlocks"

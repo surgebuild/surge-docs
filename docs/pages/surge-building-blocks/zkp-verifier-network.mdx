@@ -3,6 +3,8 @@ title: Surge | ZKP Verifier Network
 description: PoS based ZKP verifier network
 ---
 
+import ZoomImage from "../../components/ZoomImage";
+
 # ↳ 2️⃣ ZKP Verifier Network [PoS based ZKP verifier network]
 
 Our ultimate goal is to enable native verification of Zero-Knowledge Proofs (ZKPs) within Bitcoin blocks. This advancement requires the introduction of new opcodes—such as OP_verifystarkproof in Bitcoin's script language. We believe that these necessary changes will evolve and be adapted over time, until then we are developing a ZKP Verifier Network.
@@ -17,7 +19,10 @@ This ZKP network functions in the following manner:
 
 - **Validator's Duty:** Proofs submitted to the validator network are meticulously reviewed, and any discrepancies are promptly challenged, ensuring only valid proofs are confirmed and inscribed onto Bitcoin.
 
-<img src="/assets/zkp-verifier-network.png" alt="zkp verifier network" />
+  <ZoomImage
+    src="/assets/zkp-verifier-network.png"
+    alt="zkp verifier network"
+  />
 
 ## The Critical Role of the ZKP Verifier Network
 
@@ -27,7 +32,7 @@ The ZKP verifier network is fundamental in enhancing the security and trust of L
 
 - **Decentralizing Trust:** The verifier network distributes the trust assumptions associated with validity proofs, mitigating the risks linked to centralized verification processes.
 
-<img src="/assets/zkp-verifier-overview.png" alt="user tx" />
+<ZoomImage src="/assets/zkp-verifier-overview.png" alt="user tx" />
 
 ## Need for a ZKP Verifier Network
 
@@ -45,18 +50,18 @@ However, the non-Turing-complete nature of Bitcoin's scripting language limits i
 
 4. **Final Settlement:** Once verification is complete, the aggregated proof or the validity proof is inscribed into the Bitcoin blockchain, ensuring final settlement.
 
-<img src="/assets/final-settlement.png" alt="final settlement" />
+<ZoomImage src="/assets/final-settlement.png" alt="final settlement" />
 
 ## Reviewing zkVMs and Their Components:
 
 As part of our ZKP verification layer, we are actively reviewing various zkVMs (Zero-Knowledge Virtual Machines) and their components
 
-<img src="/assets/virtual-machines.png" alt="virtual machines" />
+<ZoomImage src="/assets/virtual-machines.png" alt="virtual machines" />
 
 For integration we are particularly reviewing the prover & verification component
 to facilitate the zk Rollup execution
 
-<img src="/assets/zk-rollup-execution.png" alt="zk rollup execution" />
+<ZoomImage src="/assets/zk-rollup-execution.png" alt="zk rollup execution" />
 
 ## Future Roadmap also includes using BitVM for On-Chain Verification
 

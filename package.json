@@ -11,6 +11,7 @@
     "@types/react": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-medium-image-zoom": "^5.2.8",
     "typescript": "latest",
     "vocs": "latest"
   }

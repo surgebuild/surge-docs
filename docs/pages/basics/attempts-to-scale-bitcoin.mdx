@@ -1,7 +1,9 @@
 ---
 title: Attempts to Scale Bitcoin
-description: So far attempts made to scale Bitcoin]
+description: So far attempts made to scale Bitcoin
 ---
+
+import ZoomImage from "../../components/ZoomImage";
 
 # Attempts to Scale Bitcoin [So far attempts made to scale Bitcoin]
 
@@ -13,7 +15,7 @@ This upgrade marked a pivotal change by segregating / separating the witness dat
 
 **Increased Block Capacity:** Additionally, by separating the witness data, Segwit transactions effectively increase the capacity of blocks without changing their size limit. This is because the witness data is counted differently, allowing more transactions to fit into a single block. More transactions per block can lead to lower fees during times of high demand, as the competition for space in a block decreases.
 
-<img
+<ZoomImage
   src="/assets/increased-block-capacity.png"
   alt="Increased block capacity"
   className="md:w-[60%] w-[80%] mx-auto"
@@ -21,7 +23,7 @@ This upgrade marked a pivotal change by segregating / separating the witness dat
 
 This reduced transaction times and increased block capacity beyond the initial 1MB limit set by Satoshi Nakamoto in 2010 .
 
-<img
+<ZoomImage
   src="/assets/block-size.png"
   alt="Block size"
   className="md:w-[60%] w-[80%] mx-auto"
