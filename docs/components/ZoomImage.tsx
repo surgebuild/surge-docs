@@ -12,7 +12,12 @@ export default function ZoomImage({
   className?: string;
 }) {
   return (
-    <Zoom>
+    <Zoom
+      zoomImg={{
+        className: "custom-zoom-image", // Apply custom zoom image class
+      }}
+      zoomMargin={80}
+    >
       <img
         src={src}
         alt={alt}

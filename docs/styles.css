@@ -189,3 +189,14 @@ img {
 .vocs_Outline_heading {
   display: none;
 }
+
+.custom-zoom-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-zoom-image {
+  max-width: 80%; /* Adjust as needed */
+  max-height: 80%; /* Adjust as needed */
+}
