@@ -200,3 +200,14 @@ img {
   max-width: 80%; /* Adjust as needed */
   max-height: 80%; /* Adjust as needed */
 }
+
+@media (max-width: 767px) {
+  .custom-zoom-overlay {
+    display: block; /* Reset overlay to default behavior on mobile */
+  }
+
+  .custom-zoom-image {
+    max-width: none; /* Reset image to default size on mobile */
+    max-height: none; /* Reset image to default size on mobile */
+  }
+}

@@ -16,7 +16,7 @@ export default function ZoomImage({
       zoomImg={{
         className: "custom-zoom-image", // Apply custom zoom image class
       }}
-      zoomMargin={80}
+      zoomMargin={20}
     >
       <img
         src={src}
