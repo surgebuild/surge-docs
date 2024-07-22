@@ -7,17 +7,17 @@ import ZoomImage from "../../components/ZoomImage";
 
 # ZKP Verifier Network [PoS based ZKP verifier network]
 
-Our ultimate goal is to enable native verification of Zero-Knowledge Proofs (ZKPs) within Bitcoin blocks. This advancement requires the introduction of new opcodes—such as OP_verifystarkproof in Bitcoin's script language. We believe that these necessary changes will evolve and be adapted over time, until then we are developing a ZKP Verifier Network.
+Our ultimate goal is to enable native verification of Zero-Knowledge Proofs (ZKPs) within Bitcoin blocks. This advancement requires the introduction of new opcodes—such as OP_verifystarkproof in Bitcoin's script language. To address this gap, we are developing a unique ZKP Verifier Network that can be seamlessly integrated with Bitcoin. This module will enable information to be verified and then inscribed onto the Bitcoin blockchain, ensuring enhanced security and reliability until native support is fully developed and adopted.
 
 ## Building a PoS-Backed ZKP Verifier Network
 
-We are concurrently developing a Proof-of-Stake (PoS) backed Zero knowledge Proof (ZKP) Verifier Network.
+We are developing a Proof-of-Stake (PoS) based Zero knowledge Proof (ZKP) Verifier Network.
 
-This ZKP network functions in the following manner:
+- The ZKP Network is built on Cosmos SDK, with modules developed for verifying proofs generated in RISC Zero or SP1.
 
-- **Prover's Role:** A prover generates ZK proofs reflecting the state differences of Bitcoin Layer 2, which are then inscribed onto the Bitcoin Layer.
+- Proofs submitted to the validator network are verified, and any discrepancies are promptly challenged, ensuring only valid proofs are confirmed
 
-- **Validator's Duty:** Proofs submitted to the validator network are meticulously reviewed, and any discrepancies are promptly challenged, ensuring only valid proofs are confirmed and inscribed onto Bitcoin.
+- Confirmed proofs are then queued for inscription onto bitcoin. By doing so inheriting the security of Bitcoin.
 
   <ZoomImage
     src="/assets/zkp-verifier-network.png"
@@ -26,9 +26,9 @@ This ZKP network functions in the following manner:
 
 ## The Critical Role of the ZKP Verifier Network
 
-The ZKP verifier network is fundamental in enhancing the security and trust of Layer 2 state transitions. Key roles of the ZKP network include:
+The ZKP verifier network is fundamental in enhancing the security and trust of Layer 2 state transitions. The key roles of the ZKP network include:
 
-- **Ensuring Secure Correctness of L2 State Transitions:** By accurately validating the state changes of Layer 2 transactions, the network guarantees their correctness.
+- **Ensuring Secure Correctness of L2 State Transitions:** By accurately verifying the proofs of state changes of Layer 2 transactions, the network guarantees their correctness.
 
 - **Decentralizing Trust:** The verifier network distributes the trust assumptions associated with validity proofs, mitigating the risks linked to centralized verification processes.
 
@@ -51,18 +51,3 @@ However, the non-Turing-complete nature of Bitcoin's scripting language limits i
 4. **Final Settlement:** Once verification is complete, the aggregated proof or the validity proof is inscribed into the Bitcoin blockchain, ensuring final settlement.
 
 <ZoomImage src="/assets/final-settlement.png" alt="final settlement" />
-
-## Reviewing zkVMs and Their Components:
-
-As part of our ZKP verification layer, we are actively reviewing various zkVMs (Zero-Knowledge Virtual Machines) and their components
-
-<ZoomImage src="/assets/virtual-machines.png" alt="virtual machines" />
-
-For integration we are particularly reviewing the prover & verification component
-to facilitate the zk Rollup execution
-
-<ZoomImage src="/assets/zk-rollup-execution.png" alt="zk rollup execution" />
-
-## Future Roadmap also includes using BitVM for On-Chain Verification
-
-With BitVM Program, we have the capability to verify validity proofs directly on the Bitcoin layer. Leveraging BitVM, we are exploring a framework that iteratively fetches ZK proofs from Bitcoin blocks and authenticates these proofs. This process ensures the integrity and finality of state differences in Layer 2 networks. But BitVM is still under development and needs lot of work before ready.
