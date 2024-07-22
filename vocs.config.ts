@@ -48,7 +48,7 @@ export default defineConfig({
         text: "SURGE BUILDING BLOCKS",
         items: [
           {
-            text: "Architecture",
+            text: "🌟 Architecture",
             link: "/surge-building-blocks/architecture",
           },
           {
@@ -114,6 +114,10 @@ export default defineConfig({
         text: "MORE READ",
         items: [
           {
+            text: "Upcoming Bitcoin L2's",
+            link: "/more-read/upcoming-bitcoin-l2s",
+          },
+          {
             text: "Bitcoin as a Settlement Layer",
             collapsed: true,
             items: [
@@ -146,17 +150,12 @@ export default defineConfig({
             ],
           },
           {
-            text: "How RaaS Interface will Evolve?",
-            link: "/more-read/how-raas-interface-will-evolve",
-          },
-          {
-            text: "Upcoming Bitcoin L2's",
-            link: "/more-read/upcoming-bitcoin-l2s",
-          },
-
-          {
             text: "Attempts to Scale Bitcoin",
             link: "/basics/attempts-to-scale-bitcoin",
+          },
+          {
+            text: "How RaaS Interface will Evolve?",
+            link: "/more-read/how-raas-interface-will-evolve",
           },
           // {
           //   text: "Bitcoin Scaling Trilemma",
