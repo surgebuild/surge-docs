@@ -17,25 +17,30 @@ However, the non-Turing-complete nature of Bitcoin's scripting language limits i
 
 ## Building a PoS-Backed ZKP Verifier Network
 
-We are developing a Proof-of-Stake (PoS) based Zero knowledge Proof (ZKP) Verifier Network.
-
 We are developing an innovative Proof-of-Stake (PoS) based Zero Knowledge Proof (ZKP) Verifier Network. This network is designed to ensure secure and efficient proof verification with the following key components and principles:
 
-### Built on Cosmos SDK
+- ### Built on Cosmos SDK :
 
-Our ZKP Verifier Network is constructed using the Cosmos SDK, a powerful and modular framework that allows for the development of scalable and interoperable blockchain applications. By leveraging the Cosmos SDK, we ensure our network is both robust and adaptable to future advancements.
+  Our ZKP Verifier Network is constructed using the Cosmos SDK, a powerful and modular framework that allows for the development of scalable and interoperable blockchain applications. By leveraging the Cosmos SDK, we ensure our network is both robust and adaptable to future advancements.
 
-### Proof Verification Modules
+  <br />
 
-We have developed specialized modules within the network that are responsible for verifying proofs generated using RISC Zero or SP1. These modules play a crucial role in maintaining the integrity of the network by ensuring that only valid proofs are processed and accepted.
+- ### Proof Verification Modules
 
-### Staking on Bitcoin
+  We have developed specialized modules within the network that are responsible for verifying proofs generated using RISC Zero or SP1. These modules play a crucial role in maintaining the integrity of the network by ensuring that only valid proofs are processed and accepted.
 
-Participants can stake Bitcoin and contribute to the Superstack's ZKP network. By staking, participants support the network's security and gain the ability to participate in the verification and inscription process. This decentralized approach enhances the network's resilience and trustworthiness.
+  <br />
 
-Superstack's Zero Knowledge Verifier offers Bitcoin holders a seamless way to engage in Proof of Stake (PoS) blockchains without relying on intermediaries for asset custody, cross-chain bridges, or token wrapping. This approach provides robust security mechanisms that are intrinsic to PoS networks, ensuring the rapid unlocking of staked Bitcoin to enhance liquidity for participants.
+- ### Staking on Bitcoin
 
-Superstack Zero Knowledge Verifier leverages Babylon to implement extractable one-time signatures (EOTS), a technology designed to maintain integrity and accountability. With EOTS, if a signature is reused across different blocks at the same level, the secret key is revealed, promoting honest behavior among stakers. Those who stake their Bitcoin in good faith are rewarded with block rewards and transaction fees.
+  - Superstack's Zero Knowledge Verifier offers Bitcoin holders a seamless way to
+    engage in Proof of Stake (PoS) blockchains without relying on intermediaries
+    for asset custody, cross-chain bridges, or token wrapping. This approach
+    provides robust security mechanisms that are intrinsic to PoS networks,
+    ensuring the rapid unlocking of staked Bitcoin to enhance liquidity for
+    participants.
+
+  - Superstack Zero Knowledge Verifier leverages Babylon for staking. Which enables Superstack to implement extractable one-time signatures (EOTS). A technology architected to maintain integrity and accountability. With EOTS, if a signature is reused across different blocks at the same level (double singing), the secret key is revealed, promoting honest behavior among stakers. Those who stake their Bitcoin in good faith are rewarded with block rewards and transaction fees.
 
 {" "}
 
@@ -68,4 +73,4 @@ Once a proof is confirmed, it is queued for inscription onto the Bitcoin blockch
 
 **Efficiency**: Our PoS mechanism and discrepancy challenge process ensure that the network operates efficiently, minimizing the chances of invalid proofs being accepted.
 
-This approach combines the strengths of the Cosmos SDK, zero-knowledge proofs, and Bitcoin's security to create a highly reliable and secure verifier network.
+This approach combines the strengths of the Cosmos SDK, zero-knowledge proofs, staking on Babylon and Bitcoin's security to create a highly reliable, decentralized and secure verifier network.
