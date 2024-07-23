@@ -9,45 +9,63 @@ import ZoomImage from "../../components/ZoomImage";
 
 Our ultimate goal is to enable native verification of Zero-Knowledge Proofs (ZKPs) within Bitcoin blocks. This advancement requires the introduction of new opcodes—such as OP_verifystarkproof in Bitcoin's script language. To address this gap, we are developing a unique ZKP Verifier Network that can be seamlessly integrated with Bitcoin. This module will enable information to be verified and then inscribed onto the Bitcoin blockchain, ensuring enhanced security and reliability until native support is fully developed and adopted.
 
-## Building a PoS-Backed ZKP Verifier Network
-
-We are developing a Proof-of-Stake (PoS) based Zero knowledge Proof (ZKP) Verifier Network.
-
-- The ZKP Network is built on Cosmos SDK, with modules developed for verifying proofs generated in RISC Zero or SP1.
-
-- Proofs submitted to the validator network are verified, and any discrepancies are promptly challenged, ensuring only valid proofs are confirmed
-
-- Confirmed proofs are then queued for inscription onto bitcoin. By doing so inheriting the security of Bitcoin.
-
-  <ZoomImage
-    src="/assets/zkp-verifier-network.png"
-    alt="zkp verifier network"
-  />
-
-## The Critical Role of the ZKP Verifier Network
-
-The ZKP verifier network is fundamental in enhancing the security and trust of Layer 2 state transitions. The key roles of the ZKP network include:
-
-- **Ensuring Secure Correctness of L2 State Transitions:** By accurately verifying the proofs of state changes of Layer 2 transactions, the network guarantees their correctness.
-
-- **Decentralizing Trust:** The verifier network distributes the trust assumptions associated with validity proofs, mitigating the risks linked to centralized verification processes.
-
-<ZoomImage src="/assets/zkp-verifier-overview.png" alt="user tx" />
-
 ## Need for a ZKP Verifier Network
 
 In typical Validium ZK rollup setups, transaction data is pushed to an off-chain data availability layer and publishes zero-knowledge proofs to verify off-chain transactions on Layer 1.
 
 However, the non-Turing-complete nature of Bitcoin's scripting language limits its proof verification capabilities. To address this, our Zero-Knowledge Proof (ZKP) verifier network ensures that the submitted proofs are compatible, verifiable with BitVM2, and can be natively verified on the Bitcoin Layer.
 
-## How the ZKP Verification Happens:
+## Building a PoS-Backed ZKP Verifier Network
 
-1. **Proof Generation:** Bitcoin rollups initiate the process by generating a bundle of transactions on the client side. This bundle is then sent to the Prover Network, a marketplace of provers that generate zero-knowledge proofs for the transactions. These proofs are subsequently compressed using ZK proof recursion and passed to the ZKP Verifier Network.
+We are developing a Proof-of-Stake (PoS) based Zero knowledge Proof (ZKP) Verifier Network.
 
-2. **Validation in ZKP Verifier Network:** Verifiers in the Proof of Stake (PoS)-backed network consistently monitor for new proofs. When detected, these proofs are gathered and queued for validation. Validators meticulously examine each proof against the claimed state changes. If inconsistencies are detected, a challenge is launched, initiating a secondary verification process to guarantee only valid proofs are accepted. This process leverages ZK-Stark along with the instruction set of RISC-V as used in Zero-Knowledge Virtual Machine (ZKVM) for efficient and scalable validation.
+We are developing an innovative Proof-of-Stake (PoS) based Zero Knowledge Proof (ZKP) Verifier Network. This network is designed to ensure secure and efficient proof verification with the following key components and principles:
 
-3. **Decentralized Verification:** The decentralized verifier network consists of validator nodes and guardian nodes. Proof recursion can occur every 100 blocks or every few hours, after which the proofs are verified within the network.
+### Built on Cosmos SDK
 
-4. **Final Settlement:** Once verification is complete, the aggregated proof or the validity proof is inscribed into the Bitcoin blockchain, ensuring final settlement.
+Our ZKP Verifier Network is constructed using the Cosmos SDK, a powerful and modular framework that allows for the development of scalable and interoperable blockchain applications. By leveraging the Cosmos SDK, we ensure our network is both robust and adaptable to future advancements.
 
-<ZoomImage src="/assets/final-settlement.png" alt="final settlement" />
+### Proof Verification Modules
+
+We have developed specialized modules within the network that are responsible for verifying proofs generated using RISC Zero or SP1. These modules play a crucial role in maintaining the integrity of the network by ensuring that only valid proofs are processed and accepted.
+
+### Staking on Bitcoin
+
+Participants can stake Bitcoin and contribute to the Superstack's ZKP network. By staking, participants support the network's security and gain the ability to participate in the verification and inscription process. This decentralized approach enhances the network's resilience and trustworthiness.
+
+Superstack's Zero Knowledge Verifier offers Bitcoin holders a seamless way to engage in Proof of Stake (PoS) blockchains without relying on intermediaries for asset custody, cross-chain bridges, or token wrapping. This approach provides robust security mechanisms that are intrinsic to PoS networks, ensuring the rapid unlocking of staked Bitcoin to enhance liquidity for participants.
+
+Superstack Zero Knowledge Verifier leverages Babylon to implement extractable one-time signatures (EOTS), a technology designed to maintain integrity and accountability. With EOTS, if a signature is reused across different blocks at the same level, the secret key is revealed, promoting honest behavior among stakers. Those who stake their Bitcoin in good faith are rewarded with block rewards and transaction fees.
+
+{" "}
+
+<ZoomImage src="/assets/surge-architecture.png" alt="zkp verifier network" />
+
+## The Critical Role of the ZKP Verifier Network
+
+### 1. Proof Submission and Verification Process
+
+**Submission**: Users submit their zero-knowledge proofs to the validator network.
+
+**Verification**: The submitted proofs are rigorously verified by the network's validators. This process involves cross-checking the proofs to ensure their validity.
+
+**Discrepancy Challenges**: If any discrepancies are detected during verification, they are promptly challenged. This mechanism ensures that any invalid or malicious proofs are quickly identified and rejected.
+
+**Confirmation**: Only the proofs that pass the verification process without discrepancies are confirmed as valid.
+
+### 2. Inscription onto Bitcoin
+
+Once a proof is confirmed, it is queued for inscription onto the Bitcoin blockchain. By inscribing the confirmed proofs onto Bitcoin, we inherit Bitcoin's unparalleled security. This process adds an additional layer of security and immutability to the proofs, leveraging Bitcoin's decentralized and robust network.
+
+<ZoomImage src="/assets/Bitcoin_inscription.png" alt="user tx" />
+<p className="text-center">An inscription on Bitcoin</p>
+
+## Benefits of Our Approach
+
+**Security**: By using the Bitcoin blockchain for final proof inscription, we harness its security features, ensuring the highest level of integrity for our proofs.
+
+**Scalability**: The use of the Cosmos SDK allows for a scalable architecture, capable of handling a growing number of proofs and validators.
+
+**Efficiency**: Our PoS mechanism and discrepancy challenge process ensure that the network operates efficiently, minimizing the chances of invalid proofs being accepted.
+
+This approach combines the strengths of the Cosmos SDK, zero-knowledge proofs, and Bitcoin's security to create a highly reliable and secure verifier network.
