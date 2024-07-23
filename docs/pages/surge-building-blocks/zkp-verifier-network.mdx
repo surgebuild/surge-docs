@@ -65,12 +65,23 @@ Once a proof is confirmed, it is queued for inscription onto the Bitcoin blockch
 <ZoomImage src="/assets/Bitcoin_inscription.png" alt="user tx" />
 <p className="text-center">An inscription on Bitcoin</p>
 
-Here is a pseudo code explanation of how a bitcoin inscription is constructed:
+Here is a **pseudo code** explanation of how a bitcoin inscription is constructed:
 
-<ZoomImage
-  alt="Bitcoin Inscription Pseudo code"
-  src="/assets/pseudo_inscription_code.png"
-/>
+```js
+Function InscribeBitcoin(data, privateKey, utxo):
+    tx = new Transaction()
+    tx.addInput(utxo)
+
+    opReturnScript = Script([OP_RETURN, data])
+    tx.addOutput(0, opReturnScript)
+
+    if changeAmount > 0:
+        tx.addOutput(changeAmount, createChangeScript())
+
+    signTransaction(tx, privateKey)
+    rawTx = serialize(tx)
+    broadcast(rawTx)
+```
 
 ## Benefits of Our Approach
 
