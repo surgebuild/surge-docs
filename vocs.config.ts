@@ -10,12 +10,16 @@ export default defineConfig({
   font: {
     google: "Inter",
   },
-  topNav: [{ text: "surge.build", link: "https://www.surge.build/" }],
+  topNav: [
+    { text: "Getting Started", link: "/overview/introduction" },
+    { text: "Blog", link: "https://surge.build/blog" },
+    { text: "Website", link: "https://www.surge.build/" },
+  ],
   theme: {
     // accentColor: "#f56949"
     accentColor: "#f4431b",
   },
-  title: "Surge Docs",
+  title: "Surge",
   sidebar: {
     "/": [
       {
@@ -39,7 +43,7 @@ export default defineConfig({
             link: "/basics/understanding-the-rollups",
           },
           {
-            text: "Journey of Rollups on Bitcoin",
+            text: "Evolution of Rollups on Bitcoin",
             link: "/basics/journey-of-rollups-on-bitcoin",
           },
         ],
@@ -48,7 +52,7 @@ export default defineConfig({
         text: "SURGE BUILDING BLOCKS",
         items: [
           {
-            text: "🌟 Architecture",
+            text: "Architecture",
             link: "/surge-building-blocks/architecture",
           },
           {
@@ -175,11 +179,11 @@ export default defineConfig({
         text: "USERS TOOLING",
         items: [
           {
-            text: "Node Setup Guide",
+            text: "Custom Signet Node",
             link: "/users-tooling/node-setup-guide",
           },
           {
-            text: "Run a Validator Node",
+            text: "Running a Validator Node",
             link: "/users-tooling/run-a-validator-node",
           },
         ],

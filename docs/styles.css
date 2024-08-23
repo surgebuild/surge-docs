@@ -20,8 +20,8 @@ img {
 }
 
 :root.dark {
-  --vocs-color_background: #000000;
-  --vocs-color_backgroundDark: #000000;
+  --vocs-color_background: #0d1111;
+  --vocs-color_backgroundDark: #0d1111;
   --vocs-color_background4: #3c393f;
 }
 ::-webkit-scrollbar {
@@ -123,7 +123,7 @@ img {
 }
 
 .vocs_Sidebar_logo {
-  @apply bg-white dark:bg-black;
+  @apply bg-white dark:bg-[#0D1111];;
 }
 
 .vocs_Strong {
