@@ -8,6 +8,12 @@ import { Button } from "vocs/components";
 import { HomePage } from "vocs/components";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
+import SurgeIntro from "../components/SurgeIntro.tsx";
+import SuperStack from "../components/SuperStack.tsx";
+import RaasStack from "../components/RaasStack.tsx";
+import RunNode from "../components/RunNode.tsx";
+import Resources from "../components/Resources.tsx";
+import BitcoinPlayground from "../components/BitcoinPlayground.tsx";
 
 <div className="max-w-[1200px] mx-auto vp-doc relative px-[24px] md:mt-[12px] md:px-0 md:mb-20 test">
   <div className="flex flex-col items-center justify-center">
@@ -15,35 +21,11 @@ import "react-medium-image-zoom/dist/styles.css";
     <img className="block dark:hidden h-24" src="/assets/surge_short_lg.svg" alt="docs" />
       <HomePage.Tagline className="!text-[40px] !font-bold mb-5">Surge Docs</HomePage.Tagline>
       <HomePage.Description className="mb-10 !text-base !font-semibold	 dark:!text-grey-100 !text-grey-100">A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge</HomePage.Description>
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
-      <Button href="/overview/introduction" className="customBtn">
-        <div className="py-6 px-4 rounded-xl bg-white dark:bg-grey-200 border border-grey-600 dark:border-grey-300">
-          <p className="dark:text-white text-black text-2xl mb-2.5">Get Started</p>
-          <p className="dark:text-grey-400 mb-2.5">Welcome to Surge! This guide will help you to know the Surge platform better and quickly!</p>
-          <img src="/assets/full-docs.png" alt="full docs" />
-        </div>
-    </Button>
-    <Button href="/surge-building-blocks/mpc-tss-bridge" className="customBtn">
-        <div className="py-6 px-4 rounded-xl bg-white dark:bg-grey-200 border border-grey-600 dark:border-grey-300">
-          <p className="dark:text-white text-black text-2xl mb-2.5">MPC TSS bridge</p>
-          <p className="dark:text-grey-400 mb-2.5">Learn more about Surge MPC TSS Bridge enables secure and efficient cross-chain transactions.</p>
-          <img src="/assets/tss-bridge.png" alt="MPC TSS bridge" />
-        </div>
-    </Button>
-    <Button href="/surge-building-blocks/zkp-verifier-network" className="customBtn">
-        <div className="py-6 px-4 rounded-xl bg-white dark:bg-grey-200 border border-grey-600 dark:border-grey-300">
-          <p className="dark:text-white text-black text-2xl mb-2.5">ZKP Verifier Network</p>
-          <p className="dark:text-grey-400 mb-2.5">PoS based Zero-Knowledge Proofs verifier with a decentralized network of validators.</p>
-          <img src="/assets/zk-proof.png" alt="zk proof" />
-        </div>
-    </Button>
-    <Button href="/surge-building-blocks/utilities/overview" className="customBtn">
-        <div className="py-6 px-4 rounded-xl bg-white dark:bg-grey-200 border border-grey-600 dark:border-grey-300">
-          <p className="dark:text-white text-black text-2xl mb-2.5">Auxiliary Utilities</p>
-          <p className="dark:text-grey-400 mb-2.5">Explore auxiliary utilities, including oracles, indexers, and bridges for runes and ordinals.</p>
-          <img src="/assets/auxilary.png" alt="auxilary" />
-        </div>
-    </Button>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <SurgeIntro/>
+      <SuperStack/>
+      <BitcoinPlayground/>
+      <Resources/>
     </div>
 
   </div>
