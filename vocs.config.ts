@@ -94,7 +94,11 @@ export default defineConfig({
             collapsed: true,
             items: [
               {
-                text: " Decentralized Sequencer",
+                text: "High Availability Sequencer",
+                link: "/surge-building-blocks/customizations/high-availability-sequencer",
+              },
+              {
+                text: "Decentralized Sequencer",
                 link: "/surge-building-blocks/customizations/decentralized-sequencer",
               },
               {
