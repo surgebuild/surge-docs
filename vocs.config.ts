@@ -11,11 +11,14 @@ export default defineConfig({
   font: {
     google: "Inter",
   },
+
   topNav: [{ text: "surge.build", link: "https://www.surge.build/" }],
   theme: {
     // accentColor: "#f56949"
     accentColor: "#f4431b",
+    // colorScheme: "dark",
   },
+
   title: "Surge Docs",
   sidebar: {
     "/": [

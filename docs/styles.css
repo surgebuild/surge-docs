@@ -189,3 +189,9 @@ img {
 .vocs_Outline_heading {
   display: none;
 }
+
+.gradientText {
+  background: linear-gradient(90deg, #f4431c 0%, #8e2710 50%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
