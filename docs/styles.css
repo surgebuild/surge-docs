@@ -20,8 +20,8 @@ img {
 }
 
 :root.dark {
-  --vocs-color_background: #000;
-  --vocs-color_backgroundDark: #000;
+  --vocs-color_background: #0d1111;
+  --vocs-color_backgroundDark: #0d1111;
   --vocs-color_background4: #3c393f;
 }
 ::-webkit-scrollbar {
@@ -76,7 +76,7 @@ img {
 }
 
 .dark .vocs_DocsLayout_gutterTop .vocs_DocsLayout_gutterTop_sticky {
-  background: black !important;
+  background: #0d1111 !important;
 }
 
 .vocs_Sidebar_item[data-active="true"] {
@@ -95,7 +95,7 @@ img {
 }
 
 .dark .vocs_Footer {
-  background: black;
+  background: #0d1111;
   margin-bottom: 0;
 }
 
@@ -181,7 +181,7 @@ img {
   width: 23.75rem; /* 380px */
 }
 .dark .vocs_Content {
-  background: black !important;
+  background: #0d1111 !important;
 }
 
 .vocs_H1 {

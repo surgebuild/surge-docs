@@ -112,7 +112,7 @@ export default defineConfig({
                 link: "/metalayer/utilities/overview",
               },
               {
-                text: " Native Stable Coins",
+                text: " StableCoin",
                 link: "/metalayer/utilities/native-stable-coins",
               },
               {
