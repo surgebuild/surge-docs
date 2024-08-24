@@ -16,7 +16,7 @@ const arr = [
   //   url: "/",
   // },
   {
-    title: "B.R.I.E.F Rollup Fee Calculator",
+    title: "B.R.I.E.F Rollup Fee Estimator",
     url: "https://brief.surge.dev/",
   },
 ];

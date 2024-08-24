@@ -66,7 +66,7 @@ export default defineConfig({
           },
           {
             text: "High Availability Sequencer",
-            link: "/surge-building-blocks/customizations/high-availability-sequencer",
+            link: "/surge-building-blocks/high-availability-sequencer",
           },
           {
             text: "Customizations",
@@ -96,12 +96,12 @@ export default defineConfig({
             link: "/metalayer/superstack",
           },
           {
-            text: "↳ MPC TSS Bridge",
-            link: "/metalayer/mpc-tss-bridge",
-          },
-          {
             text: "↳ ZKP Verifier Network",
             link: "/metalayer/zkp-verifier-network",
+          },
+          {
+            text: "↳ MPC TSS Bridge",
+            link: "/metalayer/mpc-tss-bridge",
           },
           {
             text: "↳ Utilities",
@@ -125,47 +125,51 @@ export default defineConfig({
               },
             ],
           },
+          {
+            text: "Super Validators",
+            link: "/metalayer/validators",
+          },
         ],
       },
       {
         text: "MORE READ",
         items: [
           {
-            text: "Upcoming Bitcoin L2's",
+            text: "Bitcoin L2 Landscape",
             link: "/more-read/upcoming-bitcoin-l2s",
           },
-          {
-            text: "Bitcoin as a Settlement Layer",
-            collapsed: true,
-            items: [
-              {
-                text: "Overview",
-                link: "/basics/bitcoin-as-a-settlement-layer/overview",
-              },
-              {
-                text: "Finality",
-                link: "/basics/bitcoin-as-a-settlement-layer/finality",
-              },
-              {
-                text: "Shared Security",
-                collapsed: true,
-                items: [
-                  {
-                    text: "Bitcoin Shared Security",
-                    link: "/basics/bitcoin-as-a-settlement-layer/shared-security/bitcoin-shared-security",
-                  },
-                  {
-                    text: "Shared Security Protocol",
-                    link: "/basics/bitcoin-as-a-settlement-layer/shared-security/shared-security-protocol",
-                  },
-                ],
-              },
-              {
-                text: "BitVM",
-                link: "/basics/bitcoin-as-a-settlement-layer/bitvm",
-              },
-            ],
-          },
+          // {
+          //   text: "Bitcoin as a Settlement Layer",
+          //   collapsed: true,
+          //   items: [
+          //     {
+          //       text: "Overview",
+          //       link: "/basics/bitcoin-as-a-settlement-layer/overview",
+          //     },
+          //     {
+          //       text: "Finality",
+          //       link: "/basics/bitcoin-as-a-settlement-layer/finality",
+          //     },
+          //     {
+          //       text: "Shared Security",
+          //       collapsed: true,
+          //       items: [
+          //         {
+          //           text: "Bitcoin Shared Security",
+          //           link: "/basics/bitcoin-as-a-settlement-layer/shared-security/bitcoin-shared-security",
+          //         },
+          //         {
+          //           text: "Shared Security Protocol",
+          //           link: "/basics/bitcoin-as-a-settlement-layer/shared-security/shared-security-protocol",
+          //         },
+          //       ],
+          //     },
+          //     {
+          //       text: "BitVM",
+          //       link: "/basics/bitcoin-as-a-settlement-layer/bitvm",
+          //     },
+          //   ],
+          // },
           {
             text: "Attempts to Scale Bitcoin",
             link: "/basics/attempts-to-scale-bitcoin",

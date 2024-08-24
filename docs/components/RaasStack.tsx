@@ -13,7 +13,7 @@ const arr = [
   },
   {
     title: "High Availability Sequencer",
-    url: "customizations/high-availability-sequencer",
+    url: "surge-building-blocks/high-availability-sequencer",
   },
 ];
 
