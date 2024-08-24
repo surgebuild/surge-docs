@@ -29,7 +29,7 @@ export default function BitcoinPlayground() {
           Bitcoin Playground
         </p>
         <p className="border-b border-dashed border-[#6F7B8B] pb-4 text-base leading-5 text-[#6B7280]">
-          Space built to support the growing Bitcoin dev community
+          Space Built to Support the Growing Bitcoin Dev Community
         </p>
       </div>
       <div className="flex flex-col gap-y-[10px] w-full mt-7">

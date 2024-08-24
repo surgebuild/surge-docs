@@ -21,7 +21,7 @@ export default function Resources() {
           Resources
         </p>
         <p className="border-b border-dashed border-[#6F7B8B] pb-4 text-base leading-5 text-[#6B7280]">
-          Access all our brand and product logos for external communications.
+          Access our Brand and Product Logos for External Communications
         </p>
       </div>
       <div className="flex flex-col gap-y-[10px] w-full mt-7">

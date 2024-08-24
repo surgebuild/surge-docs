@@ -9,28 +9,28 @@ import ZoomImage from "../../components/ZoomImage";
 
 ## Overview
 
-Our architecture is built on the foundation of **Adaptive Core Architecture with Zero Trust Principles**. This approach ensures that the platform remains secure, flexible, and scalable, enabling the deployment of Layer 2 solutions on Bitcoin. The design is modular, providing a highly customizable environment that can adapt to various use cases while maintaining a strong security anchored in Bitcoin.
+Our architecture is built on the foundation of **Modular Adaptive Core Architecture**. This approach ensures that the platform remains secure, flexible, and scalable, enabling the deployment of Layer 2 solutions on Bitcoin. The design is modular, providing a highly customizable environment that can adapt to various use cases while maintaining the security anchored to Bitcoin.
 
-## Adaptive Core Model Architecture
+## Modular Adaptive Core Model
 
-The Surge Adaptive Core allows us to keep the overall architecture modular and layered, facilitating easy interchangeability or integration with the rollup stack that any Bitcoin L2 might choose. The architecture is primarily divided into three layers: Execution, Settlement, and Data Availability.
+The Surge Adaptive Core allows us to keep the overall architecture modular and layered, facilitating easy interchangeability or integration with the rollup stack that any Bitcoin rollup might choose. The architecture is primarily divided into three layers: Execution, Settlement, and Data Availability.
 
 1. **Execution Layer:** Supports multiple virtual machines (VMs), including EVM and MoveVM, offering developers the flexibility to build on their preferred VM.
 
-2. **Settlement Layer:** Manages transaction finalization through robust zero-knowledge proofs, enabling fast and secure settlements.
+2. **Settlement Layer:** Handles transaction finalization using zero-knowledge proofs, verified through the SuperStack—a meta-layer integrated with Bitcoin inscription.
 
-3. **Data Layer:** Ensures data availability and integrity for the chain, crucial for transparent operations across the platform.
+3. **Data Layer:** : Ensures data availability and integrity for the chain, seamlessly integrating with Bitcoin as the DA or any alternative DAs that Bitcoin rollups choose to utilize.
 
+>_**Surge RaaS stack does not require OP_CAT or Soft forks to Bitcoin**_
 
 <ZoomImage src="/assets/architecture-model.png" alt="architecture model" />
 
-### Rollup Frameworks
-Surge integrates ZK rollup frameworks to enhance scalability and security for Bitcoin Layer 2 solutions.
+### Rollup Execution
+The platform supports multiple VMs, including ZkVM with RISC Zero and MoveVM, with planned extensions to other VMs to enhance flexibility. This allows rollups to fully support the existing ecosystem without requiring changes. You can find more details on multi-VM support [here](/surge-building-blocks/multi-vm).
 
-### Execution & Frameworks
-The platform supports multiple VMs, including ZkVM with RISC Zero and MoveVM, with planned extensions to other VMs to enhance flexibility. This allows rollups to fully support the existing ecosystem without requiring changes. You can find more details on multi-VM support [here].
+### Surge SuperStack
+>_**A MetaLayer with Proof Verification and Inscription to Bitcoin**_
 
-### Surge Superstack
 Our proprietary Surge Superstack layer acts as an intermediary that sits atop Bitcoin. Superstack is a PoS protocol-based verifier network that secures the network and facilitates proof verification with Bitcoin inscription for transactions. Superstack accepts the ZK proofs from the execution layers and pushes the transaction data to the DA layer and the verified Merkle state hash to the Bitcoin L1 layer through inscriptions. By inscribing the data on Bitcoin, we inherit the security of Bitcoin.
 
 <ZoomImage
@@ -43,6 +43,9 @@ Superstack also contains MPC TSS-based network nodes for bridging assets from Bi
 
 ### Bitcoin Settlement
 As our proofs are directly inscribed onto Bitcoin L1, they can be verified by anyone operating a Bitcoin node. By doing so, we leverage the inherent security of Bitcoin to ensure the integrity of these proofs once they are settled on the blockchain. Our ultimate goal is to integrate verification directly within the Bitcoin layer, fostering significant innovation and enhancing the robustness of this process.
+
+### Rollup Frameworks
+Surge integrates ZK rollup frameworks to enhance scalability and security for Bitcoin Layer 2 solutions.
 
 ### Data Availability
 Surge offers multiple Data Availability (DA) options to suit different requirements and cost considerations:

@@ -53,7 +53,7 @@ export default defineConfig({
         text: "RAAS STACK",
         items: [
           {
-            text: "Architecture",
+            text: "⭐ Architecture",
             link: "/surge-building-blocks/architecture",
           },
           {
@@ -92,7 +92,7 @@ export default defineConfig({
         text: "METALAYER",
         items: [
           {
-            text: "SuperStack",
+            text: "⚡ SuperStack",
             link: "/metalayer/superstack",
           },
           {

@@ -29,7 +29,7 @@ export default function SurgeIntro() {
           Surge 101
         </p>
         <p className="border-b border-dashed border-[#6F7B8B] pb-4 text-base leading-5 text-[#6B7280]">
-          Surge’s core principles and Bitcoin scaling.
+          Core Principles and Bitcoin Scaling
         </p>
       </div>
       <div className="flex flex-col gap-y-[10px] w-full mt-7">
