@@ -20,8 +20,8 @@ img {
 }
 
 :root.dark {
-  --vocs-color_background: #000000;
-  --vocs-color_backgroundDark: #000000;
+  --vocs-color_background: #0d1111;
+  --vocs-color_backgroundDark: #0d1111;
   --vocs-color_background4: #3c393f;
 }
 ::-webkit-scrollbar {
@@ -75,6 +75,10 @@ img {
   border-radius: 0.3rem;
 }
 
+.dark .vocs_DocsLayout_gutterTop .vocs_DocsLayout_gutterTop_sticky {
+  background: #0d1111 !important;
+}
+
 .vocs_Sidebar_item[data-active="true"] {
   font-weight: 600;
   @apply hover:bg-[#f4431b1f];
@@ -88,6 +92,11 @@ img {
 .vocs_Footer {
   @apply py-0;
   margin-bottom: 2.688rem;
+}
+
+.dark .vocs_Footer {
+  background: #0d1111;
+  margin-bottom: 0;
 }
 
 .dark .vocs_HomePage_tagline {
@@ -123,7 +132,7 @@ img {
 }
 
 .vocs_Sidebar_logo {
-  @apply bg-white dark:bg-black;
+  @apply bg-white dark:bg-[#0D1111];
 }
 
 .vocs_Strong {
@@ -170,6 +179,9 @@ img {
 
 .vocs_DocsLayout_sidebar {
   width: 23.75rem; /* 380px */
+}
+.dark .vocs_Content {
+  background: #0d1111 !important;
 }
 
 .vocs_H1 {

@@ -15,15 +15,18 @@ import RunNode from "../components/RunNode.tsx";
 import Resources from "../components/Resources.tsx";
 import BitcoinPlayground from "../components/BitcoinPlayground.tsx";
 
-<div className="max-w-[1200px] mx-auto vp-doc relative px-[24px] md:mt-[12px] md:px-0 md:mb-20 test">
-  <div className="flex flex-col items-center justify-center">
-    <img className="hidden dark:block h-24" src="/assets/surge_short_dark.svg" alt="docs" />
-    <img className="block dark:hidden h-24" src="/assets/surge_short_lg.svg" alt="docs" />
-      <HomePage.Tagline className="!text-[40px] !font-bold mb-5">Surge Docs</HomePage.Tagline>
-      <HomePage.Description className="mb-10 !text-base !font-semibold	 dark:!text-grey-100 !text-grey-100">A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge</HomePage.Description>
+<div className="w-full vp-doc relative test">
+<img className="w-full absolute top-0 left-0 z-[0] opacity-60 dark:hidden" src="assets/docs_bg_light.png"/>
+<img className="w-full absolute top-0 left-0 z-[0] opacity-60 hidden dark:block" src="assets/docs_bg_dark.png"/>
+  <div className="flex flex-col items-center justify-center relative z-[1] max-w-[1200px] mx-auto px-[24px] md:mt-[12px] md:px-0 md:mb-20">
+    {/* <img className="hidden dark:block h-24" src="/assets/surge_short_dark.svg" alt="docs" /> */}
+    {/* <img className="block dark:hidden h-24" src="/assets/surge_short_lg.svg" alt="docs" /> */}
+      <HomePage.Tagline className="!text-[40px] !font-bold mb-4">Build with Surge</HomePage.Tagline>
+      <HomePage.Description className="mb-10 !text-base	 dark:!text-grey-100 !text-grey-100">Our complete guide to getting started with Surge, Bitcoin’s first modular Rollup as a Service </HomePage.Description>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-      <SurgeIntro/>
+      <RaasStack/>
       <SuperStack/>
+      <SurgeIntro/>
       <BitcoinPlayground/>
       <Resources/>
     </div>

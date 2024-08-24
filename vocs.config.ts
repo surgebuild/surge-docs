@@ -1,8 +1,7 @@
 import { defineConfig } from "vocs";
 
 export default defineConfig({
-  description:
-    "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
+  description: "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
   logoUrl: {
     light: "/logo/logo-light.png",
     dark: "/logo/logo-dark.png",
@@ -11,14 +10,16 @@ export default defineConfig({
   font: {
     google: "Inter",
   },
-
-  topNav: [{ text: "surge.build", link: "https://www.surge.build/" }],
+  topNav: [
+    // { text: "Introduction", link: "/overview/introduction" },
+    { text: "Blog", link: "https://surge.build/blog" },
+    { text: "Website", link: "https://www.surge.build/" },
+  ],
   theme: {
     // accentColor: "#f56949"
     accentColor: "#f4431b",
     // colorScheme: "dark",
   },
-
   title: "Surge Docs",
   sidebar: {
     "/": [
@@ -43,109 +44,90 @@ export default defineConfig({
             link: "/basics/understanding-the-rollups",
           },
           {
-            text: "Attempts to Scale Bitcoin",
-            link: "/basics/attempts-to-scale-bitcoin",
-          },
-          {
-            text: "Journey of Rollups on Bitcoin",
+            text: "Evolution of Rollups on Bitcoin",
             link: "/basics/journey-of-rollups-on-bitcoin",
           },
+        ],
+      },
+      {
+        text: "RAAS STACK",
+        items: [
           {
-            text: "Bitcoin as a Settlement Layer",
+            text: "⭐ Architecture",
+            link: "/surge-building-blocks/architecture",
+          },
+          {
+            text: "Multi VM Execution Support",
+            link: "/surge-building-blocks/multi-vm",
+          },
+          {
+            text: "Rollup Frameworks",
+            link: "/surge-building-blocks/rollup-frameworks",
+          },
+          {
+            text: "High Availability Sequencer",
+            link: "/surge-building-blocks/high-availability-sequencer",
+          },
+          {
+            text: "Customizations",
             collapsed: true,
             items: [
               {
-                text: "Overview",
-                link: "/basics/bitcoin-as-a-settlement-layer/overview",
+                text: "Decentralized Sequencer",
+                link: "/surge-building-blocks/customizations/decentralized-sequencer",
               },
               {
-                text: "Finality",
-                link: "/basics/bitcoin-as-a-settlement-layer/finality",
+                text: " Native Gas Token",
+                link: "/surge-building-blocks/customizations/native-gas-token",
               },
               {
-                text: "Shared Security",
-                collapsed: true,
-                items: [
-                  {
-                    text: "Bitcoin Shared Security",
-                    link: "/basics/bitcoin-as-a-settlement-layer/shared-security/bitcoin-shared-security",
-                  },
-                  {
-                    text: "Shared Security Protocol",
-                    link: "/basics/bitcoin-as-a-settlement-layer/shared-security/shared-security-protocol",
-                  },
-                ],
-              },
-              {
-                text: "BitVM",
-                link: "/basics/bitcoin-as-a-settlement-layer/bitvm",
+                text: " Alternative Data Availability",
+                link: "/surge-building-blocks/customizations/alternative-data-availability",
               },
             ],
           },
         ],
       },
       {
-        text: "SURGE BUILDING BLOCKS",
+        text: "METALAYER",
         items: [
           {
-            text: "👁️ Architecture",
-            link: "/surge-building-blocks/architecture",
+            text: "⚡ SuperStack",
+            link: "/metalayer/superstack",
           },
           {
-            text: "⏫ Superstack",
-            link: "/surge-building-blocks/superstack",
+            text: "↳ Decentralized Verifier Network",
+            link: "/metalayer/zkp-verifier-network",
           },
           {
-            text: "↳ 1️⃣ MPC TSS Bridge",
-            link: "/surge-building-blocks/mpc-tss-bridge",
+            text: "↳ Bitcoin MPC TSS Bridge",
+            link: "/metalayer/mpc-tss-bridge",
           },
           {
-            text: "↳ 2️⃣ ZKP Verifier Network",
-            link: "/surge-building-blocks/zkp-verifier-network",
-          },
-          {
-            text: "↳ 3️⃣ Utilities",
+            text: "↳ Utilities",
             collapsed: true,
             items: [
               {
-                text: "➡️ Overview",
-                link: "/surge-building-blocks/utilities/overview",
+                text: " Overview",
+                link: "/metalayer/utilities/overview",
               },
               {
-                text: "➡️ Native Stable Coins",
-                link: "/surge-building-blocks/utilities/native-stable-coins",
+                text: " StableCoin",
+                link: "/metalayer/utilities/native-stable-coins",
               },
               {
-                text: "➡️ Oracles & Indexers",
-                link: "/surge-building-blocks/utilities/oracles-and-indexers",
+                text: " Oracles & Indexers",
+                link: "/metalayer/utilities/oracles-and-indexers",
               },
               {
-                text: "➡️ Bridge Ordinals and Runes",
-                link: "/surge-building-blocks/utilities/bridge-ordinals-and-runes",
+                text: " Bridge Ordinals and Runes",
+                link: "/metalayer/utilities/bridge-ordinals-and-runes",
               },
             ],
           },
           {
-            text: "↳ 4️⃣ Customizations",
-            collapsed: true,
-            items: [
-              {
-                text: "➡️ Decentralized Sequencer",
-                link: "/surge-building-blocks/customizations/decentralized-sequencer",
-              },
-              {
-                text: "➡️ Native Gas Token",
-                link: "/surge-building-blocks/customizations/native-gas-token",
-              },
-              {
-                text: "➡️ Alternative Data Availability",
-                link: "/surge-building-blocks/customizations/alternative-data-availability",
-              },
-            ],
-          },
-          {
-            text: "#️⃣ Bitcoin ZK Rollups",
-            link: "/surge-building-blocks/bitcoin-zk-rollups",
+            text: "Super Validators",
+            link: "/metalayer/validators",
           },
         ],
       },
@@ -153,36 +135,72 @@ export default defineConfig({
         text: "MORE READ",
         items: [
           {
+            text: "Bitcoin L2 Landscape",
+            link: "/more-read/upcoming-bitcoin-l2s",
+          },
+          // {
+          //   text: "Bitcoin as a Settlement Layer",
+          //   collapsed: true,
+          //   items: [
+          //     {
+          //       text: "Overview",
+          //       link: "/basics/bitcoin-as-a-settlement-layer/overview",
+          //     },
+          //     {
+          //       text: "Finality",
+          //       link: "/basics/bitcoin-as-a-settlement-layer/finality",
+          //     },
+          //     {
+          //       text: "Shared Security",
+          //       collapsed: true,
+          //       items: [
+          //         {
+          //           text: "Bitcoin Shared Security",
+          //           link: "/basics/bitcoin-as-a-settlement-layer/shared-security/bitcoin-shared-security",
+          //         },
+          //         {
+          //           text: "Shared Security Protocol",
+          //           link: "/basics/bitcoin-as-a-settlement-layer/shared-security/shared-security-protocol",
+          //         },
+          //       ],
+          //     },
+          //     {
+          //       text: "BitVM",
+          //       link: "/basics/bitcoin-as-a-settlement-layer/bitvm",
+          //     },
+          //   ],
+          // },
+          {
+            text: "Attempts to Scale Bitcoin",
+            link: "/basics/attempts-to-scale-bitcoin",
+          },
+          {
             text: "How RaaS Interface will Evolve?",
             link: "/more-read/how-raas-interface-will-evolve",
           },
-          {
-            text: "Upcoming Bitcoin L2's",
-            link: "/more-read/upcoming-bitcoin-l2s",
-          },
-          {
-            text: "Bitcoin Scaling Trilemma",
-            link: "/more-read/bitcoin-scaling-trilemma",
-          },
-          {
-            text: "How does a Bitcoin Transaction Work?",
-            link: "/more-read/how-does-a-bitcoin-transaction-work",
-          },
-          {
-            text: "Advantages of Choosing MPC TSS Over Alternative Methods",
-            link: "/more-read/advantages-of-choosing-mpc-tss-over-alternative-methods",
-          },
+          // {
+          //   text: "Bitcoin Scaling Trilemma",
+          //   link: "/more-read/bitcoin-scaling-trilemma",
+          // },
+          // {
+          //   text: "How does a Bitcoin Transaction Work?",
+          //   link: "/more-read/how-does-a-bitcoin-transaction-work",
+          // },
+          // {
+          //   text: "Advantages of Choosing MPC TSS Over Alternative Methods",
+          //   link: "/more-read/advantages-of-choosing-mpc-tss-over-alternative-methods",
+          // },
         ],
       },
       {
         text: "USERS TOOLING",
         items: [
           {
-            text: "Node Setup Guide",
+            text: "Custom Signet Node",
             link: "/users-tooling/node-setup-guide",
           },
           {
-            text: "Run a Validator Node",
+            text: "Running a Validator Node",
             link: "/users-tooling/run-a-validator-node",
           },
         ],

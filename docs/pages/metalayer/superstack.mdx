@@ -1,0 +1,42 @@
+---
+title: Surge | Superstack
+description: The MetaLayer to scale Rollups on Bitcoin
+---
+
+import ZoomImage from "../../components/ZoomImage";
+
+# Superstack [The MetaLayer to scale Rollups on Bitcoin]
+
+## Overview
+
+The Surge Superstack operates as a crucial intermediate layer above the Bitcoin Settlement Layer, facilitating the scalable deployment of rollups. By processing Zero-Knowledge Proofs (ZK proofs) from execution layers and managing data via the Data Availability (DA) layer, the Superstack ensures the secure inscription of Merkle state hashes onto Bitcoin. This architecture not only enhances scalability but also preserves the core principles of decentralization and security inherent to Bitcoin.
+
+## Architecture and Network
+
+- **PoS-based Decentralization:** Our Proof-of-Stake model ensures network security and operational efficiency.
+
+- **Validator Program:** The Superstack validator program is designed to expand our network. It allows participants to set up nodes and contribute to the network's robustness, enhancing decentralized validation processes.
+
+## Building Blocks of Superstack
+
+- **Decentralized Verification Layer:** The ZKP Verification Layer is responsible for validating the correctness of transaction proofs without exposing any underlying data. This enhances both privacy and security, acting as a foundational layer for trustless and verifiable rollup interactions on Bitcoin.
+
+- **MPC TSS Secure Bridge:** This component provides a secure, trust-minimized bridge for a 2-way peg between Bitcoin and rollups. It utilizes Threshold Signature Schemes (TSS) to securely manage and safeguard the pegs, ensuring the integrity of cross-chain asset transfers.
+
+- **Utilities for Rollups:** The Superstack includes a suite of essential tools that support the development and operation of rollups:
+  - **Oracles:** Reliable data feeds that provide smart contracts with accurate and real-time information.
+  - **Indexers:** Efficient tools for organizing and accessing transaction data, supporting scalability.
+  - **Bridges for Runes and Ordinals:** Specialized bridges that enable seamless integration and interaction with Runes and Ordinals, expanding the utility of rollups.
+
+## Impact of Soft Forks on Superstack
+**Enhancing On-Chain Scripting with OP_CAT**\
+The introduction of _OP_CAT_ in a potential Bitcoin soft fork could significantly enhance the Superstack's capabilities. _OP_CAT_, by enabling more sophisticated on-chain scripting, offers the opportunity to reduce our reliance on off-chain processes. This improvement can lead to a more streamlined and efficient system, particularly in terms of transaction execution and validation.
+
+**Optimizing Performance and Efficiency**\
+With the integration of _OP_CAT_, we anticipate being able to offload certain off-chain verification computations from the Superstack, reallocating that processing power toward proof aggregation. This shift would not only optimize the performance of the Superstack but also improve overall efficiency. By reducing the need for off-chain dependencies, the Superstack can become even more robust, maintaining high levels of security and scalability while adapting to evolving technological advancements within the Bitcoin network.
+
+<ZoomImage
+  src="/assets/superstack-core-functions.png"
+  alt="superstack core functions"
+/>
+
