@@ -15,7 +15,7 @@ const arr = [
 
 export default function Resources() {
   return (
-    <div className="size-full bg-white dark:bg-black pb-8 pl-7 pr-5 pt-5 shadow-lg dark:shadow-sm dark:shadow-gray-500 dark:border dark:border-gray-800 rounded-lg">
+    <div className="size-full bg-white dark:bg-[#0d1111] pb-8 pl-7 pr-5 pt-5 shadow-lg dark:shadow-sm dark:shadow-gray-500 dark:border dark:border-gray-800 rounded-lg">
       <div>
         <p className="gradientText text-[32px] font-bold leading-[42px] pb-2">
           Resources

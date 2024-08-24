@@ -75,10 +75,6 @@ img {
   border-radius: 0.3rem;
 }
 
-.dark .vocs_DocsLayout_gutterTop .vocs_DocsLayout_gutterTop_sticky {
-  background: #0d1111 !important;
-}
-
 .vocs_Sidebar_item[data-active="true"] {
   font-weight: 600;
   @apply hover:bg-[#f4431b1f];
