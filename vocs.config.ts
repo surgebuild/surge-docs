@@ -11,15 +11,16 @@ export default defineConfig({
     google: "Inter",
   },
   topNav: [
-    { text: "Getting Started", link: "/overview/introduction" },
+    // { text: "Introduction", link: "/overview/introduction" },
     { text: "Blog", link: "https://surge.build/blog" },
     { text: "Website", link: "https://www.surge.build/" },
   ],
   theme: {
     // accentColor: "#f56949"
     accentColor: "#f4431b",
+    // colorScheme: "dark",
   },
-  title: "Surge",
+  title: "Surge Docs",
   sidebar: {
     "/": [
       {
