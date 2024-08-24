@@ -8,7 +8,7 @@ const arr = [
     url: "/metalayer/mpc-tss-bridge",
   },
   {
-    title: "zk Proof Verifier Network",
+    title: "Decentralized Verifier Network",
     url: "/metalayer/zkp-verifier-network",
   },
   {

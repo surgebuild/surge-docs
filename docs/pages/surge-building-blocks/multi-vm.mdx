@@ -7,36 +7,34 @@ import ZoomImage from "../../components/ZoomImage";
 
 # Multiple VM Execution
 
-Zero-Knowledge (ZK) proofs significantly enhance the scalability, security, and efficiency of blockchain technologies. ZK-Rollups, in particular, are a type of Layer 2 scaling solution that can significantly improve Bitcoin's transaction throughput and reduce computational load on the main blockchain..
-
-The key idea behind ZK-Rollups is to batch multiple transactions into a single cryptographic proof, which is then submitted to the main Bitcoin blockchain. This proof verifies the validity of the bundled transactions without revealing their details, providing a scalable and privacy-preserving way to process transactions off-chain.
-
-ZK-Rollups manage blockchain bloat by reducing on-chain data. They post only the proof and minimal transaction data. The ZK proofs alone assure the correctness of transactions, which can be verified much faster.
+Surge's architecture is designed to support multiple Virtual Machines (VMs), offering developers the flexibility to choose the best environment for their applications. This multi-VM approach not only broadens the scope of what can be built on Bitcoin L2s but also integrates advanced cryptographic techniques like Zero-Knowledge Proofs (ZKPs) to ensure secure and scalable smart contract execution.
 
 <p align="center">
-  <ZoomImage width="90%" src="/assets/zkflow.png" alt="Understanding rollups" />
-</p>
-### How Bitcoin ZK-Rollups work?{" "}
-
-The primary goal is to enhance scalability by reducing
-the load on the main Bitcoin network. The zk-Rollup achieves this through zero-knowledge
-proofs, ensuring that all transactions in the rollup batch are valid without revealing
-any transaction details.
-
-<p align="center">
-  <ZoomImage
-    width="100%"
-    src="/assets/bitcoin-zk.png"
-    alt="Understanding rollups"
-  />
+  <ZoomImage width="90%" src="/assets/multivm.png" alt="Multi VMs" />
 </p>
 
-Some of the Benefits for ZKPs are being explored as a way to enhance Bitcoin Rollups in several ways:
+### How Multi-VM Support Works?{" "}
 
-- **Increased Privacy:** ZKPs would allow users to prove they have sufficient funds to make a transaction without revealing the amount being sent or received. ZKPs would enhance financial privacy for the users. ZKPs could enable users to store confidential assets or anonymous marketplaces.
-- **Improved Scalability:** ZKPs can potentially reduce the amount of data stored on Bitcoin blockchain by allowing verification of complex transactions without needing to reveal all the details. This could help Bitcoin scale to handle more transactions with a smaller data footprint on-chain.
-- **Energy Efficiency:** By reducing the need for excessive computational resources to verify transactions, ZK-Rollups could make the Bitcoin network more energy-efficient, addressing one of the major criticisms regarding Bitcoin’s environmental impact.
-- **Enhanced Security:** ZK proofs add an additional layer of security, ensuring that transactions are valid without exposing sensitive information, which helps protect against fraud and cyber attacks.
-- **Cost-Effectiveness:** Lower transaction fees due to reduced data storage and processing needs make Bitcoin Rollups more attractive for everyday transactions, potentially increasing its adoption among users and businesses.
+At its core, Surge enables the execution of smart contracts across various VMs, each with its own strengths and language support. This includes:
+- **Ethereum Virtual Machine (EVM):** Supports Solidity and Vyper, allowing seamless migration and deployment of Ethereum-based dApps.
+- **Move Virtual Machine (MoveVM):** Leverages the Move language, providing advanced resource management and formal verification capabilities.
+- **WebAssembly (Wasm) VM (Future Integration):** A high-performance, language-agnostic environment suitable for a wide range of applications.
+  
+By supporting multiple VMs, Surge ensures that developers are not locked into a single ecosystem, fostering innovation and cross-chain compatibility. Each VM interacts with a unified settlement layer, ensuring consistent security and finality across the platform.
 
-In conclusion, the integration of ZK-Rollups into Bitcoin addresses issues of scalability, transaction fees, and privacy. By leveraging zero-knowledge proofs, ZK-Rollups enhance Bitcoin’s functionality while preserving its decentralization and security.
+### Role of Zero-Knowledge Proofs (ZKPs)
+ZKPs play a crucial role in maintaining the integrity and security of transactions. ZKPs enable the verification of transactions across different VMs without exposing sensitive information, ensuring that all operations are provably secure. 
+
+### Benefits of Multi-VM Support
+Surge’s multi-VM architecture offers several advantages:
+
+- **Flexibility for Developers:** Support for different VMs allows developers to use the languages and tools they are most comfortable with.
+- **Enhanced Interoperability:** Applications can interact across different blockchain ecosystems, promoting cross-chain innovation.
+- **Future-Proofing:** Keeping architecture adaptable, allowing for the integration of emerging VM technologies and standards.
+- **Optimized Performance:** Developers can choose the VM that best suits their application’s needs, whether it's for performance, security, or specific functionalities.
+
+### Impact on Bitcoin L2s
+
+The integration of multiple VMs within Surge represents a significant advancement for Bitcoin L2 scalability and versatility. By offering a platform where diverse virtual machines can operate securely, Surge is setting the stage for a new wave of decentralized applications on Bitcoin, all while maintaining the network's core principles of security and decentralization.
+
+In conclusion, Surge’s multi-VM support, combined with the power of Zero-Knowledge Proofs, is poised to revolutionize how developers build on Bitcoin. This approach not only enhances scalability and security but also ensures that Surge remains at the forefront of innovation in the blockchain ecosystem.

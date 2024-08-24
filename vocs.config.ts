@@ -57,7 +57,7 @@ export default defineConfig({
             link: "/surge-building-blocks/architecture",
           },
           {
-            text: "Multiple VM Execution Support",
+            text: "Multi VM Execution Support",
             link: "/surge-building-blocks/multi-vm",
           },
           {
@@ -96,11 +96,11 @@ export default defineConfig({
             link: "/metalayer/superstack",
           },
           {
-            text: "↳ ZKP Verifier Network",
+            text: "↳ Decentralized Verifier Network",
             link: "/metalayer/zkp-verifier-network",
           },
           {
-            text: "↳ MPC TSS Bridge",
+            text: "↳ Bitcoin MPC TSS Bridge",
             link: "/metalayer/mpc-tss-bridge",
           },
           {

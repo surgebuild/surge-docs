@@ -16,7 +16,7 @@ const arr = [
   //   url: "/basics/attempts-to-scale-bitcoin",
   // },
   // {
-  //   title: "Journey of Bitcoin Rollups",
+  //   title: "Evolution of Bitcoin Rollups",
   //   url: "/basics/journey-of-rollups-on-bitcoin",
   // },
 ];
