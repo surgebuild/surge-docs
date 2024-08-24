@@ -1,24 +1,20 @@
 const arr = [
   {
-    title: "Introduction",
-    url: "/surge-building-blocks/superstack",
+    title: "Overview",
+    url: "/metalayer/superstack",
   },
   {
-    title: "Architecture",
-    url: "/surge-building-blocks/architecture",
+    title: "MPC-TSS Bridge",
+    url: "/metalayer/mpc-tss-bridge",
   },
   {
-    title: "MPC TSS Bridge",
-    url: "/surge-building-blocks/mpc-tss-bridge",
-  },
-  {
-    title: "ZKP Verifier Network",
-    url: "/surge-building-blocks/zkp-verifier-network",
+    title: "zk Proof Verifier Network",
+    url: "/metalayer/zkp-verifier-network",
   },
   {
     title: "Utilities",
-    url: "/surge-building-blocks/utilities/overview",
-  }
+    url: "/metalayer/utilities/overview",
+  },
 ];
 
 export default function SuperStack() {
@@ -29,7 +25,7 @@ export default function SuperStack() {
           SuperStack (MetaLayer)
         </p>
         <p className="border-b border-dashed border-[#6F7B8B] pb-4 text-base leading-5 text-[#6B7280]">
-          Meta Layer for Bitcoin Rollups
+          MetaLayer for Bitcoin Rollups
         </p>
       </div>
       <div className="flex flex-col gap-y-[10px] w-full mt-7">

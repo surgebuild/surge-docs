@@ -50,54 +50,28 @@ export default defineConfig({
         ],
       },
       {
-        text: "SURGE BUILDING BLOCKS",
+        text: "RAAS STACK",
         items: [
           {
             text: "Architecture",
             link: "/surge-building-blocks/architecture",
           },
           {
-            text: "Superstack",
-            link: "/surge-building-blocks/superstack",
+            text: "Multiple VM Execution Support",
+            link: "/surge-building-blocks/multi-vm",
           },
           {
-            text: "↳ MPC TSS Bridge",
-            link: "/surge-building-blocks/mpc-tss-bridge",
+            text: "Rollup Frameworks",
+            link: "/surge-building-blocks/rollup-frameworks",
           },
           {
-            text: "↳ ZKP Verifier Network",
-            link: "/surge-building-blocks/zkp-verifier-network",
+            text: "High Availability Sequencer",
+            link: "/surge-building-blocks/customizations/high-availability-sequencer",
           },
           {
-            text: "↳ Utilities",
+            text: "Customizations",
             collapsed: true,
             items: [
-              {
-                text: " Overview",
-                link: "/surge-building-blocks/utilities/overview",
-              },
-              {
-                text: " Native Stable Coins",
-                link: "/surge-building-blocks/utilities/native-stable-coins",
-              },
-              {
-                text: " Oracles & Indexers",
-                link: "/surge-building-blocks/utilities/oracles-and-indexers",
-              },
-              {
-                text: " Bridge Ordinals and Runes",
-                link: "/surge-building-blocks/utilities/bridge-ordinals-and-runes",
-              },
-            ],
-          },
-          {
-            text: "↳ Customizations",
-            collapsed: true,
-            items: [
-              {
-                text: "High Availability Sequencer",
-                link: "/surge-building-blocks/customizations/high-availability-sequencer",
-              },
               {
                 text: "Decentralized Sequencer",
                 link: "/surge-building-blocks/customizations/decentralized-sequencer",
@@ -112,11 +86,45 @@ export default defineConfig({
               },
             ],
           },
-          // commenting this as of now since we 'll be adding this in future
-          // {
-          //   text: "#️⃣ Bitcoin ZK Rollups",
-          //   link: "/surge-building-blocks/bitcoin-zk-rollups",
-          // },
+        ],
+      },
+      {
+        text: "METALAYER",
+        items: [
+          {
+            text: "SuperStack",
+            link: "/metalayer/superstack",
+          },
+          {
+            text: "↳ MPC TSS Bridge",
+            link: "/metalayer/mpc-tss-bridge",
+          },
+          {
+            text: "↳ ZKP Verifier Network",
+            link: "/metalayer/zkp-verifier-network",
+          },
+          {
+            text: "↳ Utilities",
+            collapsed: true,
+            items: [
+              {
+                text: " Overview",
+                link: "/metalayer/utilities/overview",
+              },
+              {
+                text: " Native Stable Coins",
+                link: "/metalayer/utilities/native-stable-coins",
+              },
+              {
+                text: " Oracles & Indexers",
+                link: "/metalayer/utilities/oracles-and-indexers",
+              },
+              {
+                text: " Bridge Ordinals and Runes",
+                link: "/metalayer/utilities/bridge-ordinals-and-runes",
+              },
+            ],
+          },
         ],
       },
       {

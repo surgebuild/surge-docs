@@ -1,15 +1,19 @@
 const arr = [
   {
-    title: "Introduction",
-    url: "/",
+    title: "Architecture",
+    url: "surge-building-blocks/architecture",
   },
   {
-    title: "Why Surge?",
-    url: "/",
+    title: "Multiple VM Execution",
+    url: "surge-building-blocks/multi-vm",
   },
   {
-    title: "Understanding Rollups",
-    url: "/",
+    title: "Rollup Frameworks",
+    url: "surge-building-blocks/rollup-frameworks",
+  },
+  {
+    title: "High Availability Sequencer",
+    url: "customizations/high-availability-sequencer",
   },
 ];
 

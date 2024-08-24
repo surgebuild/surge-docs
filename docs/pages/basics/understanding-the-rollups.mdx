@@ -25,11 +25,16 @@ Rollups work by "rolling up" or bundling hundreds or thousands of transactions i
 ## Types of Rollups
 
 ### Optimistic Rollups
-
 Optimistic Rollups assume transactions to be valid by default and only perform computation and state execution in case of a dispute. This optimistic approach allows for quicker transaction throughput but requires a challenge period during which transactions can be contested for their validity.
 
 ### Zero-Knowledge Rollups (ZK-Rollups) or Validity Rollups
 
 ZK Rollups utilize zero-knowledge proofs to validate all transactions within a rollup bundle without revealing any underlying data. This method ensures transaction validity upfront, eliminating the need for a dispute resolution mechanism.
 
-Rollups, whether Optimistic or Zero-Knowledge, offer a compelling solution to the blockchain scalability challenge.
+### Based Rollups
+Based Rollups directly integrate transaction sequencing with the underlying Layer 1 (L1) blockchain, leveraging its security and decentralization. This reduces reliance on centralized sequencers, enhancing censorship resistance and transaction integrity.
+
+### Ephemeral Rollups
+Ephemeral Rollups are short-lived rollups designed for temporary computations. They focus on quick execution with minimal overhead, ideal for disposable transactions where long-term state management isn't required.
+
+Rollups, whether Optimistic / Zero-Knowledge / Based / Ephemeral, offer a compelling solution to the blockchain scalability challenge.

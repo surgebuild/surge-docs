@@ -11,14 +11,14 @@ const arr = [
     title: "Understanding Rollups",
     url: "/basics/understanding-the-rollups",
   },
-  {
-    title: "Bitcoin Scaling Attempts",
-    url: "/basics/attempts-to-scale-bitcoin",
-  },
-  {
-    title: "Journey of Bitcoin Rollups",
-    url: "/basics/journey-of-rollups-on-bitcoin",
-  },
+  // {
+  //   title: "Bitcoin Scaling Attempts",
+  //   url: "/basics/attempts-to-scale-bitcoin",
+  // },
+  // {
+  //   title: "Journey of Bitcoin Rollups",
+  //   url: "/basics/journey-of-rollups-on-bitcoin",
+  // },
 ];
 
 export default function SurgeIntro() {
