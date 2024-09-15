@@ -8,7 +8,7 @@ const arr = [
     url: "https://bitviper.surge.dev/",
   },
   {
-    title: "Bitcoin MPC-TSS Bridge",
+    title: "Bitcoin Bridge",
     url: "https://bridge.devnet.surge.dev/",
   },
   // {
@@ -43,7 +43,7 @@ export default function BitcoinPlayground() {
             <p className="text-lg text-[#2D3036] dark:text-white group-hover:text-[#f4431b]">
               {_item.title}
             </p>
-            <img src="/assets/arrow_right.svg" alt="MPC TSS bridge" />
+            <img src="/assets/arrow_right.svg" alt="bridge" />
           </a>
         ))}
       </div>

@@ -1,19 +1,19 @@
 const arr = [
   {
     title: "Overview",
-    url: "/metalayer",
+    url: "/metalayer/overview",
   },
   {
-    title: "DKLs23 (OT-MUL)",
-    url: "/metalayer/dkls23",
+    title: "Verifier Node",
+    url: "/metalayer/verifier",
   },
   {
-    title: "Decentralized Verifiers",
-    url: "/metalayer/zkp-verifier",
+    title: "DKLs23 - Signer Node",
+    url: "/metalayer/signer",
   },
   {
-    title: "Utilities",
-    url: "/metalayer/utilities/overview",
+    title: "Indexer Node",
+    url: "/metalayer/indexer/overview",
   },
 ];
 

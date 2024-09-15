@@ -49,6 +49,50 @@ export default defineConfig({
           },
         ],
       },
+
+      {
+        text: "METALAYER",
+        items: [
+          {
+            text: "⚡ Surge Network",
+            link: "/metalayer/overview",
+          },
+          {
+            text: "↳ Decentralized Verifier",
+            link: "/metalayer/verifier",
+          },
+          {
+            text: "↳ DKLs23 (EdDSA/ECDSA)",
+            link: "/metalayer/signer",
+          },
+          {
+            text: "↳ Indexer",
+            collapsed: true,
+            items: [
+              {
+                text: " Overview",
+                link: "/metalayer/indexer/overview",
+              },
+              {
+                text: " StableCoin",
+                link: "/metalayer/indexer/native-stable-coins",
+              },
+              {
+                text: " Oracles & Indexers",
+                link: "/metalayer/indexer/oracles-and-indexers",
+              },
+              {
+                text: " Bridge Ordinals and Runes",
+                link: "/metalayer/indexer/bridge-ordinals-and-runes",
+              },
+            ],
+          },
+          {
+            text: "Super Validators",
+            link: "/metalayer/validators",
+          },
+        ],
+      },
       {
         text: "RDK",
         items: [
@@ -85,49 +129,6 @@ export default defineConfig({
                 link: "/surge-building-blocks/customizations/alternative-data-availability",
               },
             ],
-          },
-        ],
-      },
-      {
-        text: "METALAYER",
-        items: [
-          {
-            text: "⚡ SuperStack",
-            link: "/metalayer/superstack",
-          },
-          {
-            text: "↳ Decentralized Verifier Network",
-            link: "/metalayer/zkp-verifier-network",
-          },
-          {
-            text: "↳ Bitcoin MPC TSS Bridge",
-            link: "/metalayer/mpc-tss-bridge",
-          },
-          {
-            text: "↳ Utilities",
-            collapsed: true,
-            items: [
-              {
-                text: " Overview",
-                link: "/metalayer/utilities/overview",
-              },
-              {
-                text: " StableCoin",
-                link: "/metalayer/utilities/native-stable-coins",
-              },
-              {
-                text: " Oracles & Indexers",
-                link: "/metalayer/utilities/oracles-and-indexers",
-              },
-              {
-                text: " Bridge Ordinals and Runes",
-                link: "/metalayer/utilities/bridge-ordinals-and-runes",
-              },
-            ],
-          },
-          {
-            text: "Super Validators",
-            link: "/metalayer/validators",
           },
         ],
       },
