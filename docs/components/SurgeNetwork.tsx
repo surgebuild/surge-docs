@@ -8,7 +8,7 @@ const arr = [
     url: "/metalayer/verifier",
   },
   {
-    title: "DKLs23 - Signer Node",
+    title: "Signer Node (DKLs23 - ECDSA/EdDSA)",
     url: "/metalayer/signer",
   },
   {
