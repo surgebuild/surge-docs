@@ -22,10 +22,10 @@ export default function RaasStack() {
     <div className="size-full bg-white dark:bg-[#0d1111] pb-8 pl-7 pr-5 pt-5 shadow-lg dark:shadow-sm dark:shadow-gray-500 dark:border dark:border-gray-800 rounded-lg">
       <div>
         <p className="gradientText text-[32px] font-bold leading-[42px] pb-2">
-          RaaS Stack
+          Rollup Dev Kit (RDK)
         </p>
         <p className="border-b border-dashed border-[#6F7B8B] pb-4 text-base leading-5 text-[#6B7280]">
-          Modular Multi-VM Rollup-as-a-Service Stack
+          A tool kit in addition to a multi-VM stack that simplifies rollup development
         </p>
       </div>
       <div className="flex flex-col gap-y-[10px] w-full mt-7">

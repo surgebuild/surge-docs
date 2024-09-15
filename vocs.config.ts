@@ -50,7 +50,7 @@ export default defineConfig({
         ],
       },
       {
-        text: "RAAS STACK",
+        text: "RDK",
         items: [
           {
             text: "⭐ Architecture",
