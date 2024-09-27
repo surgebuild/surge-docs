@@ -32,24 +32,28 @@ export default defineConfig({
             link: "/overview/introduction",
           },
           {
+            text: "Surge Stack",
+            link: "/overview/surge-stack",
+          },
+          {
             text: "Why Surge?",
             link: "/overview/why-surge",
           },
         ],
       },
-      {
-        text: "BASICS",
-        items: [
-          {
-            text: "Understanding the Rollups",
-            link: "/basics/understanding-the-rollups",
-          },
-          {
-            text: "Evolution of Rollups on Bitcoin",
-            link: "/basics/journey-of-rollups-on-bitcoin",
-          },
-        ],
-      },
+      // {
+      //   text: "BASICS",
+      //   items: [
+      //     {
+      //       text: "Understanding the Rollups",
+      //       link: "/basics/understanding-the-rollups",
+      //     },
+      //     {
+      //       text: "Evolution of Rollups on Bitcoin",
+      //       link: "/basics/journey-of-rollups-on-bitcoin",
+      //     },
+      //   ],
+      // },
 
       {
         text: "METALAYER",

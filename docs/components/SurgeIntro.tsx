@@ -4,13 +4,17 @@ const arr = [
     url: "/overview/introduction",
   },
   {
+    title: "Surge Stack",
+    url: "/overview/surge-stack",
+  },
+  {
     title: "Why Surge?",
     url: "/overview/why-surge",
   },
-  {
-    title: "Understanding Rollups",
-    url: "/basics/understanding-the-rollups",
-  },
+  // {
+  //   title: "Understanding Rollups",
+  //   url: "/basics/understanding-the-rollups",
+  // },
   // {
   //   title: "Bitcoin Scaling Attempts",
   //   url: "/basics/attempts-to-scale-bitcoin",
