@@ -31,24 +31,28 @@ export default defineConfig({
             link: "/overview/introduction",
           },
           {
+            text: "Surge Stack",
+            link: "/overview/surge-stack",
+          },
+          {
             text: "Why Surge?",
             link: "/overview/why-surge",
           },
         ],
       },
-      {
-        text: "BASICS",
-        items: [
-          {
-            text: "Understanding the Rollups",
-            link: "/basics/understanding-the-rollups",
-          },
-          {
-            text: "Evolution of Rollups on Bitcoin",
-            link: "/basics/journey-of-rollups-on-bitcoin",
-          },
-        ],
-      },
+      // {
+      //   text: "BASICS",
+      //   items: [
+      //     {
+      //       text: "Understanding the Rollups",
+      //       link: "/basics/understanding-the-rollups",
+      //     },
+      //     {
+      //       text: "Evolution of Rollups on Bitcoin",
+      //       link: "/basics/journey-of-rollups-on-bitcoin",
+      //     },
+      //   ],
+      // },
 
       {
         text: "METALAYER",
@@ -93,45 +97,45 @@ export default defineConfig({
           },
         ],
       },
-      {
-        text: "RDK",
-        items: [
-          {
-            text: "⭐ Architecture",
-            link: "/surge-building-blocks/architecture",
-          },
-          {
-            text: "Multi VM Execution Support",
-            link: "/surge-building-blocks/multi-vm",
-          },
-          {
-            text: "Rollup Frameworks",
-            link: "/surge-building-blocks/rollup-frameworks",
-          },
-          {
-            text: "High Availability Sequencer",
-            link: "/surge-building-blocks/high-availability-sequencer",
-          },
-          {
-            text: "Customizations",
-            collapsed: true,
-            items: [
-              {
-                text: "Decentralized Sequencer",
-                link: "/surge-building-blocks/customizations/decentralized-sequencer",
-              },
-              {
-                text: " Native Gas Token",
-                link: "/surge-building-blocks/customizations/native-gas-token",
-              },
-              {
-                text: " Alternative Data Availability",
-                link: "/surge-building-blocks/customizations/alternative-data-availability",
-              },
-            ],
-          },
-        ],
-      },
+      // {
+      //   text: "RDK",
+      //   items: [
+      //     {
+      //       text: "⭐ Architecture",
+      //       link: "/surge-building-blocks/architecture",
+      //     },
+      //     {
+      //       text: "Multi VM Execution Support",
+      //       link: "/surge-building-blocks/multi-vm",
+      //     },
+      //     {
+      //       text: "Rollup Frameworks",
+      //       link: "/surge-building-blocks/rollup-frameworks",
+      //     },
+      //     {
+      //       text: "High Availability Sequencer",
+      //       link: "/surge-building-blocks/high-availability-sequencer",
+      //     },
+      //     {
+      //       text: "Customizations",
+      //       collapsed: true,
+      //       items: [
+      //         {
+      //           text: "Decentralized Sequencer",
+      //           link: "/surge-building-blocks/customizations/decentralized-sequencer",
+      //         },
+      //         {
+      //           text: " Native Gas Token",
+      //           link: "/surge-building-blocks/customizations/native-gas-token",
+      //         },
+      //         {
+      //           text: " Alternative Data Availability",
+      //           link: "/surge-building-blocks/customizations/alternative-data-availability",
+      //         },
+      //       ],
+      //     },
+      //   ],
+      // },
       {
         text: "MORE READ",
         items: [
@@ -175,10 +179,10 @@ export default defineConfig({
             text: "Attempts to Scale Bitcoin",
             link: "/basics/attempts-to-scale-bitcoin",
           },
-          {
-            text: "How RaaS Interface will Evolve?",
-            link: "/more-read/how-raas-interface-will-evolve",
-          },
+          // {
+          //   text: "How RaaS Interface will Evolve?",
+          //   link: "/more-read/how-raas-interface-will-evolve",
+          // },
           // {
           //   text: "Bitcoin Scaling Trilemma",
           //   link: "/more-read/bitcoin-scaling-trilemma",
