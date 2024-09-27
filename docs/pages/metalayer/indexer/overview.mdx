@@ -1,9 +1,11 @@
 ---
-title: Utilities
+title: Indexers
 description: Enhancing Rollup Functionality
 ---
 
-# Utilities [Enhancing Rollup Functionality]
+import ZoomImage from "../../../components/ZoomImage";
+
+# Indexer
 
 ## Overview
 
@@ -14,24 +16,41 @@ The UTXO Indexer is fully integrated with a Bitcoin node, allowing it to access 
 
 ## Core Utilities
 
-1. #### Native Stable Coins
+The core utilities of an Indexer, particularly in a blockchain network like Surge, are designed to optimize data retrieval, transaction tracking, and verification processes. Here are the key functions:
 
-   Integration with Union Protocol and Nobel, Plans are in place to introduce Native Stable Coins to Bitcoin Rollups from other ecosystems. This integration addresses the fragmentation of the protocol total value locked (TVL) and inherent liquidity challenges, thereby increasing interoperability between layer-2 ecosystems.
+### 1. **Data Extraction and Parsing**
 
-2. #### Oracles
+- **Real-time Monitoring:** The Indexer scans newly mined blocks in real-time, extracting relevant transactions and information from the blockchain.
+- **Filtering of Relevant Data:** It focuses on specific transactions, such as those containing network-specific identifiers (e.g., Surge identifiers), ignoring irrelevant data to optimize performance.
 
-   Oracles serve as data feeds that bring external information, such as market prices or environmental data, into the Rollups. This enables smart contracts to execute actions based on real-world events, greatly expanding the adaptability and applicability of decentralized applications (dApps).
+### 2. **Transaction Tracking**
 
-3. #### Indexers
+- **UTXO Management:** In a Bitcoin-based system, the Indexer keeps track of Unspent Transaction Outputs (UTXOs). It identifies both newly created and spent UTXOs, ensuring up-to-date transaction status.
+- **Efficient Data Retrieval:** The Indexer maintains an optimized database, allowing for quick access to relevant transactions and outputs whenever needed.
 
-   Indexers organize and make blockchain data easily accessible.
+### 3. **Verification and Integrity Checking**
 
-4. #### Bridges for Runes and Ordinals
+- **Signature Validation:** For each tracked transaction, the Indexer verifies the authenticity and integrity of data by validating digital signatures (e.g., using public keys, signatures, and hashed data).
+- **Double-spend Prevention:** By tracking UTXOs, the Indexer helps prevent double-spending, a critical feature in maintaining blockchain integrity.
 
-   This allows secure transfers and synchronization of assets like Runes and Ordinals between Bitcoin and rollups.
+### 4. **Event and Trigger Management**
 
-## Future Enhancements
+- **Event Detection:** The Indexer can trigger actions when specific conditions are met, such as the detection of a UTXO associated with a specific network or a particular transaction type.
+- **Automation Support:** This allows the network to automate certain functions, such as reward distributions or proof submissions based on UTXO changes.
 
-**IBC Compatibility and Support:** Surge plans to integrate Inter-Blockchain Communication (IBC) protocols to enhance cross-chain interactions and functionalities.
+### 5. **Auditability and Transparency**
 
-**Expansion of Services:** The ongoing development of new tools and services will meet the evolving needs of the blockchain community and support emerging dApps and blockchain interactions.
+- **Data Integrity Logs:** The Indexer keeps a historical log of all tracked transactions, ensuring that the network is auditable and transparent.
+- **Finality Assurance:** By indexing all relevant transactions and maintaining records of UTXO states, it guarantees finality and provides a solid foundation for auditing and compliance.
+
+### 6. **Resource Efficiency**
+
+- **Optimized for Performance:** It is designed to efficiently process blockchain data, reducing the computational load on the network by indexing only the necessary transactions.
+- **Scalability:** An Indexer enables a blockchain network to handle larger volumes of transactions by providing quick access to relevant transaction data, improving the scalability of the system.
+
+These core utilities make an Indexer a vital tool in any blockchain ecosystem, providing a framework for efficient data handling, transparency, and security, which are essential for the integrity and scalability of the network.
+
+<ZoomImage
+  src="/assets/indexer-surge.svg"
+  alt="superstack core functions"
+/>

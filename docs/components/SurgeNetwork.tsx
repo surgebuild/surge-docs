@@ -4,15 +4,15 @@ const arr = [
     url: "/metalayer/overview",
   },
   {
-    title: "Verifier Node",
+    title: "Verifiers",
     url: "/metalayer/verifier",
   },
   {
-    title: "Signer Node (DKLs23 - ECDSA/EdDSA)",
+    title: "Signers (DKLs23 - ECDSA/EdDSA)",
     url: "/metalayer/signer",
   },
   {
-    title: "Indexer Node",
+    title: "Indexers",
     url: "/metalayer/indexer/overview",
   },
 ];
@@ -25,9 +25,9 @@ export default function SurgeNetwork() {
           Surge Network (Metalayer)
         </p>
         <p className="border-b border-dashed border-[#6F7B8B] pb-4 text-base leading-5 text-[#6B7280]">
-          A Bitcoin native MetaLayer for Scaling
+          Composable Metalayer on Bitcoin
         </p>
-      </div> 
+      </div>
       <div className="flex flex-col gap-y-[10px] w-full mt-7">
         {arr.map((_item, ind) => (
           <a

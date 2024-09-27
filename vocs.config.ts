@@ -1,7 +1,8 @@
 import { defineConfig } from "vocs";
 
 export default defineConfig({
-  description: "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
+  description:
+    "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
   logoUrl: {
     light: "/logo/logo-light.png",
     dark: "/logo/logo-dark.png",
@@ -62,39 +63,39 @@ export default defineConfig({
             link: "/metalayer/overview",
           },
           {
-            text: "↳ Decentralized Verifier",
+            text: "↳ Verifiers",
             link: "/metalayer/verifier",
           },
           {
-            text: "↳ DKLs23 (EdDSA/ECDSA)",
+            text: "↳ Signers",
             link: "/metalayer/signer",
           },
           {
             text: "↳ Indexer",
-            collapsed: true,
-            items: [
-              {
-                text: " Overview",
-                link: "/metalayer/indexer/overview",
-              },
-              {
-                text: " StableCoin",
-                link: "/metalayer/indexer/native-stable-coins",
-              },
-              {
-                text: " Oracles & Indexers",
-                link: "/metalayer/indexer/oracles-and-indexers",
-              },
-              {
-                text: " Bridge Ordinals and Runes",
-                link: "/metalayer/indexer/bridge-ordinals-and-runes",
-              },
-            ],
+            link: "/metalayer/indexer/overview",
           },
-          {
-            text: "Super Validators",
-            link: "/metalayer/validators",
-          },
+          // {
+          //   text: "↳ Indexer",
+          //   collapsed: true,
+          //   items: [
+          //     {
+          //       text: " Overview",
+          //       link: "/metalayer/indexer/overview",
+          //     },
+          //     {
+          //       text: " StableCoin",
+          //       link: "/metalayer/indexer/native-stable-coins",
+          //     },
+          //     {
+          //       text: " Oracles & Indexers",
+          //       link: "/metalayer/indexer/oracles-and-indexers",
+          //     },
+          //     {
+          //       text: " Bridge Ordinals and Runes",
+          //       link: "/metalayer/indexer/bridge-ordinals-and-runes",
+          //     },
+          //   ],
+          // },
         ],
       },
       // {
