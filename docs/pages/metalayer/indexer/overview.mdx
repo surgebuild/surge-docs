@@ -7,7 +7,10 @@ description: Enhancing Rollup Functionality
 
 ## Overview
 
-Utilities within the Surge ecosystem are vital for enhancing the functionality, efficiency, and flexibility of Bitcoin Rollups. They provide the necessary tools and capabilities essential for robust operation and seamless integration of various applications.
+The Surge Network integrates a specialized Unspent Transaction Output (UTXO) Indexer to enhance transparency and facilitate efficient auditing, while achieving Bitcoin finality. This Indexer plays a critical role by systematically scanning Bitcoin blocks, specifically focusing on transactions tied to the Surge Network. It tracks UTXOs that contain unique Surge identifiers, ensuring seamless interaction between Surge and Bitcoin's blockchain.
+
+Integration with Bitcoin Nodes
+The UTXO Indexer is fully integrated with a Bitcoin node, allowing it to access real-time blockchain data. As new blocks are mined, the Indexer monitors these blocks, parsing through transactions to detect Surge-specific identifiers. These identifiers are embedded within transaction data, often found in OP_RETURN fields or encoded within the scriptPubKey. By filtering out irrelevant transactions, the Indexer ensures high performance and optimal resource utilization.
 
 ## Core Utilities
 
