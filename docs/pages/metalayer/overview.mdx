@@ -19,11 +19,17 @@ The Surge Metalayer solves this by providing enhanced throughput and smart contr
 
 ## Building Blocks of Surge Network
 
-- **Verifiers:** The ZKP Verification Layer is responsible for validating the correctness of transaction proofs without exposing any underlying data. This enhances both privacy and security, acting as a foundational layer for trustless and verifiable rollup interactions on Bitcoin.
+### Verifiers
 
-- **Signers:** These handle transaction signing and manage distributed cryptographic keys, governing BTC vault operations with precision and reliability
+ZKP Verification Layer: The Verifiers are responsible for validating the correctness of transaction proofs using Zero-Knowledge Proofs without revealing any underlying data. This process enhances both privacy and security, serving as a foundational layer for trustless and verifiable Rollup interactions on Bitcoin. By ensuring that all transactions are legitimate without exposing sensitive information, Verifiers maintain the integrity and confidentiality of the network.
 
-- **Indexers:** Efficient tools for organizing and accessing transaction data, supporting scalability.
+### Signers
+
+Transaction Signing and Key Management: Signers handle the critical task of transaction signing and managing distributed cryptographic keys. They govern BTC vault operations with precision and reliability, ensuring that all transactions are authorized and secure. By distributing key management, Signers enhance the network's resilience against single points of failure and potential security breaches.
+
+### Indexers
+
+Efficient Data Organization and Access: Indexers provide efficient tools for organizing and accessing transaction data, which is essential for maintaining scalability. They facilitate quick retrieval and processing of data, enabling the network to handle large volumes of transactions seamlessly. This component ensures that Surge can support high throughput while maintaining data integrity and accessibility.
 
 ## Impact of Soft Forks on Surge Network
 

@@ -12,13 +12,6 @@ The Surge Network integrates a specialized Unspent Transaction Output (UTXO) Ind
 Integration with Bitcoin Nodes
 The UTXO Indexer is fully integrated with a Bitcoin node, allowing it to access real-time blockchain data. As new blocks are mined, the Indexer monitors these blocks, parsing through transactions to detect Surge-specific identifiers. These identifiers are embedded within transaction data, often found in OP_RETURN fields or encoded within the scriptPubKey. By filtering out irrelevant transactions, the Indexer ensures high performance and optimal resource utilization.
 
-Tracking and Verification of Surge Transactions
-When a transaction associated with Surge is identified, the Indexer extracts crucial details, including:
-
-The sender's public key (P<sub>sender</sub>)
-The transaction's signature (S)
-The corresponding data blob (B)
-
 ## Core Utilities
 
 The core utilities of an Indexer, particularly in a blockchain network like Surge, are designed to optimize data retrieval, transaction tracking, and verification processes. Here are the key functions:
