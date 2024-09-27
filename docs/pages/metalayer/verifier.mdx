@@ -5,14 +5,13 @@ description: PoS based ZKP verifier network
 
 import ZoomImage from "../../components/ZoomImage";
 
-# Decentralized Verifier Network [PoS based ZK Proof verifier network]
+# Verifiers
 
-Our ultimate goal is to enable native verification of Zero-Knowledge Proofs (ZKPs) within Bitcoin blocks. This advancement requires the introduction of new opcodes—such as OP_verifystarkproof in Bitcoin's script language. To address this gap, we are developing a unique ZKP Verifier Network that can be seamlessly integrated with Bitcoin. This module will enable information to be verified and then inscribed onto the Bitcoin blockchain, ensuring enhanced security and reliability until native support is fully developed and adopted.
+## Why do we need a verifier?
 
-## Need for a ZKP Verifier Network
+A verifier is essential in blockchain systems, especially in the context of zero-knowledge proofs (ZKPs) and complex transaction validation, because it ensures the correctness and integrity of data without exposing sensitive information. In the Surge Metalayer, a verifier plays a critical role by confirming that zk-proofs and other transactions submitted to the network are valid before they are aggregated and inscribed onto Bitcoin. This process guarantees that only legitimate, cryptographically proven transactions are finalized, enhancing the security and trust of the network.
 
-In typical Validium ZK rollup setups, transaction data is pushed to an off-chain data availability layer and publishes zero-knowledge proofs to verify off-chain transactions on Layer 1.
-
+Additionally, the verifier provides decentralization by allowing multiple participants in the network to independently check and validate proofs, preventing any single point of failure or malicious activity. In systems that aggregate multiple transactions or proofs, like Surge, the verifier also ensures scalability by efficiently handling large volumes of data while maintaining high standards of correctness.
 However, the non-Turing-complete nature of Bitcoin's scripting language limits its proof verification capabilities. To address this, our Zero-Knowledge Proof (ZKP) verifier network ensures that the submitted proofs are compatible, verifiable with BitVM2, and can be natively verified on the Bitcoin Layer.
 
 ## Building a PoS-Backed ZKP Verifier Network
@@ -31,57 +30,11 @@ We are developing an innovative Proof-of-Stake (PoS) based Zero Knowledge Proof 
 
   <br />
 
-- ### Staking on Bitcoin
-
-  - Superstack's Zero Knowledge Verifier offers Bitcoin holders a seamless way to
-    engage in Proof of Stake (PoS) blockchains without relying on intermediaries
-    for asset custody, cross-chain bridges, or token wrapping. This approach
-    provides robust security mechanisms that are intrinsic to PoS networks,
-    ensuring the rapid unlocking of staked Bitcoin to enhance liquidity for
-    participants.
-
-  - Superstack Zero Knowledge Verifier leverages Babylon for staking. Which enables Superstack to implement extractable one-time signatures (EOTS). A technology architected to maintain integrity and accountability. With EOTS, if a signature is reused across different blocks at the same level (double singing), the secret key is revealed, promoting honest behavior among stakers. Those who stake their Bitcoin in good faith are rewarded with block rewards and transaction fees.
+- ### Proof Aggregation
+  Surge is building an in-network proof aggregation module to significantly improve cost-effectiveness and scalability. By aggregating multiple zero-knowledge proofs (ZKPs) into a single, compact proof, Surge minimizes the computational and storage overhead associated with verifying individual proofs on-chain. This approach reduces the gas fees and transaction costs required for submitting proofs to Bitcoin, making the process more efficient for participants. The proof aggregation module streamlines the validation of zk-proofs across Surge, enabling the network to handle larger volumes of transactions without compromising security or performance. By integrating this module directly into the Surge ecosystem, it ensures that proof verification remains cost-effective while maintaining the network's decentralized and secure architecture.
+  <br />
 
 {" "}
-
-<ZoomImage src="/assets/surge-architecture.png" alt="zkp verifier network" />
-
-## The Critical Role of the ZKP Verifier Network
-
-### 1. Proof Submission and Verification Process
-
-**Submission**: Users submit their zero-knowledge proofs to the validator network.
-
-**Verification**: The submitted proofs are rigorously verified by the network's validators. This process involves cross-checking the proofs to ensure their validity.
-
-**Discrepancy Challenges**: If any discrepancies are detected during verification, they are promptly challenged. This mechanism ensures that any invalid or malicious proofs are quickly identified and rejected.
-
-**Confirmation**: Only the proofs that pass the verification process without discrepancies are confirmed as valid.
-
-### 2. Inscription onto Bitcoin
-
-Once a proof is confirmed, it is queued for inscription onto the Bitcoin blockchain. By inscribing the confirmed proofs onto Bitcoin, we inherit Bitcoin's unparalleled security. This process adds an additional layer of security and immutability to the proofs, leveraging Bitcoin's decentralized and robust network.
-
-<ZoomImage src="/assets/Bitcoin_inscription.png" alt="user tx" />
-<p className="text-center">An inscription on Bitcoin</p>
-
-Here is a **pseudo code** explanation of how a bitcoin inscription is constructed:
-
-```js
-Function InscribeBitcoin(data, privateKey, utxo):
-    tx = new Transaction()
-    tx.addInput(utxo)
-
-    opReturnScript = Script([OP_RETURN, data])
-    tx.addOutput(0, opReturnScript)
-
-    if changeAmount > 0:
-        tx.addOutput(changeAmount, createChangeScript())
-
-    signTransaction(tx, privateKey)
-    rawTx = serialize(tx)
-    broadcast(rawTx)
-```
 
 ## Benefits of Our Approach
 

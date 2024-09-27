@@ -9,26 +9,24 @@ import ZoomImage from "../../components/ZoomImage";
 
 ## Overview
 
-The Surge Network operates as a crucial intermediate layer above the Bitcoin Settlement Layer, facilitating the scalable deployment of rollups. By processing Zero-Knowledge Proofs (ZK proofs) from execution layers and managing data via the Data Availability (DA) layer, the Surge Network ensures the secure inscription of Merkle state hashes onto Bitcoin. This architecture not only enhances scalability but also preserves the core principles of decentralization and security inherent to Bitcoin.
+Surge Network is a composable Metalayer on Bitcoin built to provide a secure network for launching Rollups, and dApps to scale Bitcoin innovation. Combining Bitcoin's robust security model with advanced cryptographic techniques like Zero-Knowledge Proofs. At the core of the architecture are zk-aggregation and decentralized verification mechanisms, which ensure scalability without compromising security. Surge serves as the interstitial metalayer for Rollups and dApps, inheriting Bitcoin’s security and extending it to everything built on the network.
 
-## Architecture and Network
+## Why a Bitcoin Native MetaLayer?
 
-- **PoS-based Decentralization:** Our Proof-of-Stake model ensures network security and operational efficiency.
+A Bitcoin Native MetaLayer, like the Surge Metalayer, is essential because it leverages Bitcoin's unparalleled security while addressing its limitations in scalability and functionality. Bitcoin, though secure and decentralized, struggles to handle the high transaction volumes and complex operations needed for advanced decentralized applications (dApps).
 
-- **Validator Program:** The Surge Network validator program is designed to expand our network. It allows participants to set up nodes and contribute to the network's robustness, enhancing decentralized validation processes.
+The Surge Metalayer solves this by providing enhanced throughput and smart contract capabilities without altering Bitcoin's core layer. Additionally, through Inter-Blockchain Communication (IBC), Surge enables seamless interaction with other blockchain ecosystems, facilitating the transfer of assets, data, and zk-proofs. This composability not only scales Bitcoin but also fosters greater flexibility and interoperability for developers, empowering them to build unified applications across multiple chains.
 
 ## Building Blocks of Surge Network
 
-- **Decentralized Verification Layer:** The ZKP Verification Layer is responsible for validating the correctness of transaction proofs without exposing any underlying data. This enhances both privacy and security, acting as a foundational layer for trustless and verifiable rollup interactions on Bitcoin.
+- **Verifiers:** The ZKP Verification Layer is responsible for validating the correctness of transaction proofs without exposing any underlying data. This enhances both privacy and security, acting as a foundational layer for trustless and verifiable rollup interactions on Bitcoin.
 
-- **MPC TSS Secure Bridge:** This component provides a secure, trust-minimized bridge for a 2-way peg between Bitcoin and rollups. It utilizes Threshold Signature Schemes (TSS) to securely manage and safeguard the pegs, ensuring the integrity of cross-chain asset transfers.
+- **Signers:** These handle transaction signing and manage distributed cryptographic keys, governing BTC vault operations with precision and reliability
 
-- **Utilities for Rollups:** The Surge Network includes a suite of essential tools that support the development and operation of rollups:
-  - **Oracles:** Reliable data feeds that provide smart contracts with accurate and real-time information.
-  - **Indexers:** Efficient tools for organizing and accessing transaction data, supporting scalability.
-  - **Bridges for Runes and Ordinals:** Specialized bridges that enable seamless integration and interaction with Runes and Ordinals, expanding the utility of rollups.
+- **Indexers:** Efficient tools for organizing and accessing transaction data, supporting scalability.
 
 ## Impact of Soft Forks on Surge Network
+
 **Enhancing On-Chain Scripting with OP_CAT**\
 The introduction of _OP_CAT_ in a potential Bitcoin soft fork could significantly enhance the Surge Network's capabilities. _OP_CAT_, by enabling more sophisticated on-chain scripting, offers the opportunity to reduce our reliance on off-chain processes. This improvement can lead to a more streamlined and efficient system, particularly in terms of transaction execution and validation.
 
@@ -39,4 +37,3 @@ With the integration of _OP_CAT_, we anticipate being able to offload certain of
   src="/assets/superstack-core-functions.png"
   alt="superstack core functions"
 />
-
