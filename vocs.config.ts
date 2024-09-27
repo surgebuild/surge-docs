@@ -176,10 +176,10 @@ export default defineConfig({
             text: "Attempts to Scale Bitcoin",
             link: "/basics/attempts-to-scale-bitcoin",
           },
-          {
-            text: "How RaaS Interface will Evolve?",
-            link: "/more-read/how-raas-interface-will-evolve",
-          },
+          // {
+          //   text: "How RaaS Interface will Evolve?",
+          //   link: "/more-read/how-raas-interface-will-evolve",
+          // },
           // {
           //   text: "Bitcoin Scaling Trilemma",
           //   link: "/more-read/bitcoin-scaling-trilemma",
