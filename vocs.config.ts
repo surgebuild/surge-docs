@@ -1,7 +1,8 @@
 import { defineConfig } from "vocs";
 
 export default defineConfig({
-  description: "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
+  description:
+    "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
   logoUrl: {
     light: "/logo/logo-light.png",
     dark: "/logo/logo-dark.png",
@@ -31,106 +32,111 @@ export default defineConfig({
             link: "/overview/introduction",
           },
           {
+            text: "Surge Stack",
+            link: "/overview/surge-stack",
+          },
+          {
             text: "Why Surge?",
             link: "/overview/why-surge",
           },
         ],
       },
-      {
-        text: "BASICS",
-        items: [
-          {
-            text: "Understanding the Rollups",
-            link: "/basics/understanding-the-rollups",
-          },
-          {
-            text: "Evolution of Rollups on Bitcoin",
-            link: "/basics/journey-of-rollups-on-bitcoin",
-          },
-        ],
-      },
-      {
-        text: "RAAS STACK",
-        items: [
-          {
-            text: "⭐ Architecture",
-            link: "/surge-building-blocks/architecture",
-          },
-          {
-            text: "Multi VM Execution Support",
-            link: "/surge-building-blocks/multi-vm",
-          },
-          {
-            text: "Rollup Frameworks",
-            link: "/surge-building-blocks/rollup-frameworks",
-          },
-          {
-            text: "High Availability Sequencer",
-            link: "/surge-building-blocks/high-availability-sequencer",
-          },
-          {
-            text: "Customizations",
-            collapsed: true,
-            items: [
-              {
-                text: "Decentralized Sequencer",
-                link: "/surge-building-blocks/customizations/decentralized-sequencer",
-              },
-              {
-                text: " Native Gas Token",
-                link: "/surge-building-blocks/customizations/native-gas-token",
-              },
-              {
-                text: " Alternative Data Availability",
-                link: "/surge-building-blocks/customizations/alternative-data-availability",
-              },
-            ],
-          },
-        ],
-      },
+      // {
+      //   text: "BASICS",
+      //   items: [
+      //     {
+      //       text: "Understanding the Rollups",
+      //       link: "/basics/understanding-the-rollups",
+      //     },
+      //     {
+      //       text: "Evolution of Rollups on Bitcoin",
+      //       link: "/basics/journey-of-rollups-on-bitcoin",
+      //     },
+      //   ],
+      // },
+
       {
         text: "METALAYER",
         items: [
           {
-            text: "⚡ SuperStack",
-            link: "/metalayer/superstack",
+            text: "⚡ Surge Network",
+            link: "/metalayer/overview",
           },
           {
-            text: "↳ Decentralized Verifier Network",
-            link: "/metalayer/zkp-verifier-network",
+            text: "↳ Verifiers",
+            link: "/metalayer/verifier",
           },
           {
-            text: "↳ Bitcoin MPC TSS Bridge",
-            link: "/metalayer/mpc-tss-bridge",
+            text: "↳ Signers",
+            link: "/metalayer/signer",
           },
           {
-            text: "↳ Utilities",
-            collapsed: true,
-            items: [
-              {
-                text: " Overview",
-                link: "/metalayer/utilities/overview",
-              },
-              {
-                text: " StableCoin",
-                link: "/metalayer/utilities/native-stable-coins",
-              },
-              {
-                text: " Oracles & Indexers",
-                link: "/metalayer/utilities/oracles-and-indexers",
-              },
-              {
-                text: " Bridge Ordinals and Runes",
-                link: "/metalayer/utilities/bridge-ordinals-and-runes",
-              },
-            ],
+            text: "↳ Indexer",
+            link: "/metalayer/indexer/overview",
           },
-          {
-            text: "Super Validators",
-            link: "/metalayer/validators",
-          },
+          // {
+          //   text: "↳ Indexer",
+          //   collapsed: true,
+          //   items: [
+          //     {
+          //       text: " Overview",
+          //       link: "/metalayer/indexer/overview",
+          //     },
+          //     {
+          //       text: " StableCoin",
+          //       link: "/metalayer/indexer/native-stable-coins",
+          //     },
+          //     {
+          //       text: " Oracles & Indexers",
+          //       link: "/metalayer/indexer/oracles-and-indexers",
+          //     },
+          //     {
+          //       text: " Bridge Ordinals and Runes",
+          //       link: "/metalayer/indexer/bridge-ordinals-and-runes",
+          //     },
+          //   ],
+          // },
         ],
       },
+      // {
+      //   text: "RDK",
+      //   items: [
+      //     {
+      //       text: "⭐ Architecture",
+      //       link: "/surge-building-blocks/architecture",
+      //     },
+      //     {
+      //       text: "Multi VM Execution Support",
+      //       link: "/surge-building-blocks/multi-vm",
+      //     },
+      //     {
+      //       text: "Rollup Frameworks",
+      //       link: "/surge-building-blocks/rollup-frameworks",
+      //     },
+      //     {
+      //       text: "High Availability Sequencer",
+      //       link: "/surge-building-blocks/high-availability-sequencer",
+      //     },
+      //     {
+      //       text: "Customizations",
+      //       collapsed: true,
+      //       items: [
+      //         {
+      //           text: "Decentralized Sequencer",
+      //           link: "/surge-building-blocks/customizations/decentralized-sequencer",
+      //         },
+      //         {
+      //           text: " Native Gas Token",
+      //           link: "/surge-building-blocks/customizations/native-gas-token",
+      //         },
+      //         {
+      //           text: " Alternative Data Availability",
+      //           link: "/surge-building-blocks/customizations/alternative-data-availability",
+      //         },
+      //       ],
+      //     },
+      //   ],
+      // },
       {
         text: "MORE READ",
         items: [
@@ -174,10 +180,10 @@ export default defineConfig({
             text: "Attempts to Scale Bitcoin",
             link: "/basics/attempts-to-scale-bitcoin",
           },
-          {
-            text: "How RaaS Interface will Evolve?",
-            link: "/more-read/how-raas-interface-will-evolve",
-          },
+          // {
+          //   text: "How RaaS Interface will Evolve?",
+          //   link: "/more-read/how-raas-interface-will-evolve",
+          // },
           // {
           //   text: "Bitcoin Scaling Trilemma",
           //   link: "/more-read/bitcoin-scaling-trilemma",

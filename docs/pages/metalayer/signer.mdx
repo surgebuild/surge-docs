@@ -1,0 +1,27 @@
+---
+title: Surge | Singer Node
+description: Decentralized TSS network for signing operations using the DKLS23 EdDSA/ECDSA scheme
+---
+
+import ZoomImage from "../../components/ZoomImage";
+
+## Decentralized Signing and Inscription
+
+The Signer Node manages decentralized signing operations using the DKLS23 EdDSA/ECDSA scheme, ensuring secure, decentralized management of cryptographic keys for inscribing ZKPs into Bitcoin.
+
+- **Decentralized Key Management:** A quorum-based signing process of nodes is required to sign a transaction, ensuring a decentralized approach to key management.
+
+<ZoomImage
+  src="/assets/signer_node.png"
+  alt="surge node"
+  className="md:w-[100%] w-[100%] mx-auto"
+/>
+
+- **BTC Vault Operations:** Signer nodes manage BTC vault operations, enabling secure peg-in and peg-out transactions for rollups. BTC is secured and governed through decentralized signing mechanisms.
+
+## Security and Resilience via TSS Network
+
+The Signer Node operates within a standalone TSS (Threshold Signature Scheme) network, ensuring that no single node controls the signing process and utilizes M of N consensus to securely manage key shares and signatures.
+
+- **Distributed Key Generation (DKG):** Key generation is distributed across the TSS network, ensuring that no single party has access to the entire private key.
+- **Pro-activization, Key rotation:** The system includes regular key rotation and refresh processes, ensuring that keys are never permanently exposed and remain secure even in the face of node compromise..
