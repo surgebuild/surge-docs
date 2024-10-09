@@ -1,8 +1,7 @@
 import { defineConfig } from "vocs";
 
 export default defineConfig({
-  description:
-    "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
+  description: "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
   logoUrl: {
     light: "/logo/logo-light.png",
     dark: "/logo/logo-dark.png",
@@ -12,8 +11,8 @@ export default defineConfig({
     google: "Inter",
   },
   topNav: [
-    // { text: "Introduction", link: "/overview/introduction" },
     { text: "Blog", link: "https://surge.build/blog" },
+    { text: "Bitcoin Playground", link: "https://surge.build/playground" },
     { text: "Website", link: "https://www.surge.build/" },
   ],
   theme: {
