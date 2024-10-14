@@ -1,7 +1,8 @@
 import { defineConfig } from "vocs";
 
 export default defineConfig({
-  description: "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
+  description:
+    "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
   logoUrl: {
     light: "/logo/logo-light.png",
     dark: "/logo/logo-dark.png",
@@ -67,15 +68,15 @@ export default defineConfig({
             items: [
               {
                 text: "↳ Verifiers",
-                link: "/tech-specs/architecture/verifiers",
+                link: "/tech-specs/architecture/newverifiers",
               },
               {
                 text: "↳ Signers",
-                link: "/tech-specs/architecture/signers",
+                link: "/tech-specs/architecture/newsigners",
               },
               {
                 text: "↳ Indexers",
-                link: "/tech-specs/architecture/indexers",
+                link: "/tech-specs/architecture/newindexers",
               },
               {
                 text: "↳ Adapters",

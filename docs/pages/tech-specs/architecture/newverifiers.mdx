@@ -1,0 +1,81 @@
+---
+title: Surge | Decentralized Verifier Network
+description: PoS based ZKP verifier network
+---
+
+import ZoomImage from "../../../components/ZoomImage";
+
+# Verifiers
+
+Verifiers are essential to securing the Surge network by validating zk-proofs that represent transaction histories. Using off-chain aggregation, they consolidate multiple proofs into recursive succinct zk-proofs, reducing on-chain costs and enhancing scalability. By posting only minimal data, such as state commitments and aggregated signatures, Surge maintains high throughput and data availability. Periodic commitments to Bitcoin anchor these state transitions within its Proof-of-Work, ensuring finality. Verifiers are rewarded for their contributions, making them integral to Surge’s decentralized consensus.
+
+## ZK Aggregation and Verification Layer
+
+To transcend the limitations of conventional rollups, which requires each transaction to be submitted to the base layer, Surge employs zk-aggregation. This process compresses multiple proofs (n proofs) into a single concise proof (Pagg), significantly reducing computational overhead and on-chain fees. This aggregation also enhances throughput by enabling the verification of entire rollup histories using a single cryptographic proof.
+
+### zk-Aggregation Technique
+
+Surge's zk-aggregation compresses multiple zk-proofs into a single proof that can be efficiently verified on-chain.
+
+<div align="center">
+  P<sub>agg</sub> = Agg(π<sub>1</sub>, π<sub>2</sub>, …, π<sub>n</sub>)
+</div>
+
+Here, π<sub>1</sub>, π<sub>2</sub>, …, π<sub>n</sub> are the individual zk-SNARK or zk-STARK proofs generated for each transaction batch, and Agg is the aggregation function that compresses these into a single proof P<sub>agg</sub> ​that can be succinctly verified on-chain.
+
+<ZoomImage
+  src="/assets/aggregation_layer.png"
+  alt="Proof Aggregation"
+  className="md:w-[70%] w-[80%] mx-auto"
+/>
+
+By minimizing the verification load, Surge reduces the gas fees and enhances the finality speed of zk-proofs submitted to the network.
+
+### Hashing for State Commitments
+
+To ensure integrity and immutability, Surge produces a state commitment that reflects the new state of the system. This is done using a Merkle tree, where each leaf represents the hash of a transaction with zk-proofs submitted to the chain, and the root represents the commitment to the entire set of transactions.
+
+Let _h<sub>x</sub>(T<sub>i</sub>)_ be the cryptographic hash of transaction _T<sub>i</sub>_. The Merkle root _M<sub>root</sub>_ for _n_ transactions is computed as:
+
+<div align="center">
+  _M<sub>root</sub> = MerkleRoot(h<sub>x</sub>(T<sub>1</sub>), h<sub>x</sub>(T
+  <sub>2</sub>), …, h<sub>x</sub>(T<sub>n</sub>))_
+</div>
+
+This root is then inscribed onto Bitcoin, providing a secure and verifiable state commitment.
+
+## Anchoring to Bitcoin Security
+
+Surge leverages Bitcoin's security by anchoring state commitments and zk-proof aggregations to Bitcoin. This is achieved using a Commit-Reveal Framework, embedding the Merkle root of Surge's state and aggregated proofs in a Bitcoin UTXO. Once confirmed, this provides verifiable proof that Surge’s state existed and is backed by Bitcoin's consensus.
+
+### Key Security Components:
+
+- **State Commitment & Proof Aggregation**: A Merkle root (_M<sub>root</sub>_) and aggregated zk-proof (_P<sub>agg</sub>_) are embedded into Bitcoin as _UTXOSurge_.
+
+- **Bitcoin Inscription**: Each Surge state is linked to a specific Bitcoin block, inheriting Bitcoin's Proof-of-Work integrity. This results in probabilistic finality, where the likelihood of reversal diminishes exponentially with each confirmation.
+
+- **Timestamp Integrity**: Bitcoin’s native timestamping provides verifiable time references for each block. Every Bitcoin block includes a timestamp _t<sub>block</sub>_, which is used to record the time of the Surge state commitment. This timestamp can be verified by referencing the block height _h<sub>block</sub>_ where the transaction _UTXOSurge_ was included.
+
+<div align="center">
+  _t<sub>commit</sub> = t<sub>block</sub>(h<sub>block</sub>)_
+</div>
+
+Participants can verify that the Surge state existed at or before _t<sub>commit</sub>_ by verifying the inclusion of _UTXOSurge_ in Bitcoin’s blockchain at _t<sub>commit</sub>_.
+
+### Security Inheritance:
+
+- **Probabilistic Finality**: The probability of a block reversal decreases exponentially with each subsequent block confirmation:
+
+  <div align="center">
+    *P(reversal) ≈ (p / (1 - p))<sup>n</sup>*
+  </div>
+  Where *p* is the proportion of hostile mining power, and *n* is the number of confirmations.
+
+- **Computational Security**: The cost of altering a block rises exponentially with the length of the chain since that block, further strengthening the integrity of the anchored data.  
+  By anchoring Surge's state commitments and aggregated proofs to Bitcoin, Surge inherits Bitcoin's finality and timestamp integrity. This security is based on the cryptographic robustness of zk-proofs and Bitcoin's Proof-of-Work (PoW) consensus, providing a verifiable solution for ensuring finality and precise time references.
+
+<ZoomImage
+  src="/assets/user_protocol_framework.png"
+  alt="Commit-Reveal framework journey"
+  className="md:w-[70%] w-[80%] mx-auto"
+/>

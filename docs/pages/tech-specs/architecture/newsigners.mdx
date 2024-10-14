@@ -1,0 +1,53 @@
+---
+title: Surge | Singer Node
+description: Decentralized TSS network for signing operations using the DKLS23 EdDSA/ECDSA scheme
+---
+
+import ZoomImage from "../../../components/ZoomImage";
+
+# Signers
+
+The Signers manage decentralized signing operations using the DKLs23 EdDSA/ECDSA scheme, ensuring secure, decentralized management of cryptographic keys for inscribing zk-proofs into Bitcoin.  
+DKLs23 is preferred for its use of Oblivious Transfer-based Multiplication (OT Mul), which significantly reduces computational overhead and latency compared to traditional Paillier-based methods. This efficiency enables faster key generation and signing, making DKLs23 highly scalable for large decentralized networks.
+
+## Decentralized Signing and Inscription
+
+- **Decentralized Key Management**: A quorum-based signing process of nodes is required to sign a transaction, ensuring a decentralized approach to key management.
+
+- **BTC Vault & Distributed Signers**: Signers manage BTC vault and Bridge operations, enabling secure cross-chain transfers between Bitcoin and other rollups. The bridge utilizes peg-in and peg-out processes, where users lock their BTC in the vault to access its value on another blockchain. The core of this system is the DKLs23 signature scheme combined with a TSS decentralized network, where cryptographic key management and signing are distributed across multiple Signers. This ensures that no single entity controls the vault, enhancing security and decentralization. The DKLs23 scheme’s use of advanced cryptography reduces latency and computational overhead, allowing efficient and secure authorization of BTC releases from the vault.
+
+## Security and Resilience via TSS Network
+
+- **Signer Node Operation**: The Signer Node operates within a standalone TSS (Threshold Signature Scheme) network, ensuring that no single node controls the signing process and utilizes M of N consensus to securely manage key shares and signatures.
+
+- **Distributed Key Generation (DKG)**: The key generation is distributed across the TSS network, ensuring that no single party has access to the entire private key.
+
+- **Proactive Key Refresh**: The system includes regular key rotation and refresh processes, ensuring that keys are never permanently exposed and remain secure even in the face of node compromise.
+
+<ZoomImage
+  src="/assets/key_refresh.png"
+  alt="Proactive Key Refresh"
+  className="md:w-[50%] w-[80%] mx-auto"
+/>
+
+- **Weighted Nodes**: Nodes are assigned weights based on factors like stake, reputation, performance, or governance roles.
+
+  - **_Prioritized Signing_**: Higher-weighted nodes are prioritized in the signing process, allowing for faster consensus and signature generation.
+
+  - **_Reduced Latency_**: Reliable and fast nodes with higher weights can reduce overall latency in the TSS signing process.
+
+  - **_Security and Fault Tolerance_**: High-weighted nodes improve security by being more accountable and enhance fault tolerance by ensuring progress even if some nodes fail.
+
+- **Malicious Node Detection**: The DKLs23 protocol includes mechanisms to detect and mitigate malicious nodes during key generation and threshold signing.
+
+  - **_Consistency Checks_**: The protocol checks message consistency, allowing nodes to detect and flag deviations from expected behavior.
+  - **_Audit Trails_**: Actions and messages are logged, enabling the identification of malicious nodes through post-event analysis.
+  - **_Complaint Mechanism_**: Nodes can file complaints against suspicious behavior, leading to the exclusion of confirmed malicious nodes.
+
+- **Stake-Based Security and Slashing**: In the event of identifying a malicious actor, the network employs economic penalties through slashing. Validators are required to stake cryptocurrency as a security bond. If they engage in malicious or faulty behavior, a portion of their stake is slashed, serving as a deterrent and maintaining the network’s security and integrity.
+
+<ZoomImage
+  src="/assets/tss_network.png"
+  alt="Economic guarantee of TSS Network"
+  className="md:w-[95%] w-[80%] mx-auto"
+/>
