@@ -77,19 +77,23 @@ export default defineConfig({
                 text: "↳ Indexers",
                 link: "/tech-specs/architecture/indexers",
               },
+              {
+                text: "↳ Adapters",
+                link: "/tech-specs/architecture/adapters",
+              },
             ],
           },
           {
             text: "Composability",
-            link: "/tech-specs/overview",
+            link: "/tech-specs/composability",
           },
           {
             text: "Interopability",
-            link: "/tech-specs/overview",
+            link: "/tech-specs/interopability",
           },
           {
             text: "Security",
-            link: "/tech-specs/overview",
+            link: "/tech-specs/security",
           },
           // {
           //   text: "↳ Indexer",
@@ -162,119 +166,6 @@ export default defineConfig({
           },
         ],
       },
-      // {
-      //   text: "RDK",
-      //   items: [
-      //     {
-      //       text: "⭐ Architecture",
-      //       link: "/surge-building-blocks/architecture",
-      //     },
-      //     {
-      //       text: "Multi VM Execution Support",
-      //       link: "/surge-building-blocks/multi-vm",
-      //     },
-      //     {
-      //       text: "Rollup Frameworks",
-      //       link: "/surge-building-blocks/rollup-frameworks",
-      //     },
-      //     {
-      //       text: "High Availability Sequencer",
-      //       link: "/surge-building-blocks/high-availability-sequencer",
-      //     },
-      //     {
-      //       text: "Customizations",
-      //       collapsed: true,
-      //       items: [
-      //         {
-      //           text: "Decentralized Sequencer",
-      //           link: "/surge-building-blocks/customizations/decentralized-sequencer",
-      //         },
-      //         {
-      //           text: " Native Gas Token",
-      //           link: "/surge-building-blocks/customizations/native-gas-token",
-      //         },
-      //         {
-      //           text: " Alternative Data Availability",
-      //           link: "/surge-building-blocks/customizations/alternative-data-availability",
-      //         },
-      //       ],
-      //     },
-      //   ],
-      // },
-      // {
-      //   text: "MORE READ",
-      //   items: [
-      //     {
-      //       text: "Bitcoin L2 Landscape",
-      //       link: "/more-read/upcoming-bitcoin-l2s",
-      //     },
-      //     // {
-      //     //   text: "Bitcoin as a Settlement Layer",
-      //     //   collapsed: true,
-      //     //   items: [
-      //     //     {
-      //     //       text: "Overview",
-      //     //       link: "/basics/bitcoin-as-a-settlement-layer/overview",
-      //     //     },
-      //     //     {
-      //     //       text: "Finality",
-      //     //       link: "/basics/bitcoin-as-a-settlement-layer/finality",
-      //     //     },
-      //     //     {
-      //     //       text: "Shared Security",
-      //     //       collapsed: true,
-      //     //       items: [
-      //     //         {
-      //     //           text: "Bitcoin Shared Security",
-      //     //           link: "/basics/bitcoin-as-a-settlement-layer/shared-security/bitcoin-shared-security",
-      //     //         },
-      //     //         {
-      //     //           text: "Shared Security Protocol",
-      //     //           link: "/basics/bitcoin-as-a-settlement-layer/shared-security/shared-security-protocol",
-      //     //         },
-      //     //       ],
-      //     //     },
-      //     //     {
-      //     //       text: "BitVM",
-      //     //       link: "/basics/bitcoin-as-a-settlement-layer/bitvm",
-      //     //     },
-      //     //   ],
-      //     // },
-      //     {
-      //       text: "Attempts to Scale Bitcoin",
-      //       link: "/basics/attempts-to-scale-bitcoin",
-      //     },
-      //     // {
-      //     //   text: "How RaaS Interface will Evolve?",
-      //     //   link: "/more-read/how-raas-interface-will-evolve",
-      //     // },
-      //     // {
-      //     //   text: "Bitcoin Scaling Trilemma",
-      //     //   link: "/more-read/bitcoin-scaling-trilemma",
-      //     // },
-      //     // {
-      //     //   text: "How does a Bitcoin Transaction Work?",
-      //     //   link: "/more-read/how-does-a-bitcoin-transaction-work",
-      //     // },
-      //     // {
-      //     //   text: "Advantages of Choosing MPC TSS Over Alternative Methods",
-      //     //   link: "/more-read/advantages-of-choosing-mpc-tss-over-alternative-methods",
-      //     // },
-      //   ],
-      // },
-      // {
-      //   text: "USERS TOOLING",
-      //   items: [
-      //     {
-      //       text: "Custom Signet Node",
-      //       link: "/users-tooling/node-setup-guide",
-      //     },
-      //     {
-      //       text: "Running a Validator Node",
-      //       link: "/users-tooling/run-a-validator-node",
-      //     },
-      //   ],
-      // },
       {
         text: "RESOURCES",
         items: [
