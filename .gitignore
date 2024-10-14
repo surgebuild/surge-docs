@@ -134,3 +134,4 @@ dist
 *.pem
 
 
+vocs.config.ts.timestamp-*

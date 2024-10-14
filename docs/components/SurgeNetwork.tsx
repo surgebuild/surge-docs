@@ -1,7 +1,7 @@
 const arr = [
   {
     title: "Overview",
-    url: "/metalayer/overview",
+    url: "/overview/introduction",
   },
   {
     title: "Verifiers",

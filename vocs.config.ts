@@ -1,8 +1,7 @@
 import { defineConfig } from "vocs";
 
 export default defineConfig({
-  description:
-    "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
+  description: "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
   logoUrl: {
     light: "/logo/logo-light.png",
     dark: "/logo/logo-dark.png",
@@ -56,23 +55,41 @@ export default defineConfig({
       // },
 
       {
-        text: "SURGE",
+        text: "TECH SPECS",
         items: [
           {
             text: "Essentials",
-            link: "/surge/overview",
+            link: "/tech-specs/overview",
           },
           {
-            text: "↳ Verifiers",
-            link: "/surge/verifier",
+            text: "Architecture",
+            collapsed: false,
+            items: [
+              {
+                text: "↳ Verifiers",
+                link: "/tech-specs/architecture/verifiers",
+              },
+              {
+                text: "↳ Signers",
+                link: "/tech-specs/architecture/signers",
+              },
+              {
+                text: "↳ Indexers",
+                link: "/tech-specs/architecture/indexers",
+              },
+            ],
           },
           {
-            text: "↳ Signers",
-            link: "/surge/signer",
+            text: "Composability",
+            link: "/tech-specs/overview",
           },
           {
-            text: "↳ Indexer",
-            link: "/surge/indexer/overview",
+            text: "Interopability",
+            link: "/tech-specs/overview",
+          },
+          {
+            text: "Security",
+            link: "/tech-specs/overview",
           },
           // {
           //   text: "↳ Indexer",
