@@ -31,8 +31,8 @@ export default defineConfig({
             link: "/overview/introduction",
           },
           {
-            text: "Surge Stack",
-            link: "/overview/surge-stack",
+            text: "Evolution of Bitcoin Scalability",
+            link: "/overview/bitcoin-scalability",
           },
           {
             text: "Why Surge?",
@@ -58,7 +58,7 @@ export default defineConfig({
         text: "METALAYER",
         items: [
           {
-            text: "⚡ Surge Network",
+            text: "Essentials",
             link: "/metalayer/overview",
           },
           {

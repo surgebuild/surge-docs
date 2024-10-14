@@ -4,8 +4,8 @@ const arr = [
     url: "/overview/introduction",
   },
   {
-    title: "Surge Stack",
-    url: "/overview/surge-stack",
+    title: "Evolution of Bitcoin Scalability",
+    url: "/overview/bitcoin-scalability",
   },
   {
     title: "Why Surge?",
