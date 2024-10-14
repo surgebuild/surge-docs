@@ -1,7 +1,8 @@
 import { defineConfig } from "vocs";
 
 export default defineConfig({
-  description: "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
+  description:
+    "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
   logoUrl: {
     light: "/logo/logo-light.png",
     dark: "/logo/logo-dark.png",
@@ -35,8 +36,8 @@ export default defineConfig({
             link: "/overview/bitcoin-scalability",
           },
           {
-            text: "Why Surge?",
-            link: "/overview/why-surge",
+            text: "BTCFi - The New Bitcoin Frontier?",
+            link: "/overview/btcFi",
           },
         ],
       },
@@ -55,23 +56,23 @@ export default defineConfig({
       // },
 
       {
-        text: "METALAYER",
+        text: "SURGE",
         items: [
           {
             text: "Essentials",
-            link: "/metalayer/overview",
+            link: "/surge/overview",
           },
           {
             text: "↳ Verifiers",
-            link: "/metalayer/verifier",
+            link: "/surge/verifier",
           },
           {
             text: "↳ Signers",
-            link: "/metalayer/signer",
+            link: "/surge/signer",
           },
           {
             text: "↳ Indexer",
-            link: "/metalayer/indexer/overview",
+            link: "/surge/indexer/overview",
           },
           // {
           //   text: "↳ Indexer",
@@ -95,6 +96,53 @@ export default defineConfig({
           //     },
           //   ],
           // },
+        ],
+      },
+      {
+        text: "USE CASES",
+        items: [
+          {
+            text: "App-specific Rollups",
+            link: "/use-cases/app-specific-rollups",
+          },
+          {
+            text: "DeFi",
+            link: "/use-cases/defi",
+          },
+          {
+            text: "Gaming and Ordinals",
+            link: "/use-cases/gaming-and-ordinals",
+          },
+        ],
+      },
+      {
+        text: "COLLABORATE",
+        items: [
+          {
+            text: "Run a Node",
+            link: "/collaborate/run-a-node",
+          },
+          {
+            text: "Custom Signet Node",
+            link: "/collaborate/custom-signet-node",
+          },
+          {
+            text: "Build on Surge",
+            link: "/collaborate/build-on-surge",
+          },
+        ],
+      },
+      {
+        text: "BITCOIN REPORTS",
+        items: [
+          {
+            text: "In-house Research",
+            link: "/bitcoin-reports/in-house-research",
+          },
+          {
+            text: "External Research",
+            link: "/bitcoin-reports/external-research",
+          },
         ],
       },
       // {
@@ -136,80 +184,80 @@ export default defineConfig({
       //     },
       //   ],
       // },
-      {
-        text: "MORE READ",
-        items: [
-          {
-            text: "Bitcoin L2 Landscape",
-            link: "/more-read/upcoming-bitcoin-l2s",
-          },
-          // {
-          //   text: "Bitcoin as a Settlement Layer",
-          //   collapsed: true,
-          //   items: [
-          //     {
-          //       text: "Overview",
-          //       link: "/basics/bitcoin-as-a-settlement-layer/overview",
-          //     },
-          //     {
-          //       text: "Finality",
-          //       link: "/basics/bitcoin-as-a-settlement-layer/finality",
-          //     },
-          //     {
-          //       text: "Shared Security",
-          //       collapsed: true,
-          //       items: [
-          //         {
-          //           text: "Bitcoin Shared Security",
-          //           link: "/basics/bitcoin-as-a-settlement-layer/shared-security/bitcoin-shared-security",
-          //         },
-          //         {
-          //           text: "Shared Security Protocol",
-          //           link: "/basics/bitcoin-as-a-settlement-layer/shared-security/shared-security-protocol",
-          //         },
-          //       ],
-          //     },
-          //     {
-          //       text: "BitVM",
-          //       link: "/basics/bitcoin-as-a-settlement-layer/bitvm",
-          //     },
-          //   ],
-          // },
-          {
-            text: "Attempts to Scale Bitcoin",
-            link: "/basics/attempts-to-scale-bitcoin",
-          },
-          // {
-          //   text: "How RaaS Interface will Evolve?",
-          //   link: "/more-read/how-raas-interface-will-evolve",
-          // },
-          // {
-          //   text: "Bitcoin Scaling Trilemma",
-          //   link: "/more-read/bitcoin-scaling-trilemma",
-          // },
-          // {
-          //   text: "How does a Bitcoin Transaction Work?",
-          //   link: "/more-read/how-does-a-bitcoin-transaction-work",
-          // },
-          // {
-          //   text: "Advantages of Choosing MPC TSS Over Alternative Methods",
-          //   link: "/more-read/advantages-of-choosing-mpc-tss-over-alternative-methods",
-          // },
-        ],
-      },
-      {
-        text: "USERS TOOLING",
-        items: [
-          {
-            text: "Custom Signet Node",
-            link: "/users-tooling/node-setup-guide",
-          },
-          {
-            text: "Running a Validator Node",
-            link: "/users-tooling/run-a-validator-node",
-          },
-        ],
-      },
+      // {
+      //   text: "MORE READ",
+      //   items: [
+      //     {
+      //       text: "Bitcoin L2 Landscape",
+      //       link: "/more-read/upcoming-bitcoin-l2s",
+      //     },
+      //     // {
+      //     //   text: "Bitcoin as a Settlement Layer",
+      //     //   collapsed: true,
+      //     //   items: [
+      //     //     {
+      //     //       text: "Overview",
+      //     //       link: "/basics/bitcoin-as-a-settlement-layer/overview",
+      //     //     },
+      //     //     {
+      //     //       text: "Finality",
+      //     //       link: "/basics/bitcoin-as-a-settlement-layer/finality",
+      //     //     },
+      //     //     {
+      //     //       text: "Shared Security",
+      //     //       collapsed: true,
+      //     //       items: [
+      //     //         {
+      //     //           text: "Bitcoin Shared Security",
+      //     //           link: "/basics/bitcoin-as-a-settlement-layer/shared-security/bitcoin-shared-security",
+      //     //         },
+      //     //         {
+      //     //           text: "Shared Security Protocol",
+      //     //           link: "/basics/bitcoin-as-a-settlement-layer/shared-security/shared-security-protocol",
+      //     //         },
+      //     //       ],
+      //     //     },
+      //     //     {
+      //     //       text: "BitVM",
+      //     //       link: "/basics/bitcoin-as-a-settlement-layer/bitvm",
+      //     //     },
+      //     //   ],
+      //     // },
+      //     {
+      //       text: "Attempts to Scale Bitcoin",
+      //       link: "/basics/attempts-to-scale-bitcoin",
+      //     },
+      //     // {
+      //     //   text: "How RaaS Interface will Evolve?",
+      //     //   link: "/more-read/how-raas-interface-will-evolve",
+      //     // },
+      //     // {
+      //     //   text: "Bitcoin Scaling Trilemma",
+      //     //   link: "/more-read/bitcoin-scaling-trilemma",
+      //     // },
+      //     // {
+      //     //   text: "How does a Bitcoin Transaction Work?",
+      //     //   link: "/more-read/how-does-a-bitcoin-transaction-work",
+      //     // },
+      //     // {
+      //     //   text: "Advantages of Choosing MPC TSS Over Alternative Methods",
+      //     //   link: "/more-read/advantages-of-choosing-mpc-tss-over-alternative-methods",
+      //     // },
+      //   ],
+      // },
+      // {
+      //   text: "USERS TOOLING",
+      //   items: [
+      //     {
+      //       text: "Custom Signet Node",
+      //       link: "/users-tooling/node-setup-guide",
+      //     },
+      //     {
+      //       text: "Running a Validator Node",
+      //       link: "/users-tooling/run-a-validator-node",
+      //     },
+      //   ],
+      // },
       {
         text: "RESOURCES",
         items: [
