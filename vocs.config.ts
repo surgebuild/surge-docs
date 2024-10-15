@@ -39,6 +39,10 @@ export default defineConfig({
             text: "BTCFi - The New Bitcoin Frontier?",
             link: "/overview/btcFi",
           },
+          {
+            text: "Future of Bitcoin Scaling",
+            link: "/overview/future-of-bitcoin-scaling",
+          },
         ],
       },
       // {
@@ -56,11 +60,11 @@ export default defineConfig({
       // },
 
       {
-        text: "TECH SPECS",
+        text: "SURGE METALAYER",
         items: [
           {
             text: "Fundamentals",
-            link: "/tech-specs/overview",
+            link: "/surge-metalayer/overview",
           },
           {
             text: "Architecture",
@@ -68,33 +72,33 @@ export default defineConfig({
             items: [
               {
                 text: "↳ Verifiers",
-                link: "/tech-specs/architecture/verifiers",
+                link: "/surge-metalayer/architecture/verifiers",
               },
               {
                 text: "↳ Signers",
-                link: "/tech-specs/architecture/signers",
+                link: "/surge-metalayer/architecture/signers",
               },
               {
                 text: "↳ Indexers",
-                link: "/tech-specs/architecture/indexers",
+                link: "/surge-metalayer/architecture/indexers",
               },
               {
                 text: "↳ Adapters",
-                link: "/tech-specs/architecture/adapters",
+                link: "/surge-metalayer/architecture/adapters",
               },
             ],
           },
           {
             text: "Composability",
-            link: "/tech-specs/composability",
+            link: "/surge-metalayer/composability",
           },
           {
             text: "Interopability",
-            link: "/tech-specs/interopability",
+            link: "/surge-metalayer/interopability",
           },
           {
             text: "Bitcoin Anchored",
-            link: "/tech-specs/security",
+            link: "/surge-metalayer/security",
           },
           // {
           //   text: "↳ Indexer",
@@ -141,12 +145,12 @@ export default defineConfig({
         text: "COLLABORATE",
         items: [
           {
-            text: "Run a Node",
-            link: "/collaborate/run-a-node",
-          },
-          {
             text: "Custom Signet Node",
             link: "/collaborate/custom-signet-node",
+          },
+          {
+            text: "Run a Node",
+            link: "/collaborate/run-a-node",
           },
           {
             text: "Build on Surge",
@@ -175,12 +179,16 @@ export default defineConfig({
             link: "/resources/quick-links",
           },
           {
-            text: "Branding and Logos",
-            link: "/resources/branding-and-logos",
+            text: "Media Kit",
+            link: "/resources/media-kit",
           },
           {
             text: "Community Guidelines",
             link: "/resources/community-guidelines",
+          },
+          {
+            text: "Surge FAQs",
+            link: "/resources/surge-faqs",
           },
         ],
       },

@@ -52,12 +52,15 @@ img {
   align-items: center; /* Vertically center the text with the logo */
 }
 
+.dark .vocs_Sidebar_logo a:after {
+  color: #fff;
+}
 .vocs_Sidebar_logo a:after {
   content: "Surge Documentation"; /* Add the text next to the logo */
   font-size: 16px;
   font-weight: bold;
   font: "Inter";
-  color: #fff;
+  color: #000;
   margin-left: 10px; /* Adds space between the logo and the text */
   display: inline-block; /* Ensure the text is displayed inline with the logo */
   vertical-align: middle; /* Vertically align the text */
@@ -68,8 +71,11 @@ img {
   display: inline-block; /* Ensure the logo images remain inline */
 }
 
-.vocs_DesktopTopNav_logo a > img {
+.dark .vocs_DesktopTopNav_logo a > img {
   content: url("/logo/logo-dark.png");
+}
+.vocs_DesktopTopNav_logo a > img {
+  content: url("/logo/logo-light.png");
 }
 
 .vocs_Subtitle {

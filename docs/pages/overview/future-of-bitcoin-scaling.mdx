@@ -1,0 +1,22 @@
+---
+title: Surge | Future of Bitcoin Scaling
+description: Composable MetaLayer to scale Bitcoin
+---
+
+# The highly expensive future of Bitcoin scaling
+
+Bitcoin's blockspace scarcity, capped at 4MB per block, poses a challenge for Rollups, dApps, and Metaprotocols using Bitcoin as a data availability (DA) layer, particularly ZK-Rollups that need to post large amounts of data (e.g., ZK-Proofs and state differences) every 6-8 blocks. With each Rollup posting consuming up to 10% of blockspace (400KB), the competition for block inclusion is set to intensify, potentially driving up transaction fees to unsustainable levels. Rollups must generate significant L2 revenue from transaction fees to cover these high costs or risk exploring alternative DA solutions, which could reduce their alignment with Bitcoin.
+
+We’ve been deeply understanding how all of this would impact Bitcoin at a cent-to-cent transaction level, and we even made a freely available calculator aimed at simplifying the cost analysis - [B.R.I.E.F](https://brief.surge.dev/) (Bitcoin Rollup Inscription Estimated Fee).
+
+### Some key takeaways:
+
+- Posting full data on Bitcoin will push the limits of the current blockspace to the brink and can severely drive up L1 fees and overall health of the ecosystem.
+- A simple simulation of 5 rollups posting 400kB/hour can result in a yearly fee of $47.6M!
+- Emphasis should be made on aggregating and batching as much data as possible to sizeably reduce the footprint that goes on L1, as well as optimizing for off-chain storage and on-chain compute/verify.
+- If within the same constraints we cut the batched data size to 40kB (1/10th of the previous) and have 100 rollups competing, we end up paying around $9.5M in L1 fees (80% reduction!).
+
+- Drawing parallels to the Ethereum space:
+
+  - **Pre-EIP-4844 Costs**: L2s like ZKSync Era spent $51.2M on data posting to Ethereum L1, with an average transaction fee of $0.16, posting 100s of kBs per ZK-Proof batch.
+  - **Post-EIP-4844 (Blobs)**: EIP-4844 reduced the data posting costs by up to 90%, by storing **maximum data off-chain** and potentially lowering ZKSync's annual data costs by 90%!
