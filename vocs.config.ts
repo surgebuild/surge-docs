@@ -21,7 +21,7 @@ export default defineConfig({
     accentColor: "#f4431b",
     // colorScheme: "dark",
   },
-  title: "Surge Docs",
+  title: "Surge Documentation",
   sidebar: {
     "/": [
       {
@@ -59,7 +59,7 @@ export default defineConfig({
         text: "TECH SPECS",
         items: [
           {
-            text: "Essentials",
+            text: "Fundamentals",
             link: "/tech-specs/overview",
           },
           {
@@ -93,7 +93,7 @@ export default defineConfig({
             link: "/tech-specs/interopability",
           },
           {
-            text: "Security",
+            text: "Bitcoin Anchored",
             link: "/tech-specs/security",
           },
           // {
