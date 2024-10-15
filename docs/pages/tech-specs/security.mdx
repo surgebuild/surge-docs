@@ -1,21 +1,39 @@
 # Bitcoin Security
 
-Surge guarantees Bitcoin finality by inscribing both the state commitment Mroot of the Network and the aggregated proof of zk-proofs ( Pagg) onto Bitcoin by embedding the data into a UTXO using the Commit-Reveal Framework.
-Let UTXOSurge denote the Bitcoin UTXO transaction that inscribes this data:  
-UTXOSurge = Embed(Mroot, Pagg) 
-Once confirmed on Bitcoin, this transaction provides verifiable proof that the state existed and was secured by Bitcoin consensus.
-Timestamp Integrity
-Bitcoin’s native timestamping provides verifiable time references for every block. Each Bitcoin block includes a timestamp  tblock, which is used to timestamp the inscribed state commitment. The timestamp is then embedded in the validity of this timestamp can be verified by referencing the block height hblock where the transaction UTXOSurge was included.  
- tcommit = tblock(hblock)  
-Any participant can verify that the Surge state existed at or before tcommit by confirming the inclusion of UTXOSurge Bitcoin’s blockchain tcommit .
-Anchoring Surge's state commitments and aggregated proofs to Bitcoin ensures that Surge inherits Bitcoin's finality. This security relies on the cryptographic soundness of the zk-proofs scheme and Bitcoin's Proof-of-Work (PoW) consensus. The integration of zk-proofs aggregation, secure hashing via Merkle roots, and Bitcoin's timestamping mechanism provides a robust and verifiable solution for ensuring finality and accurate time references.
+Surge guarantees Bitcoin finality by inscribing both the state commitment Mroot of the Network and the aggregated proof of zk-proofs ( P<sub>agg</sub>) onto Bitcoin by embedding the data into a UTXO using the Commit-Reveal Framework.
+Let UTXO<sub>Surge</sub> denote the Bitcoin UTXO transaction that inscribes this data:
 
+<div align="center">
+  UTXO<sub>Surge</sub> = Embed(M<sub>root</sub>, P<sub>agg</sub>)
+</div>
+Once confirmed on Bitcoin, this transaction provides verifiable proof that the state
+existed and was secured by Bitcoin consensus. Timestamp Integrity Bitcoin’s native
+timestamping provides verifiable time references for every block. Each Bitcoin block
+includes a timestamp tblock, which is used to timestamp the inscribed state commitment.
+The timestamp is then embedded in the validity of this timestamp can be verified
+by referencing the block height hblock where the transaction UTXOSurge was included.
+<br />
+<div align="center">
+  t<sub>commit</sub> = t<sub>block</sub>(h<sub>block</sub>)
+</div>
+
+Any participant can verify that the Surge state existed
+at or before tcommit by confirming the inclusion of UTXOSurge Bitcoin’s blockchain
+tcommit . Anchoring Surge's state commitments and aggregated proofs to Bitcoin ensures
+that Surge inherits Bitcoin's finality. This security relies on the cryptographic
+soundness of the zk-proofs scheme and Bitcoin's Proof-of-Work (PoW) consensus. The
+integration of zk-proofs aggregation, secure hashing via Merkle roots, and Bitcoin's
+timestamping mechanism provides a robust and verifiable solution for ensuring finality
+and accurate time references.
 
 Commit-Reveal framework journey
 
-
 Surge inherits the security properties of Bitcoin's Proof-of-Work, including:
-Probabilistic finality, where the probability of a block being reversed decreases exponentially with each subsequent block: 
-P(reversal) ≈ (p/(1-p))^n
+Probabilistic finality, where the probability of a block being reversed decreases exponentially with each subsequent block:<br/>
+
+<div align="center">
+  P(reversal) ≈ ( p / (1 - p))<sup>n</sup>
+</div>
 Where p is the proportion of hostile mining power, and n is the number of confirmations.
-The computational cost of altering a block, which increases exponentially with the length of the chain since that block.
+The computational cost of altering a block, which increases exponentially with the
+length of the chain since that block.

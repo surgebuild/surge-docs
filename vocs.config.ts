@@ -4,8 +4,8 @@ export default defineConfig({
   description:
     "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
   logoUrl: {
-    light: "/logo/logo-light.png",
-    dark: "/logo/logo-dark.png",
+    light: "/logo/surge-icon-rec-light.svg",
+    dark: "/logo/surge-icon-rec-dark.svg",
   },
   ogImageUrl: "https://surge-docs.vercel.app/surge-docs.png",
   font: {
@@ -68,15 +68,15 @@ export default defineConfig({
             items: [
               {
                 text: "↳ Verifiers",
-                link: "/tech-specs/architecture/newverifiers",
+                link: "/tech-specs/architecture/verifiers",
               },
               {
                 text: "↳ Signers",
-                link: "/tech-specs/architecture/newsigners",
+                link: "/tech-specs/architecture/signers",
               },
               {
                 text: "↳ Indexers",
-                link: "/tech-specs/architecture/newindexers",
+                link: "/tech-specs/architecture/indexers",
               },
               {
                 text: "↳ Adapters",

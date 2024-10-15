@@ -21,7 +21,7 @@ export default function ZoomImage({
           className={className ?? ""}
         />
       </Zoom>
-      <p className="mx-auto text-[#6B7280] text-[14px] font-medium">{alt}</p>
+      <p className="mx-auto text-[#6B7280] text-[14px]">{alt}</p>
     </div>
   );
 }

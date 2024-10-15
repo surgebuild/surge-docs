@@ -5,15 +5,15 @@ const arr = [
   },
   {
     title: "Verifiers",
-    url: "/metalayer/verifier",
+    url: "/tech-specs/architecture/verifiers",
   },
   {
     title: "Signers (DKLs23 - ECDSA/EdDSA)",
-    url: "/metalayer/signer",
+    url: "/tech-specs/architecture/signers",
   },
   {
     title: "Indexers",
-    url: "/metalayer/indexer/overview",
+    url: "/tech-specs/architecture/indexers",
   },
 ];
 

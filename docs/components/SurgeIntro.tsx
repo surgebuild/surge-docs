@@ -8,8 +8,8 @@ const arr = [
     url: "/overview/bitcoin-scalability",
   },
   {
-    title: "Why Surge?",
-    url: "/overview/why-surge",
+    title: "BTCFi - The new Bitcoin Frontier?",
+    url: "/overview/btcFi",
   },
   // {
   //   title: "Understanding Rollups",
