@@ -1,39 +1,28 @@
-# Anchored on Bitcoin
+---
+title: Anchored on Bitcoin 
+description: Achieving Bitcoin Finality for Surge Network State Transitions
+---
+# Anchored on Bitcoin [Achieving Bitcoin Finality for Surge Network State Transitions]
 
-Surge guarantees Bitcoin finality by inscribing both the state commitment Mroot of the Network and the aggregated proof of zk-proofs ( P<sub>agg</sub>) onto Bitcoin by embedding the data into a UTXO using the Commit-Reveal Framework.
-Let UTXO<sub>Surge</sub> denote the Bitcoin UTXO transaction that inscribes this data:
+Surge leverages Bitcoin’s Proof-of-Work (PoW) security to anchor state transitions through a process that combines zk-proof aggregation, state commitments, and timestamp verification. By embedding both the state commitment (Merkle root) and the aggregated zk-proof into Bitcoin, Surge ensures verifiable proof of state existence and Bitcoin-backed security.
 
-<div align="center">
-  UTXO<sub>Surge</sub> = Embed(M<sub>root</sub>, P<sub>agg</sub>)
-</div>
-Once confirmed on Bitcoin, this transaction provides verifiable proof that the state
-existed and was secured by Bitcoin consensus. Timestamp Integrity Bitcoin’s native
-timestamping provides verifiable time references for every block. Each Bitcoin block
-includes a timestamp tblock, which is used to timestamp the inscribed state commitment.
-The timestamp is then embedded in the validity of this timestamp can be verified
-by referencing the block height hblock where the transaction UTXOSurge was included.
-<br />
-<div align="center">
-  t<sub>commit</sub> = t<sub>block</sub>(h<sub>block</sub>)
-</div>
+### State Commitments and the Commit-Reveal Framework
+Surge periodically inscribes the Merkle root of its state and aggregated proofs onto Bitcoin. This is done through a Commit-Reveal Framework, where the final aggregated state data is embedded into a Bitcoin UTXO. Upon confirmation, this transaction verifies that Surge’s state existed at a specific time and has been anchored by Bitcoin’s consensus mechanism. This approach allows for Bitcoin finality, ensuring that once a state is anchored, it benefits from Bitcoin’s computational security.
 
-Any participant can verify that the Surge state existed
-at or before tcommit by confirming the inclusion of UTXOSurge Bitcoin’s blockchain
-tcommit . Anchoring Surge's state commitments and aggregated proofs to Bitcoin ensures
-that Surge inherits Bitcoin's finality. This security relies on the cryptographic
-soundness of the zk-proofs scheme and Bitcoin's Proof-of-Work (PoW) consensus. The
-integration of zk-proofs aggregation, secure hashing via Merkle roots, and Bitcoin's
-timestamping mechanism provides a robust and verifiable solution for ensuring finality
-and accurate time references.
+### Real-Time Monitoring and Timestamp Integrity
+By integrating directly with the Bitcoin blockchain, the Surge Network maintains an up-to-date ledger that reflects the most recent confirmed state transitions. Bitcoin’s native timestamping provides verifiable time references, allowing each state commitment to be traced back to its exact inclusion block. This enables developers and users to verify the exact time a state existed within the Surge Network, strengthening the network’s reliability and transparency.
 
-Commit-Reveal framework journey
+### Enhancing Security with UTXO Indexer and Asynchronous Attestations
+Surge’s UTXO Indexer continuously scans Bitcoin blocks for Surge-related transactions, extracting and verifying key data. This real-time monitoring facilitates efficient querying of Bitcoin-attested state data and ensures that each state commitment remains tied to Bitcoin’s security model. With asynchronous attestations, Surge allows L2 blocks to proceed rapidly, incorporating Bitcoin block references as they are confirmed. This strategy supports high throughput without sacrificing security or finality.
 
-Surge inherits the security properties of Bitcoin's Proof-of-Work, including:
-Probabilistic finality, where the probability of a block being reversed decreases exponentially with each subsequent block:<br/>
+### TSS DKLs23-Based Decentralized Bridge and BTC Vault
+The Surge Network secures asset transfers between Bitcoin and L2 using a decentralized DKLs23 based bridge. This setup removes any single point of control, making cross-chain transfers resilient and tamper-resistant. Through peg-in and peg-out processes, the BTC Vault ensures that state transitions on Surge are firmly anchored to Bitcoin, preventing double-spends and guaranteeing that L2 state commitments are verifiable and final.
 
-<div align="center">
-  P(reversal) ≈ ( p / (1 - p))<sup>n</sup>
-</div>
-Where p is the proportion of hostile mining power, and n is the number of confirmations.
-The computational cost of altering a block, which increases exponentially with the
-length of the chain since that block.
+### Security Advantages of Bitcoin-Anchored State Commitments
+- **Inherited PoW Security:** By committing state data to Bitcoin, Surge inherits the security of Bitcoin’s PoW consensus, making unauthorized alterations highly improbable.
+
+- **Strong Re-org Resistance:** With each new Bitcoin block, the probability of reversing an anchored state decreases exponentially, allowing L2 state transitions to benefit from Bitcoin’s block confirmation depth.
+
+- **Optimized Data Availability:** Off-chain data solutions complement Bitcoin’s limited blockspace by only inscribing compact zk-proofs and Merkle roots. This minimizes on-chain footprint while ensuring essential data remains secure and verifiable.
+
+- **Cross-Chain Verifiability:** Bitcoin-anchored state commitments facilitate trustless validation of L2 states across other networks, promoting interoperability and enhancing trust in Surge’s Layer 2 solutions.

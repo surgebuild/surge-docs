@@ -78,11 +78,11 @@ export default defineConfig({
                 link: "/surge-metalayer/architecture/signers",
               },
               {
-                text: "↳ Indexers",
+                text: "↳ UTXO Indexers",
                 link: "/surge-metalayer/architecture/indexers",
               },
               {
-                text: "↳ Adapters",
+                text: "↳ DevKit Adapters",
                 link: "/surge-metalayer/architecture/adapters",
               },
             ],
