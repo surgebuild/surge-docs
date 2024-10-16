@@ -5,20 +5,22 @@ description: Decentralized TSS network for signing operations using the DKLS23 E
 
 import ZoomImage from "../../../components/ZoomImage";
 
-# Signers [Decentralized Signing for Bitcoin Inscriptions]
+# Signers (DKLs23) [Decentralized Signing for Bitcoin Inscriptions]
 
 Signers manage cryptographic key operations using the DKLs23 EdDSA/ECDSA scheme, which is optimized for scalability and security. DKLs23 leverages Oblivious Transfer-based Multiplication (OT Mul), significantly reducing computational overhead compared to traditional methods like Paillier. This enables rapid key generation and signing, critical for large decentralized networks.
 
 ### Decentralized Key Management with TSS
+
 Signers operate within a Threshold Signature Scheme (TSS) network, distributing cryptographic keys across multiple nodes to avoid centralized control. Unlike Bitcoin’s native multisig, which allows specific parties to control transaction approval, TSS ensures no single party can compromise the private key, enhancing security through distributed authority.
 
 The Signers’ role extends to managing the BTC Vault and Bridge operations, facilitating secure cross-chain transfers. Users can peg-in by locking BTC in the vault, gaining equivalent assets on Surge’s network, and peg-out to reclaim BTC. This decentralized bridge relies on DKLs23 signatures and TSS, ensuring that no single entity controls the process, which bolsters security against potential breaches.
 
 ### Enhanced Security and Efficiency
+
 - **Distributed Key Generation (DKG)**: Keys are generated across the TSS network, with no party holding full control. This setup enhances security by distributing key authority.
-- **Proactive Key Refresh: Regular rotation and refreshment of keys mitigate exposure risks. This continuous refresh ensures keys are resilient, even if individual nodes are compromised.
-- **Weighted Node Participation: Nodes within the TSS are weighted based on stake, reputation, and performance, prioritizing reliable nodes and reducing latency in signing.
-- **Malicious Node Detection and Slashing: DKLs23 includes mechanisms to detect and penalize malicious behavior. Any node found acting improperly can face slashing, where its staked assets are forfeited, preserving network integrity.
+- \*\*Proactive Key Refresh: Regular rotation and refreshment of keys mitigate exposure risks. This continuous refresh ensures keys are resilient, even if individual nodes are compromised.
+- \*\*Weighted Node Participation: Nodes within the TSS are weighted based on stake, reputation, and performance, prioritizing reliable nodes and reducing latency in signing.
+- \*\*Malicious Node Detection and Slashing: DKLs23 includes mechanisms to detect and penalize malicious behavior. Any node found acting improperly can face slashing, where its staked assets are forfeited, preserving network integrity.
 
 <ZoomImage
   src="/assets/key_refresh.png"
@@ -27,6 +29,7 @@ The Signers’ role extends to managing the BTC Vault and Bridge operations, fac
 />
 
 ### Why TSS over Bitcoin’s Native Multisig?
+
 Bitcoin’s multisig can secure transactions by requiring multiple signatures, but it lacks TSS’s decentralized structure. With MPC TSS, Surge distributes control across nodes, removing any single point of failure. This approach ensures that no single entity controls the network or vault, which is crucial for securely managing zk-proof inscriptions on Bitcoin. TSS provides a more scalable, secure, and flexible framework, essential for Surge’s high-throughput demands.
 
 <ZoomImage
@@ -34,4 +37,3 @@ Bitcoin’s multisig can secure transactions by requiring multiple signatures, b
   alt="Economic guarantee of TSS Network"
   className="md:w-[95%] w-[80%] mx-auto"
 />
-
