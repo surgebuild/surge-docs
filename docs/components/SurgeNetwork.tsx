@@ -1,19 +1,23 @@
 const arr = [
   {
-    title: "Overview",
-    url: "/overview/introduction",
+    title: "Fundamentals",
+    url: "/metalayer/overview",
   },
   {
     title: "Verifiers",
-    url: "/tech-specs/architecture/verifiers",
+    url: "/metalayer/architecture/verifiers",
   },
   {
-    title: "Signers (DKLs23 - ECDSA/EdDSA)",
-    url: "/tech-specs/architecture/signers",
+    title: "Signers (DKLs23)",
+    url: "/metalayer/architecture/signers",
   },
   {
     title: "UTXO Indexers",
-    url: "/tech-specs/architecture/indexers",
+    url: "/metalayer/architecture/indexers",
+  },
+  {
+    title: "DevKit Adapters",
+    url: "/metalayer/architecture/adapters",
   },
 ];
 

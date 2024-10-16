@@ -11,14 +11,14 @@ const arr = [
     title: "BTCFi - The new Bitcoin Frontier?",
     url: "/overview/btcFi",
   },
-  // {
-  //   title: "Understanding Rollups",
-  //   url: "/basics/understanding-the-rollups",
-  // },
-  // {
-  //   title: "Bitcoin Scaling Attempts",
-  //   url: "/basics/attempts-to-scale-bitcoin",
-  // },
+  {
+    title: "Future of Bitcoin Scaling",
+    url: "/overview/future-of-bitcoin-scaling",
+  },
+  {
+    title: "Use Cases",
+    url: "/use-cases/app-specific-rollups",
+  },
   // {
   //   title: "Evolution of Bitcoin Rollups",
   //   url: "/basics/journey-of-rollups-on-bitcoin",
@@ -30,7 +30,7 @@ export default function SurgeIntro() {
     <div className="size-full bg-white dark:bg-[#0d1111] pb-8 pl-7 pr-5 pt-5 shadow-lg dark:shadow-sm dark:shadow-gray-500 dark:border dark:border-gray-800 rounded-lg">
       <div>
         <p className="gradientText text-[32px] font-bold leading-[42px] pb-2">
-          Surge 101
+          Learn
         </p>
         <p className="border-b border-dashed border-[#6F7B8B] pb-4 text-base leading-5 text-[#6B7280]">
           Core Principles and Bitcoin Scaling

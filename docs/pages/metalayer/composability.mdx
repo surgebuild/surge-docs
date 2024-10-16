@@ -1,0 +1,24 @@
+---
+title: Composability
+description: 
+---
+
+import ZoomImage from "../../components/ZoomImage";
+
+# Composability [Enabling Modular, Interoperable Development on Bitcoin]
+
+
+Surge’s technical design centers around **composability**—a foundational principle in blockchain development that allows builders to create modular, interoperable components that can seamlessly integrate with each other or external blockchain networks. By leveraging a modular architecture, Surge enables developers to "plug and play" their applications and services on a highly customizable layer while maintaining Bitcoin's security.
+
+### Composable Architecture Design
+
+At its core, Surge uses a layered architecture inspired by ecosystems like Cosmos, with a focus on three critical components: execution, settlement, and data availability. 
+
+This design allows developers to build rollups, dApps, and decentralized financial applications (DeFi) with more freedom and fewer constraints. Each component is purposefully separated, allowing developers to optimize each layer independently based on their application’s requirements:
+
+1. **Execution Layer**: Surge supports multiple Virtual Machines (VMs), such as Ethereum’s EVM and MoveVM. This flexibility allows developers to use their preferred development environment and tools while building directly on Bitcoin, which enhances composability with other blockchain ecosystems. The multi-VM support also opens the door for building various app-specific rollups and DeFi solutions.
+2. **Settlement Layer**: Surge utilizes Zero-Knowledge Proofs (zkProofs) to verify transactions off-chain and settle them onto Bitcoin’s Layer 1 (L1). This design not only ensures scalability but also maintains Bitcoin's unparalleled security. By abstracting proof aggregation and verification, developers can easily build or integrate secure applications that rely on fast finality and minimal on-chain costs.
+3. **Data Availability Layer**: Surge provides multiple options for data availability, including both native Bitcoin data availability solutions (like Nubit) and non-native alternatives such as Celestia and EigenDA. This modular approach allows applications to choose the right balance between cost, speed, and scalability, making the platform highly adaptable for different use cases.
+
+### Advantages of Modular Composability
+Surge’s composable architecture is designed to give developers the freedom to select and customize each layer according to their needs. This flexibility is crucial for creating interoperable solutions that can connect with other blockchain systems or operate independently within the Surge MetaLayer. The separation of layers empowers developers to innovate while retaining the option to leverage Bitcoin’s inherent security, thereby fostering a robust and interconnected ecosystem built on Bitcoin.

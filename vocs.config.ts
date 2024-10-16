@@ -1,8 +1,7 @@
 import { defineConfig } from "vocs";
 
 export default defineConfig({
-  description:
-    "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
+  description: "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
   logoUrl: {
     light: "/logo/surge-icon-rec-light.svg",
     dark: "/logo/surge-icon-rec-dark.svg",
@@ -64,41 +63,45 @@ export default defineConfig({
         items: [
           {
             text: "Fundamentals",
-            link: "/surge-metalayer/overview",
+            link: "/metalayer/overview",
           },
           {
             text: "Architecture",
-            collapsed: false,
+            collapsed: true,
             items: [
               {
                 text: "↳ Verifiers",
-                link: "/surge-metalayer/architecture/verifiers",
+                link: "/metalayer/architecture/verifiers",
               },
               {
                 text: "↳ Signers (DKLs23)",
-                link: "/surge-metalayer/architecture/signers",
+                link: "/metalayer/architecture/signers",
               },
               {
                 text: "↳ UTXO Indexers",
-                link: "/surge-metalayer/architecture/indexers",
+                link: "/metalayer/architecture/indexers",
               },
               {
                 text: "↳ DevKit Adapters",
-                link: "/surge-metalayer/architecture/adapters",
+                link: "/metalayer/architecture/adapters",
+              },
+              {
+                text: "↳ AltVMs",
+                link: "/metalayer/architecture/altvms",
               },
             ],
           },
           {
             text: "Composability",
-            link: "/surge-metalayer/composability",
+            link: "/metalayer/composability",
           },
           {
             text: "Interopability",
-            link: "/surge-metalayer/interopability",
+            link: "/metalayer/interopability",
           },
           {
             text: "Anchored on Bitcoin",
-            link: "/surge-metalayer/security",
+            link: "/metalayer/security",
           },
           // {
           //   text: "↳ Indexer",
