@@ -1,8 +1,7 @@
 import { defineConfig } from "vocs";
 
 export default defineConfig({
-  description:
-    "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
+  description: "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
   logoUrl: {
     light: "/logo/surge-icon-rec-light.svg",
     dark: "/logo/surge-icon-rec-dark.svg",
@@ -75,7 +74,7 @@ export default defineConfig({
                 link: "/surge-metalayer/architecture/verifiers",
               },
               {
-                text: "↳ Signers",
+                text: "↳ Signer (DKLs23)",
                 link: "/surge-metalayer/architecture/signers",
               },
               {
@@ -97,7 +96,7 @@ export default defineConfig({
             link: "/surge-metalayer/interopability",
           },
           {
-            text: "Bitcoin Security",
+            text: "Anchored on Bitcoin",
             link: "/surge-metalayer/security",
           },
           // {

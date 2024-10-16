@@ -12,7 +12,7 @@ const arr = [
     url: "/tech-specs/architecture/signers",
   },
   {
-    title: "Indexers",
+    title: "UTXO Indexers",
     url: "/tech-specs/architecture/indexers",
   },
 ];
