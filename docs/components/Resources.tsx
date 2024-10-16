@@ -9,7 +9,7 @@ const arr = [
   },
   {
     title: "Bitcoin Reports",
-    url: "/bitcoin-reports/in - house - research,",
+    url: "/bitcoin-reports/in-house-research",
   },
   {
     title: "Community Guidelines",
