@@ -97,7 +97,7 @@ export default defineConfig({
             link: "/surge-metalayer/interopability",
           },
           {
-            text: "Bitcoin Anchored",
+            text: "Bitcoin Security",
             link: "/surge-metalayer/security",
           },
           // {
