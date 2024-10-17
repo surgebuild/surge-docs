@@ -86,7 +86,7 @@ export default defineConfig({
                 link: "/metalayer/architecture/adapters",
               },
               {
-                text: "↳ AltVMs",
+                text: "↳ Flexible VMs",
                 link: "/metalayer/architecture/altvms",
               },
             ],
