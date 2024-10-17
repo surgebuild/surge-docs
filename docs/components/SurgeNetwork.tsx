@@ -1,19 +1,23 @@
 const arr = [
   {
-    title: "Overview",
+    title: "Fundamentals",
     url: "/metalayer/overview",
   },
   {
     title: "Verifiers",
-    url: "/metalayer/verifier",
+    url: "/metalayer/architecture/verifiers",
   },
   {
-    title: "Signers (DKLs23 - ECDSA/EdDSA)",
-    url: "/metalayer/signer",
+    title: "Signers (DKLs23)",
+    url: "/metalayer/architecture/signers",
   },
   {
-    title: "Indexers",
-    url: "/metalayer/indexer/overview",
+    title: "UTXO Indexers",
+    url: "/metalayer/architecture/indexers",
+  },
+  {
+    title: "DevKit Adapters",
+    url: "/metalayer/architecture/adapters",
   },
 ];
 
@@ -22,7 +26,7 @@ export default function SurgeNetwork() {
     <div className="size-full bg-white dark:bg-[#0d1111] pb-8 pl-7 pr-5 pt-5 shadow-lg dark:shadow-sm dark:shadow-gray-500 dark:border dark:border-gray-800 rounded-lg">
       <div>
         <p className="gradientText text-[32px] font-bold leading-[42px] pb-2">
-          Surge Network (MetaLayer)
+          Surge Network
         </p>
         <p className="border-b border-dashed border-[#6F7B8B] pb-4 text-base leading-5 text-[#6B7280]">
           Composable MetaLayer on Bitcoin

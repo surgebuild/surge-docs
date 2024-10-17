@@ -12,13 +12,16 @@ export default function ZoomImage({
   className?: string;
 }) {
   return (
-    <Zoom>
-      <img
-        src={src}
-        alt={alt}
-        width={width ? `${width}%` : "100%"}
-        className={className ?? ""}
-      />
-    </Zoom>
+    <div className="flex flex-col items-center gap-y-1">
+      <Zoom>
+        <img
+          src={src}
+          alt={alt}
+          width={width ? `${width}%` : "100%"}
+          className={className ?? ""}
+        />
+      </Zoom>
+      <p className="mx-auto text-[#6B7280] text-[14px]">{alt}</p>
+    </div>
   );
 }

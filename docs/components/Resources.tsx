@@ -8,6 +8,10 @@ const arr = [
     url: "/resources/quick-links",
   },
   {
+    title: "Bitcoin Reports",
+    url: "/bitcoin-reports/in-house-research",
+  },
+  {
     title: "Community Guidelines",
     url: "/resources/community-guidelines",
   },

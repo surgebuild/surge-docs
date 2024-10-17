@@ -1,0 +1,30 @@
+---
+title: Composability
+description:
+---
+
+import ZoomImage from "../../components/ZoomImage";
+
+# Composability [Enabling Modular, Interoperable Development on Bitcoin]
+
+Surge’s architecture is built for **composability**, enabling modular and interoperable development across its layers. With a flexible, plug-and-play approach, Surge allows developers to create customizable applications while leveraging Bitcoin's security.
+
+### Composable Architecture Design
+
+At its core, Surge uses a layered architecture inspired by ecosystems like Cosmos, with a focus on three critical components: execution, settlement, and data availability.
+
+This design allows developers to build rollups, dApps, and decentralized financial applications (DeFi) with more freedom and fewer constraints. Each component is purposefully separated, allowing developers to optimize each layer independently based on their application’s requirements:
+
+1. **Execution Layer**: Surge supports multiple Virtual Machines (VMs), such
+   as Ethereum’s EVM, Wasm and MoveVM, allowing developers to use familiar
+   environments. This multi-VM approach enhances composability and simplifies the
+   development of rollups, dApps, and DeFi solutions directly on Bitcoin.
+2. **Settlement Layer**: Surge’s MetaLayer provides rapid finality, addressing
+   Bitcoin’s longer block times with probabilistic finality once a block is
+   confirmed. The DKLs23 TSS signing scheme further enhances security by
+   preventing double spending during transactions, enabling fast and secure
+   settlement.
+3. **Data Availability Layer**: Surge offers a flexible layer to
+   secure data and generate validated state transition proofs for inscription on
+   Bitcoin. This ensures data integrity and scalability without compromising on
+   security.

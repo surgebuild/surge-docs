@@ -1,19 +1,18 @@
 import { defineConfig } from "vocs";
 
 export default defineConfig({
-  description:
-    "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
+  description: "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
   logoUrl: {
-    light: "/logo/logo-light.png",
-    dark: "/logo/logo-dark.png",
+    light: "/logo/surge-icon-rec-light.svg",
+    dark: "/logo/surge-icon-rec-dark.svg",
   },
   ogImageUrl: "https://surge-docs.vercel.app/surge-docs.png",
   font: {
     google: "Inter",
   },
   topNav: [
-    // { text: "Introduction", link: "/overview/introduction" },
     { text: "Blog", link: "https://surge.build/blog" },
+    { text: "Bitcoin Playground", link: "https://surge.build/playground" },
     { text: "Website", link: "https://www.surge.build/" },
   ],
   theme: {
@@ -21,7 +20,7 @@ export default defineConfig({
     accentColor: "#f4431b",
     // colorScheme: "dark",
   },
-  title: "Surge Docs",
+  title: "Surge Documentation",
   sidebar: {
     "/": [
       {
@@ -32,12 +31,16 @@ export default defineConfig({
             link: "/overview/introduction",
           },
           {
-            text: "Surge Stack",
-            link: "/overview/surge-stack",
+            text: "Evolution of Bitcoin Scalability",
+            link: "/overview/bitcoin-scalability",
           },
           {
-            text: "Why Surge?",
-            link: "/overview/why-surge",
+            text: "BTCFi - The New Bitcoin Frontier?",
+            link: "/overview/btcFi",
+          },
+          {
+            text: "Future of Bitcoin Scaling",
+            link: "/overview/future-of-bitcoin-scaling",
           },
         ],
       },
@@ -56,23 +59,49 @@ export default defineConfig({
       // },
 
       {
-        text: "METALAYER",
+        text: "SURGE METALAYER",
         items: [
           {
-            text: "⚡ Surge Network",
+            text: "Fundamentals",
             link: "/metalayer/overview",
           },
           {
-            text: "↳ Verifiers",
-            link: "/metalayer/verifier",
+            text: "Architecture",
+            collapsed: true,
+            items: [
+              {
+                text: "↳ Verifiers",
+                link: "/metalayer/architecture/verifiers",
+              },
+              {
+                text: "↳ Signers (DKLs23)",
+                link: "/metalayer/architecture/signers",
+              },
+              {
+                text: "↳ UTXO Indexers",
+                link: "/metalayer/architecture/indexers",
+              },
+              {
+                text: "↳ DevKit Adapters",
+                link: "/metalayer/architecture/adapters",
+              },
+              {
+                text: "↳ Flexible VMs",
+                link: "/metalayer/architecture/altvms",
+              },
+            ],
           },
           {
-            text: "↳ Signers",
-            link: "/metalayer/signer",
+            text: "Composability",
+            link: "/metalayer/composability",
           },
           {
-            text: "↳ Indexer",
-            link: "/metalayer/indexer/overview",
+            text: "Interopability",
+            link: "/metalayer/interopability",
+          },
+          {
+            text: "Anchored on Bitcoin",
+            link: "/metalayer/security",
           },
           // {
           //   text: "↳ Indexer",
@@ -98,116 +127,50 @@ export default defineConfig({
           // },
         ],
       },
-      // {
-      //   text: "RDK",
-      //   items: [
-      //     {
-      //       text: "⭐ Architecture",
-      //       link: "/surge-building-blocks/architecture",
-      //     },
-      //     {
-      //       text: "Multi VM Execution Support",
-      //       link: "/surge-building-blocks/multi-vm",
-      //     },
-      //     {
-      //       text: "Rollup Frameworks",
-      //       link: "/surge-building-blocks/rollup-frameworks",
-      //     },
-      //     {
-      //       text: "High Availability Sequencer",
-      //       link: "/surge-building-blocks/high-availability-sequencer",
-      //     },
-      //     {
-      //       text: "Customizations",
-      //       collapsed: true,
-      //       items: [
-      //         {
-      //           text: "Decentralized Sequencer",
-      //           link: "/surge-building-blocks/customizations/decentralized-sequencer",
-      //         },
-      //         {
-      //           text: " Native Gas Token",
-      //           link: "/surge-building-blocks/customizations/native-gas-token",
-      //         },
-      //         {
-      //           text: " Alternative Data Availability",
-      //           link: "/surge-building-blocks/customizations/alternative-data-availability",
-      //         },
-      //       ],
-      //     },
-      //   ],
-      // },
       {
-        text: "MORE READ",
+        text: "USE CASES",
         items: [
           {
-            text: "Bitcoin L2 Landscape",
-            link: "/more-read/upcoming-bitcoin-l2s",
+            text: "App-specific Rollups",
+            link: "/use-cases/app-specific-rollups",
           },
-          // {
-          //   text: "Bitcoin as a Settlement Layer",
-          //   collapsed: true,
-          //   items: [
-          //     {
-          //       text: "Overview",
-          //       link: "/basics/bitcoin-as-a-settlement-layer/overview",
-          //     },
-          //     {
-          //       text: "Finality",
-          //       link: "/basics/bitcoin-as-a-settlement-layer/finality",
-          //     },
-          //     {
-          //       text: "Shared Security",
-          //       collapsed: true,
-          //       items: [
-          //         {
-          //           text: "Bitcoin Shared Security",
-          //           link: "/basics/bitcoin-as-a-settlement-layer/shared-security/bitcoin-shared-security",
-          //         },
-          //         {
-          //           text: "Shared Security Protocol",
-          //           link: "/basics/bitcoin-as-a-settlement-layer/shared-security/shared-security-protocol",
-          //         },
-          //       ],
-          //     },
-          //     {
-          //       text: "BitVM",
-          //       link: "/basics/bitcoin-as-a-settlement-layer/bitvm",
-          //     },
-          //   ],
-          // },
           {
-            text: "Attempts to Scale Bitcoin",
-            link: "/basics/attempts-to-scale-bitcoin",
+            text: "DeFi",
+            link: "/use-cases/defi",
           },
-          // {
-          //   text: "How RaaS Interface will Evolve?",
-          //   link: "/more-read/how-raas-interface-will-evolve",
-          // },
-          // {
-          //   text: "Bitcoin Scaling Trilemma",
-          //   link: "/more-read/bitcoin-scaling-trilemma",
-          // },
-          // {
-          //   text: "How does a Bitcoin Transaction Work?",
-          //   link: "/more-read/how-does-a-bitcoin-transaction-work",
-          // },
-          // {
-          //   text: "Advantages of Choosing MPC TSS Over Alternative Methods",
-          //   link: "/more-read/advantages-of-choosing-mpc-tss-over-alternative-methods",
-          // },
+          {
+            text: "Gaming and Ordinals",
+            link: "/use-cases/gaming-and-ordinals",
+          },
         ],
       },
       {
-        text: "USERS TOOLING",
+        text: "COLLABORATE",
         items: [
           {
             text: "Custom Signet Node",
-            link: "/users-tooling/node-setup-guide",
+            link: "/collaborate/custom-signet-node",
           },
           {
-            text: "Running a Validator Node",
-            link: "/users-tooling/run-a-validator-node",
+            text: "Run a Node",
+            link: "/collaborate/run-a-node",
+          },
+          {
+            text: "Build on Surge",
+            link: "https://tally.so/r/n0Pzb9",
+          },
+        ],
+      },
+      {
+        text: "BITCOIN REPORTS",
+        items: [
+          {
+            text: "In-house Research",
+            link: "/bitcoin-reports/in-house-research",
+          },
+          {
+            text: "External Research",
+            link: "/bitcoin-reports/external-research",
           },
         ],
       },
@@ -219,12 +182,16 @@ export default defineConfig({
             link: "/resources/quick-links",
           },
           {
-            text: "Branding and Logos",
-            link: "/resources/branding-and-logos",
+            text: "Media Kit",
+            link: "/resources/media-kit",
           },
           {
             text: "Community Guidelines",
             link: "/resources/community-guidelines",
+          },
+          {
+            text: "Surge FAQs",
+            link: "/resources/surge-faqs",
           },
         ],
       },

@@ -1,0 +1,28 @@
+---
+title: UTXO Indexers
+description: Ensuring Verifiable Bitcoin Finality
+---
+
+import ZoomImage from "../../../components/ZoomImage";
+
+# UTXO Indexers [Ensuring Transparent and Verifiable Bitcoin Finality]
+
+The UTXO Indexer continuously monitors Bitcoin blocks to trace and verify Surge UTXOs. By cataloging zk-proofs and state transitions validated by Surge Signers, the Indexer ensures that every transaction is indexed and verifiable within Bitcoin’s immutable ledger.
+
+### Real-Time Monitoring and Verification
+
+The Indexer integrates with a Bitcoin node to access real-time blockchain data. It monitors newly mined blocks and parses each transaction to detect Surge identifiers embedded within transaction data, such as in `OP_RETURN` fields or encoded within `scriptPubKey`. By filtering out irrelevant transactions, the Indexer optimizes performance and resource utilization.
+
+### Extracting and Verifying Data
+
+The Indexer extracts essential information—such as the sender’s public key, signature, and associated data blob. To ensure data authenticity and integrity, the Indexer verifies the signature against the embedded cryptographic proofs. This rigorous verification confirms that the data aligns with the state transitions signed by the Surge Signers, establishing a secure audit trail.
+
+<ZoomImage
+  src="/assets/utxo_indexer.png"
+  alt="UTXO Indexer Flow"
+  className="md:w-[95%] w-[80%] mx-auto"
+/>
+
+## OP_CAT Proposal and On-Chain Validation
+
+The proposed reintroduction of OP_CAT enables on-chain proof validation directly within Bitcoin. With OP_CAT, critical parts of transaction and proof data can be concatenated using opcodes within Bitcoin Script itself, allowing participants to reconstruct and verify aggregated proofs against the committed data stored in UTXOs.
