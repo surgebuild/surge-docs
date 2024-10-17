@@ -1,18 +1,22 @@
 import { defineConfig } from "vocs";
 
 export default defineConfig({
-  description: "A modular Bitcoin Rollup-as-a-Service with a Decentralised verifier network & MPC-TSS Bridge",
+  description:
+    "Introducing Surge, a decentralized network that enables dApps and rollups to anchor directly to Bitcoin security with permissionless DKLs signature scheme while maintaining block consensus, interoperability, and data availability on Bitcoin.",
   logoUrl: {
     light: "/logo/surge-icon-rec-light.svg",
     dark: "/logo/surge-icon-rec-dark.svg",
   },
-  ogImageUrl: "https://surge-docs.vercel.app/surge-docs.png",
+  ogImageUrl: "https://surge-docs.vercel.app/Meta.png",
   font: {
     google: "Inter",
   },
   topNav: [
     { text: "Blog", link: "https://surge.build/blog" },
-    { text: "Bitcoin Playground", link: "https://surge.build/playground" },
+    {
+      text: "Bitcoin Playground",
+      link: "https://surge.build/playground",
+    },
     { text: "Website", link: "https://www.surge.build/" },
   ],
   theme: {
@@ -20,7 +24,7 @@ export default defineConfig({
     accentColor: "#f4431b",
     // colorScheme: "dark",
   },
-  title: "Surge Documentation",
+  title: "Surge - Bitcoin's ultimate scaling MetaLayer",
   sidebar: {
     "/": [
       {
