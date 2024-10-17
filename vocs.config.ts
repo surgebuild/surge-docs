@@ -7,7 +7,7 @@ export default defineConfig({
     light: "/logo/surge-icon-rec-light.svg",
     dark: "/logo/surge-icon-rec-dark.svg",
   },
-  ogImageUrl: "https://surge-docs.vercel.app/Meta.png",
+  ogImageUrl: "https://docs.surge.build/assets/Meta.png",
   font: {
     google: "Inter",
   },
