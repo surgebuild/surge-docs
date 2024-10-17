@@ -1,13 +1,13 @@
 ---
-title: Surge | Decentralized Verifier Network
-description: PoS based ZKP verifier network
+title: Verifiers
+description: Decentralized Proof Validation for Bitcoin Scaling
 ---
 
 import ZoomImage from "../../../components/ZoomImage";
 
 # Verifiers [Decentralized Proof Validation for Bitcoin Scaling]
 
-Verifiers are core to Surge’s scaling, responsible for zk-proof validation over state transitions and transaction histories. Utilizing off-chain aggregation, Verifiers consolidate multiple proofs into recursive zk-proofs, reducing on-chain verification costs and enhancing scalability. This approach confines Bitcoin’s on-chain data to state commitments and aggregated signatures, optimizing data availability and enabling throughput of over 7,000 transaction batches per second.
+Verifiers are responsible for zk-proof validation over state transitions and transaction histories. Leveraging a **delegated Proof-of-Stake** (dPoS) model, Verifiers utilize leverage off-chain aggregation to consolidate multiple proofs into recursive SNARK proofs, reducing on-chain verification costs and enhancing scalability. This approach confines Bitcoin’s on-chain data to state commitments and aggregated signatures, optimizing data availability and enabling throughput of over 7,000+ transactions per second.
 
 ### Off-Chain Aggregation with Recursive ZK-Proofs
 Through recursive zk-proofs, Verifiers aggregate multiple user proofs into a single succinct proof, cutting down on verification overhead. This enables the consolidation of extensive transaction data into minimal on-chain interactions, reducing costs and improving throughput efficiency.
@@ -16,7 +16,7 @@ Through recursive zk-proofs, Verifiers aggregate multiple user proofs into a sin
 Surge prioritizes minimal on-chain footprint by posting only commitments and aggregated signatures, eliminating the need for full transaction details on Bitcoin. This approach maximizes throughput while keeping on-chain costs low.
 
 ### Byzantine Fault Tolerance with CometBFT
-Surge employs Tendermint with CometBFT to ensure Byzantine fault tolerance. Even with one-third network collusion, the consensus remains robust, ensuring network reliability under adverse conditions.
+Surge employs Tendermint with CometBFT to ensure Byzantine fault tolerance. Even with one-third network collusion, the consensus remains robust, ensuring network reliability.
 
 ### Security with DKLS23 and TSS for Bitcoin Inscriptions
 Using DKLS23 signatures and Threshold Signature Scheme (TSS), Surge enhances security for Bitcoin inscriptions. This distributed signing process secures state commitments against single points of failure, anchoring validated zk-proofs within Bitcoin’s PoW consensus.
@@ -25,15 +25,10 @@ Using DKLS23 signatures and Threshold Signature Scheme (TSS), Surge enhances sec
 
 - **State Commitment & Proof Aggregation**: A Merkle root and aggregated zk-proof are embedded into Bitcoin.
 
-- **Bitcoin Inscription**: Each Surge state is linked to a specific Bitcoin block, inheriting Bitcoin's Proof-of-Work integrity. This results in probabilistic finality, where the likelihood of reversal diminishes exponentially with each confirmation.
+- **Bitcoin Inscription**: Each Surge state is linked to a specific Bitcoin block, inheriting Bitcoin's Proof-of-Work integrity. This results in** probabilistic finality**, where the likelihood of reversal diminishes exponentially with each confirmation.
 
 - **Timestamp Integrity**: Bitcoin’s native timestamping provides verifiable time references for each block. Every Bitcoin block includes a timestamp, which is used to record the time of the Surge state commitment. This timestamp can be verified by referencing the block height where the transaction UTXO was included.
 
-### Security Inheritance:
-
-- **Probabilistic Finality**: The probability of a block reversal decreases exponentially with each subsequent block confirmation
-- **Computational Security**: The cost of altering a block rises exponentially with the length of the chain since that block, further strengthening the integrity of the anchored data.  
-  By anchoring Surge's state commitments and aggregated proofs to Bitcoin, Surge inherits Bitcoin's finality and timestamp integrity. This security is based on the cryptographic robustness of zk-proofs and Bitcoin's Proof-of-Work (PoW) consensus, providing a verifiable solution for ensuring finality and precise time references.
 
 <ZoomImage
   src="/assets/user_protocol_framework.png"

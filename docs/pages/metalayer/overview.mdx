@@ -35,9 +35,9 @@ This not only drives the cost down for L2s it also cuts the frequency needed to 
 
 The Surge network adopts a modular approach, leveraging the best practices and lessons from other ecosystems. Inspired by the Cosmos modular design, Surge enables decentralized proof validation, while CometBFT ensures Byzantine Fault Tolerant (BFT) consensus across the network, offering high performance and security. The Surge Integration Kit empowers developers to integrate Zero-Knowledge Proofs (ZKPs) and deploy secure rollups and dApps, inheriting Bitcoin's robust security guarantees. This approach provides a reliable foundation for Surge's key network components:
 
-1. **Verifiers:** Dedicated to zk-proof verification, Surge Verifiers are integral in aggregating and settling validated proofs on Bitcoin.
-2. **Integrated Signers:** These handle transaction signing and manage distributed cryptographic keys, governing BTC vault operations with precision and reliability.
-3. **UTXO Indexers:** Open to anyone, Indexers ensure transparent and seamless data retrieval, critical for enabling real-time audits across the network.
+1. **Verifiers:** Surge Verifiers specialize in zk-proof verification. They periodically aggregate and inscribe validated proofs onto the Bitcoin blockchain, referencing specific Bitcoin blocks for seamless integration and verification.
+2. **Integrated Signers:** Utilizing the DKLs23 signature scheme, the Integrated Signers maintain a decentralized P2P network structure with threshold TSS. They manage transaction signing and distributed cryptographic keys, ensuring secure and precise BTC vault operations.
+3. **UTXO Indexers:** Open to anyone, Surge UTXO Indexers ensure transparent and seamless data retrieval, facilitating the verification of proof settlements across the network.
 
 <ZoomImage
   src="/assets/surge_network_architecture.png"
