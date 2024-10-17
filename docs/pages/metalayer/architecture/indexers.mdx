@@ -1,25 +1,21 @@
 ---
 title: UTXO Indexers
-description: Ensuring Transparent and Verifiable Bitcoin Finality
+description: Ensuring Verifiable Bitcoin Finality
 ---
 
 import ZoomImage from "../../../components/ZoomImage";
 
 # UTXO Indexers [Ensuring Transparent and Verifiable Bitcoin Finality]
 
-Following the decentralized signing operations managed by the Signers, the UTXO Indexer plays a vital role in verifying and documenting the Surge Network’s state on Bitcoin. This specialized Indexer continuously scans Bitcoin blocks, isolating transactions relevant to the Surge Network—specifically, UTXOs that contain unique Surge identifiers. This ensures that all zk-proofs and state transitions managed by Signers are traceable and verifiable within Bitcoin’s ledger.
+The UTXO Indexer continuously monitors Bitcoin blocks to trace and verify Surge UTXOs. By cataloging zk-proofs and state transitions validated by Surge Signers, the Indexer ensures that every transaction is indexed and verifiable within Bitcoin’s immutable ledger.
 
-### Real-Time Blockchain Monitoring
+### Real-Time Monitoring and Verification
 
 The Indexer integrates with a Bitcoin node to access real-time blockchain data. It monitors newly mined blocks and parses each transaction to detect Surge identifiers embedded within transaction data, such as in `OP_RETURN` fields or encoded within `scriptPubKey`. By filtering out irrelevant transactions, the Indexer optimizes performance and resource utilization.
 
 ### Extracting and Verifying Data
 
-Upon detecting a Surge-identified transaction, the Indexer extracts essential information—such as the sender’s public key, signature, and associated data blob. To ensure data authenticity and integrity, the Indexer verifies the signature against the embedded cryptographic proofs. This rigorous verification confirms that the data aligns with the state transitions signed by the Surge Signers, establishing a secure audit trail.
-
-### Enhancing Transparency and Enabling Verification
-
-By systematically cataloging these Surge-related transactions, the Indexer enables transparent verification of Surge’s state within Bitcoin’s immutable ledger. This process is essential for achieving Bitcoin finality, as it creates a publicly accessible record of zk-proof validations and state transitions. The Indexer serves as a bridge, translating the cryptographic assurances provided by the Signers into verifiable data on Bitcoin.
+The Indexer extracts essential information—such as the sender’s public key, signature, and associated data blob. To ensure data authenticity and integrity, the Indexer verifies the signature against the embedded cryptographic proofs. This rigorous verification confirms that the data aligns with the state transitions signed by the Surge Signers, establishing a secure audit trail.
 
 <ZoomImage
   src="/assets/utxo_indexer.png"
