@@ -4,24 +4,21 @@ description: Achieving Bitcoin Finality for Surge Network State Transitions
 ---
 # Anchored on Bitcoin [Achieving Bitcoin Finality for Surge Network State Transitions]
 
-Surge leverages Bitcoin’s Proof-of-Work (PoW) security to anchor state transitions through a process that combines zk-proof aggregation, state commitments, and timestamp verification. By embedding both the state commitment (Merkle root) and the aggregated zk-proof into Bitcoin, Surge ensures verifiable proof of state existence and Bitcoin-backed security.
+Surge anchors its state transitions directly to Bitcoin, combining zk-proof aggregation, state commitments, and timestamp verification to secure and verify L2 states. By inscribing Merkle roots and aggregated proofs into Bitcoin, Surge inherits Bitcoin’s Proof-of-Work (PoW) security, ensuring that state data is both verifiable and resistant to tampering.
 
 ### State Commitments and the Commit-Reveal Framework
 Surge periodically inscribes the Merkle root of its state and aggregated proofs onto Bitcoin. This is done through a Commit-Reveal Framework, where the final aggregated state data is embedded into a Bitcoin UTXO. Upon confirmation, this transaction verifies that Surge’s state existed at a specific time and has been anchored by Bitcoin’s consensus mechanism. This approach allows for Bitcoin finality, ensuring that once a state is anchored, it benefits from Bitcoin’s computational security.
 
-### Real-Time Monitoring and Timestamp Integrity
-By integrating directly with the Bitcoin blockchain, the Surge Network maintains an up-to-date ledger that reflects the most recent confirmed state transitions. Bitcoin’s native timestamping provides verifiable time references, allowing each state commitment to be traced back to its exact inclusion block. This enables developers and users to verify the exact time a state existed within the Surge Network, strengthening the network’s reliability and transparency.
-
-### Enhancing Security with UTXO Indexer and Asynchronous Attestations
-Surge’s UTXO Indexer continuously scans Bitcoin blocks for Surge-related transactions, extracting and verifying key data. This real-time monitoring facilitates efficient querying of Bitcoin-attested state data and ensures that each state commitment remains tied to Bitcoin’s security model. With asynchronous attestations, Surge allows L2 blocks to proceed rapidly, incorporating Bitcoin block references as they are confirmed. This strategy supports high throughput without sacrificing security or finality.
+### Timestamp Integrity
+By integrating directly with the Bitcoin blockchain, the Surge Network maintains an up-to-date ledger that reflects the most recent confirmed state transitions. Bitcoin’s native timestamping provides verifiable time references, allowing each state commitment to be traced back to its exact inclusion block.
 
 ### TSS DKLs23-Based Decentralized Bridge and BTC Vault
-The Surge Network secures asset transfers between Bitcoin and L2 using a decentralized DKLs23 based bridge. This setup removes any single point of control, making cross-chain transfers resilient and tamper-resistant. Through peg-in and peg-out processes, the BTC Vault ensures that state transitions on Surge are firmly anchored to Bitcoin, preventing double-spends and guaranteeing that L2 state commitments are verifiable and final.
+Using a DKLs23-based decentralized bridge, Surge facilitates tamper-resistant cross-chain transfers. The BTC Vault enables peg-in and peg-out operations that tie Surge’s L2 state changes directly to Bitcoin, preventing double spends and enhancing security.
 
-### Security Advantages of Bitcoin-Anchored State Commitments
+### Benefits of Bitcoin-Anchored State Commitments
 - **Inherited PoW Security:** By committing state data to Bitcoin, Surge inherits the security of Bitcoin’s PoW consensus, making unauthorized alterations highly improbable.
 
-- **Strong Re-org Resistance:** With each new Bitcoin block, the probability of reversing an anchored state decreases exponentially, allowing L2 state transitions to benefit from Bitcoin’s block confirmation depth.
+- **Reorg Resistance:** With each new Bitcoin block, the probability of reversing an anchored state decreases exponentially, allowing state transitions to benefit from Bitcoin’s block confirmation depth.
 
 - **Optimized Data Availability:** Off-chain data solutions complement Bitcoin’s limited blockspace by only inscribing compact zk-proofs and Merkle roots. This minimizes on-chain footprint while ensuring essential data remains secure and verifiable.
 
