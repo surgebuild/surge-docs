@@ -58,7 +58,7 @@ img {
 .vocs_Sidebar_logo a:after {
   content: "Surge Documentation"; /* Add the text next to the logo */
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
   font: "Inter";
   color: #000;
   margin-left: 10px; /* Adds space between the logo and the text */
@@ -182,7 +182,8 @@ img {
 }
 
 .vocs_ListItem {
-  font-size: 400 !important;
+  font-weight: 400 !important;
+  color: #1f1f1f;
 }
 
 ._list-paragraph {
@@ -199,6 +200,10 @@ img {
 }
 .dark .vocs_Subtitle {
   @apply dark:text-[#bdbdbe] !important;
+}
+
+.dark .vocs_ListItem {
+  @apply dark:text-[#bdbdbe];
 }
 
 .dark .vocs_Strong {
