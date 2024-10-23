@@ -1,8 +1,7 @@
 import { defineConfig } from "vocs";
 
 export default defineConfig({
-  description:
-    "Introducing Surge, a decentralized network that enables dApps and rollups to anchor directly to Bitcoin security with permissionless DKLs signature scheme while maintaining block consensus, interoperability, and data availability on Bitcoin.",
+  description: "Introducing Surge, a decentralized network that enables dApps and rollups to anchor directly to Bitcoin security with permissionless DKLs signature scheme while maintaining block consensus, interoperability, and data availability on Bitcoin.",
   logoUrl: {
     light: "/logo/surge-icon-rec-light.svg",
     dark: "/logo/surge-icon-rec-dark.svg",
@@ -101,7 +100,7 @@ export default defineConfig({
           },
           {
             text: "Interoperability",
-            link: "/metalayer/interopability",
+            link: "/metalayer/interoperability",
           },
           {
             text: "Anchored on Bitcoin",
