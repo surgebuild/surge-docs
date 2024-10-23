@@ -1,7 +1,7 @@
 const arr = [
   {
     title: "Brand Kit",
-    url: "/resources/branding-and-logos",
+    url: "/resources/media-kit",
   },
   {
     title: "Quick Links",

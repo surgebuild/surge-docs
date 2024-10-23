@@ -100,7 +100,7 @@ export default defineConfig({
             link: "/metalayer/composability",
           },
           {
-            text: "Interopability",
+            text: "Interoperability",
             link: "/metalayer/interopability",
           },
           {
