@@ -1,7 +1,8 @@
 import { defineConfig } from "vocs";
 
 export default defineConfig({
-  description: "Introducing Surge, a decentralized network that enables dApps and rollups to anchor directly to Bitcoin security with permissionless DKLs signature scheme while maintaining block consensus, interoperability, and data availability on Bitcoin.",
+  description:
+    "Introducing Surge, a decentralized network that enables dApps and rollups to anchor directly to Bitcoin security with permissionless DKLs signature scheme while maintaining block consensus, interoperability, and data availability on Bitcoin.",
   logoUrl: {
     light: "/logo/surge-icon-rec-light.svg",
     dark: "/logo/surge-icon-rec-dark.svg",
@@ -148,20 +149,77 @@ export default defineConfig({
         ],
       },
       {
-        text: "COLLABORATE",
+        text: "DEVELOPER GUIDES",
         items: [
           {
-            text: "Custom Signet Node",
-            link: "/collaborate/custom-signet-node",
+            text: "Network Information",
+            link: "/developer-guides/network-information",
           },
           {
-            text: "Run a Node",
-            link: "/collaborate/run-a-node",
+            text: "Surge CLI",
+            collapsed: true,
+            items: [
+              {
+                text: "Submit Proof",
+                link: "/developer-guides/surge-cli/submit-proof",
+              },
+              {
+                text: "Verify Proof on Bitcoin",
+                link: "/developer-guides/surge-cli/verify-proof",
+              },
+              {
+                text: "Generate Schnorr / ECDSA Sigs",
+                link: "/developer-guides/surge-cli/generate-signature",
+              },
+            ],
           },
           {
-            text: "Build on Surge",
-            link: "https://tally.so/r/n0Pzb9",
+            text: "Run Surge Node",
+            collapsed: true,
+            items: [
+              {
+                text: "Custom Signet Node",
+                link: "/developer-guides/run-node/custom-signet-node",
+              },
+              {
+                text: "Run a Node",
+                link: "/developer-guides/run-node/run-a-node",
+              },
+            ],
           },
+          {
+            text: "Testnet Explorer",
+            collapsed: true,
+            items: [
+              {
+                text: "Bitcoin Inscription",
+                link: "/developer-guides/testnet-explorer/bitcoin-inscriptions",
+              },
+              {
+                text: "Cost / Time saved Stats",
+                link: "/developer-guides/testnet-explorer/time-saved",
+              },
+            ],
+          },
+          {
+            text: "Wallet & Tokens",
+            collapsed: true,
+            items: [
+              {
+                text: "Connect Keplr Wallet",
+                link: "/developer-guides/wallets-tokens/connect-keplr",
+              },
+              {
+                text: "Cost / Time saved Stats",
+                link: "/developer-guides/wallets-tokens/get-tokens",
+              },
+            ],
+          },
+
+          // {
+          //   text: "Build on Surge",
+          //   link: "https://tally.so/r/n0Pzb9",
+          // },
         ],
       },
       {
