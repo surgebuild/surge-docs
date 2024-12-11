@@ -5,4 +5,253 @@ description: Verify Proofs
 
 # Verify Proofs
 
-**_Coming Soon!_**
+## Query Type CLI
+
+**Zkpverify queries**
+
+- [`get-proof-data`](#get-proof-data)
+- [`get-bitvm-challenge-data`](#get-bitvm-challenge-data)
+- [`get-verify-result`](#get-verify-result)
+- [`get-verify-results-by-namespace`](#get-verify-results-by-namespace)
+- [`pending-proof`](#pending-proof)
+- [`pending-proof-by-namespace`](#pending-proof-by-namespace)
+
+**Bitvmstaker queries**
+
+- [`all-staker-info`](#all-staker-info)
+- [`committee-address`](#committee-address)
+- [`registered-vk-list`](#registered-vk-list)
+
+### **get-bitvm-challenge-data**
+
+Query bitVM chanllenge data stored in the fiamma by proof_id.
+
+request params:
+
+```
+{
+  "proof_id": "string",
+}
+```
+
+response:
+
+```
+{
+  "bitvm_challenge_data": {
+    "proposer": "string",
+    "public_input": "string",
+    "verify_result": "bool",
+    "vk": "string",
+    "witness": "string"
+  }
+}
+```
+
+### **get-proof-data**
+
+Query Proof data stored in the fiamma by proof_id.
+
+request params:
+
+```
+{
+  "proof_id": "string",
+}
+```
+
+response:
+
+```
+{
+  "proof_data": {
+    "proof_system": "integer",
+    "proof": "string",
+    "public_input": "string",
+    "vk": "string",
+    "namespace": "string"
+  }
+}
+```
+
+### **get-verify-result**
+
+Query Proof verify status stored in the fiamma by proof_id.
+
+request params:
+
+```
+{
+  "proof_id": "string",
+}
+```
+
+response:
+
+```
+{
+  verify_result: {
+      "proof_id": "string",
+      "proof_system": "string",
+      "data_commitment": "string",
+      "data_location": "string",
+      "result": "bool",
+      "status": "integer",
+      "community_verification_count": "integer",
+      "namespace": "string"
+  }
+}
+```
+
+### **get-verify-results-by-namespace**
+
+Query Proof verify status stored in the fiamma by namespace.
+
+request params:
+
+```
+{
+  "namespace": "string",
+}
+```
+
+response:
+
+```
+{
+  verify_result: [
+    {
+      "proof_id": "string",
+      "proof_system": "string",
+      "data_commitment": "string",
+      "data_location": "string",
+      "result": "bool",
+      "status": "integer",
+      "community_verification_count": "integer",
+      "namespace": "string"
+    },
+    ...
+  ]
+}
+
+```
+
+### **pending-proof**
+
+Queries a list of pending proof verification items.
+
+There is no request param for this method.
+
+response:
+
+```
+{
+  "pending_proofs": [
+    {
+      "proof_id": "string",
+      "proof_system": "string",
+      "data_commitment": "string",
+      "data_location": "string",
+      "result": bool,
+      "status": "string",
+      "community_verification_count": "string",
+      "namespace": "string"
+    },
+    ...
+  ],
+  "pagination": {
+    "next_key": "string",
+    "total": "integer"
+  }
+}
+```
+
+### **pending-proof-by-namespace**
+
+Queries a list of pending proof verification items by namespace.
+
+request params:
+
+```
+{
+  "namespace": "string",
+}
+```
+
+response:
+
+```
+{
+  "pending_proofs": [
+    {
+      "proof_id": "string",
+      "proof_system": "string",
+      "data_commitment": "string",
+      "data_location": "string",
+      "result": bool,
+      "status": "string",
+      "community_verification_count": "string",
+      "namespace": "string"
+    },
+    ...
+  ],
+  "pagination": {
+    "next_key": "string",
+    "total": "integer"
+  }
+}
+```
+
+### **all-staker-info**
+
+Queries a list of holding information about all the stakers. It may include details such as staker_index and staker_address.
+
+response:
+
+```
+{
+  "all_staker_info": [
+    {
+      "staker_index": "integer",
+      "staker_address": "string"
+    },
+    ...
+  ],
+  "pagination": {
+    "next_key": "string",
+    "total": "integer"
+  }
+}
+```
+
+### **committee-address**
+
+Queries the address associated with the committee responsible for overseeing certain operations or governance within Fiamma blockchain system.
+
+response:
+
+```
+{
+  "committeeAddress": "string",
+}
+```
+
+### **registered-vk-list**
+
+Queries a list of registered verification keys (VKs).
+
+response:
+
+```
+{
+  "registered_vk_list": [
+    ["string"]
+    ,
+    ...
+  ],
+  "pagination": {
+    "next_key": "string",
+    "total": "integer"
+  }
+}
+```

@@ -185,6 +185,10 @@ export default defineConfig({
                 text: "Run a Node",
                 link: "/developer-guides/run-node/run-a-node",
               },
+              {
+                text: "Become a Validator",
+                link: "/developer-guides/run-node/validator-node",
+              },
             ],
           },
           {
@@ -210,7 +214,7 @@ export default defineConfig({
                 link: "/developer-guides/wallets-tokens/connect-keplr",
               },
               {
-                text: "Cost / Time saved Stats",
+                text: "Get Surge Tokens",
                 link: "/developer-guides/wallets-tokens/get-tokens",
               },
             ],
