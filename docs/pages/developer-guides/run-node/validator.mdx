@@ -1,71 +1,13 @@
 ---
-title: Surge | Validator Node Setup
+title: Surge | Validator Setup
 description: Setup Validator Node
 ---
 
-# Surge Validator Node Setup Guide
+# Surge Validator Setup
 
-A guide to setting up and operating a validator node on the Surge Metalayer network.
+Follow all the steps from here [here](/developer-guides/run-node/setup) to setup your node.
 
-## Overview
-
-To become a validator on the Surge Metalayer, you'll need to complete several steps:
-
-- Setting up the necessary hardware and software
-- Installing the chain's binary
-- Syncing node with the network
-- Creating a validator account
-- Staking tokens and becoming an active validator
-
-### Hardware Requirements
-
-- CPU: 4+ cores (recommended)
-- RAM: 4GB minimum, 8GB recommended
-- Storage: 250GB minimum SSD/NVMe (recommended for future growth)
-- Network: Stable internet connection with 10Mbps+ bandwidth
-
-## Installation Options
-
-### Option 1: Remote Installation (Recommended)
-
-Install Surge using the following command:
-
-```bash
-curl -L https://install.surge.dev/surged.sh | bash
-```
-
-### Option 2: Local Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/surgebuild/node-validator
-cd node-validator
-```
-
-2. Make the script executable and run:
-
-```bash
-./surged.sh
-```
-
-The installation script will:
-
-- Install all required software
-- Configure the node
-- Begin syncing with the network
-
-### Checking Sync Status
-
-Monitor your node's synchronization progress:
-
-```bash
-surged status
-```
-
-Look for the `catching_up` field in the output - when it shows `false`, your node has fully synchronized with the network.
-
-## Validator Setup
+Once the setup is complete, you can follow the steps below to become a validator.
 
 ### 1. Create Validator Account
 
@@ -175,4 +117,4 @@ sudo systemctl status surge-validator
 
 ## Support
 
-For additional support or questions, please visit our [GitHub repository](https://github.com/surgebuild/surge-validator) or join our community channels.
+For additional support or questions, please visit our [GitHub repo](https://github.com/surgebuild/validator) or join our community channels.

@@ -1,0 +1,64 @@
+---
+title: Surge | Node Setup
+description: Setup Node
+---
+
+# Surge Node Setup Guide
+
+## Overview
+
+To become a validator on the Surge Metalayer, you'll need to complete several steps:
+
+- Setting up the necessary hardware and software
+- Installing the chain's binary
+- Syncing node with the network
+- Creating a validator account
+- Staking tokens and becoming an active validator
+
+### Hardware Requirements
+
+- CPU: 4+ cores
+- RAM: 8GB+
+- Storage: 250GB minimum SSD/NVMe
+- Network: Stable internet connection with 10Mbps+ bandwidth
+
+## Installation Options
+
+### Option 1: Remote Installation (Recommended)
+
+Install Surge using the following command:
+
+```bash
+curl -L https://install.surge.dev/surged.sh | bash
+```
+
+### Option 2: Local Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/surgebuild/validator
+cd validator
+```
+
+2. Make the script executable and run:
+
+```bash
+./surged.sh
+```
+
+The installation script will:
+
+- Install all required software
+- Configure the node
+- Begin syncing with the network
+
+### Checking Sync Status
+
+Monitor your node's synchronization progress:
+
+```bash
+surged status
+```
+
+Look for the `catching_up` field in the output - when it shows `false`, your node has fully synchronized with the network.
