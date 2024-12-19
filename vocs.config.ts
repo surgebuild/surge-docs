@@ -145,6 +145,10 @@ export default defineConfig({
             text: "Gaming and Ordinals",
             link: "/use-cases/gaming-and-ordinals",
           },
+          // {
+          //   text: "Cost / Time saved Stats",
+          //   link: "/developer-guides/testnet-explorer/time-saved",
+          // },
         ],
       },
       {
@@ -155,20 +159,20 @@ export default defineConfig({
             link: "/developer-guides/network-information",
           },
           {
-            text: "Surge CLI",
+            text: "Surge SDK",
             collapsed: true,
             items: [
               {
-                text: "Submit Proof",
-                link: "/developer-guides/surge-cli/submit-proof",
+                text: "Submit Proof to Bitcoin",
+                link: "/developer-guides/surge-sdk/submit-proof",
               },
               {
                 text: "Verify Proof on Bitcoin",
-                link: "/developer-guides/surge-cli/verify-proof",
+                link: "/developer-guides/surge-sdk/verify-proof",
               },
               {
                 text: "Generate Schnorr / ECDSA Sigs",
-                link: "/developer-guides/surge-cli/generate-signature",
+                link: "/developer-guides/surge-sdk/generate-signature",
               },
             ],
           },
@@ -192,17 +196,14 @@ export default defineConfig({
           },
           {
             text: "Testnet Explorer",
-            collapsed: true,
-            items: [
-              {
-                text: "Bitcoin Inscription",
-                link: "/developer-guides/testnet-explorer/bitcoin-inscriptions",
-              },
-              {
-                text: "Cost / Time saved Stats",
-                link: "/developer-guides/testnet-explorer/time-saved",
-              },
-            ],
+            link: "/developer-guides/testnet-explorer/explorer",
+            // collapsed: false,
+            // items: [
+            //   // {
+            //   //   text: "Bitcoin Inscription",
+            //   //   link: "/developer-guides/testnet-explorer/bitcoin-inscriptions",
+            //   // },
+            // ],
           },
           {
             text: "Wallet & Tokens",
